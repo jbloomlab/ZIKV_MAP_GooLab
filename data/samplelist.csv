@@ -1,0 +1,5 @@
+library,selection,antibody,percent_infectivity,R1,SRA_accession
+lib-1,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBCX3/cellranger/mkfastq/HHL7NBCX3/outs/fastq_path/HHL7NBCX3/JBS_sample01_S5_L001_R1_001.fastq.gz,NA
+lib-2,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBCX3/cellranger/mkfastq/HHL7NBCX3/outs/fastq_path/HHL7NBCX3/JBS_sample02_S6_L001_R1_001.fastq.gz,NA
+lib-3,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBCX3/cellranger/mkfastq/HHL7NBCX3/outs/fastq_path/HHL7NBCX3/JBS_sample03_S7_L001_R1_001.fastq.gz,NA
+wildtype,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBCX3/cellranger/mkfastq/HHL7NBCX3/outs/fastq_path/HHL7NBCX3/JBS_sample04_S8_L001_R1_001.fastq.gz,NA
