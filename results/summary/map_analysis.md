@@ -26,7 +26,7 @@ from IPython.display import display, HTML
 import pandas as pd
 ```
 
-    Using dms_tools2 2.6.6
+    Using dms_tools2 2.6.7
 
 
 Specify configuration for analysis:
@@ -35,7 +35,7 @@ Specify configuration for analysis:
 ```python
 use_existing = 'yes' # use existing output
 
-ncpus = 16 # max CPUs to use
+ncpus = 8  # max CPUs to use
 
 # directories
 resultsdir = './results/'
@@ -130,6 +130,42 @@ display(HTML(samples.to_html(index=False)))
       <td>NaN</td>
       <td>wildtype-plasmid</td>
     </tr>
+    <tr>
+      <td>lib-1</td>
+      <td>plasmid-new</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-lib1_S1_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-1-plasmid-new</td>
+    </tr>
+    <tr>
+      <td>lib-2</td>
+      <td>plasmid-new</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-lib2_S2_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-2-plasmid-new</td>
+    </tr>
+    <tr>
+      <td>lib-3</td>
+      <td>plasmid-new</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-lib3_S3_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-3-plasmid-new</td>
+    </tr>
+    <tr>
+      <td>wildtype</td>
+      <td>plasmid-new</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-wt_S4_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wildtype-plasmid-new</td>
+    </tr>
   </tbody>
 </table>
 
@@ -170,7 +206,7 @@ log = ! dms2_batch_bcsubamp \
 samples['codoncounts'] = countsdir + '/' + samples['name'] + '_codoncounts.csv'
 
 # check that expected codon counts files created
-assert all(map(os.path.isfile, samples.codoncounts))
+assert all(map(os.path.isfile, samples.codoncounts)), '\n'.join(log)
 
 print(f"Processed sequencing data to create codon counts files in {countsdir}")
 ```
@@ -197,7 +233,9 @@ showPDF([bcsubamp_plot_prefix + 'readstats.pdf',
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_17_0.png)
+    
 
 
 Next we look at number of reads per barcode.
@@ -209,7 +247,9 @@ showPDF(bcsubamp_plot_prefix + 'readsperbc.pdf')
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_19_0.png)
+    
 
 
 Now we look at the depth across the gene.
@@ -221,7 +261,9 @@ showPDF(bcsubamp_plot_prefix + 'depth.pdf')
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_21_0.png)
+    
 
 
 Here are the mutation frequencies across the gene.
@@ -233,7 +275,9 @@ showPDF(bcsubamp_plot_prefix + 'mutfreq.pdf')
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_23_0.png)
+    
 
 
 Here are the overall per-codon mutation rate averages:
@@ -244,7 +288,9 @@ showPDF(bcsubamp_plot_prefix + 'codonmuttypes.pdf')
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_25_0.png)
+    
 
 
 We have single and multi-nucleotide changes in the libraries, although the single nucleotide changes are perhaps over-represented:
@@ -255,11 +301,13 @@ showPDF(bcsubamp_plot_prefix + 'codonntchanges.pdf')
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_27_0.png)
+    
 
 
 Here are the frequencies of different types of mutations among single-nucleotide codon changes.
-There is no massive over-representation of any class as would be expected if oxidative damage:
+There is no massive over-representation of any class as would be expected if oxidative damage, which leads to `C->A` or `G->T` mutations:
 
 
 ```python
@@ -267,7 +315,9 @@ showPDF(bcsubamp_plot_prefix + 'singlentchanges.pdf')
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_29_0.png)
+    
 
 
 Finally, we look at mutation sampling.
@@ -279,5 +329,7 @@ showPDF(bcsubamp_plot_prefix + 'cumulmutcounts.pdf')
 ```
 
 
+    
 ![png](map_analysis_files/map_analysis_31_0.png)
+    
 
