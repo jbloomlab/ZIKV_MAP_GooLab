@@ -11,11 +11,11 @@ Other results are placed in [./results/](results), although not all files are tr
 First activate the [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment for the analysis.
 If you are using the *BloomLab* software on the Fred Hutch computing cluster, you can do this just with:
 
-    conda activate dms_tools2
+    conda activate ZIKV_DMS
 
-Otherwise, first build the *dms_tools2* [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment from the [environment.yml](environment.yml) file, then activate it as above.
+Otherwise, first build the *ZIKV_DMS* [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment from the [environment_pinned.yml](environment_pinned.yml) or [environment_unpinned.yml](environment_unpinned.yml) file (depending on whether you want fully pinned or unpinned versions), then activate it as above.
 
-After you have activated the *dms_tools2* [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment, simply run the Python Jupyter notebook [map_analysis.ipynb](map_analysis.ipynb).
+After you have activated the *ZIKV_DMS* [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment, simply run the Python Jupyter notebook [map_analysis.ipynb](map_analysis.ipynb).
 
 To run the notebook automatically and build the HTML summary linked to above, simply run the bash script [run_nbs.bash](run_nbs.bash).
 On the Hutch cluster, you will first want to grab a node with 16 cores before doing this.
