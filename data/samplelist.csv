@@ -3,3 +3,7 @@ lib-1,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBC
 lib-2,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBCX3/cellranger/mkfastq/HHL7NBCX3/outs/fastq_path/HHL7NBCX3/JBS_sample02_S6_L001_R1_001.fastq.gz,NA
 lib-3,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBCX3/cellranger/mkfastq/HHL7NBCX3/outs/fastq_path/HHL7NBCX3/JBS_sample03_S7_L001_R1_001.fastq.gz,NA
 wildtype,plasmid,none,NA,/shared/ngs/illumina/bloom_lab/200925_D00300_1065_AHHL7NBCX3/cellranger/mkfastq/HHL7NBCX3/outs/fastq_path/HHL7NBCX3/JBS_sample04_S8_L001_R1_001.fastq.gz,NA
+lib-1,plasmid-new,none,NA,/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-lib1_S1_L001_R1_001.fastq.gz,
+lib-2,plasmid-new,none,NA,/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-lib2_S2_L001_R1_001.fastq.gz,
+lib-3,plasmid-new,none,NA,/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-lib3_S3_L001_R1_001.fastq.gz,
+wildtype,plasmid-new,none,NA,/shared/ngs/illumina/bloom_lab/201112_M04866_0426_000000000-JBYVJ_new-demux/Data/Intensities/BaseCalls/JBS-wt_S4_L001_R1_001.fastq.gz,
