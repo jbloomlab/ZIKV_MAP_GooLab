@@ -166,6 +166,42 @@ display(HTML(samples.to_html(index=False)))
       <td>NaN</td>
       <td>wildtype-plasmid-new</td>
     </tr>
+    <tr>
+      <td>lib-1</td>
+      <td>plasmid-210115</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib1_S1_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-1-plasmid-210115</td>
+    </tr>
+    <tr>
+      <td>lib-2</td>
+      <td>plasmid-210115</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib2_S2_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-2-plasmid-210115</td>
+    </tr>
+    <tr>
+      <td>lib-3</td>
+      <td>plasmid-210115</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib3_S3_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-3-plasmid-210115</td>
+    </tr>
+    <tr>
+      <td>wildtype</td>
+      <td>plasmid-210115</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-wt_S4_L001_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wildtype-plasmid-210115</td>
+    </tr>
   </tbody>
 </table>
 
