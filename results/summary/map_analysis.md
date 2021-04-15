@@ -202,6 +202,78 @@ display(HTML(samples.to_html(index=False)))
       <td>NaN</td>
       <td>wildtype-plasmid-210115</td>
     </tr>
+    <tr>
+      <td>lib-1</td>
+      <td>plasmid-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_31_Sample1_S2_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-1-plasmid-210409</td>
+    </tr>
+    <tr>
+      <td>lib-2</td>
+      <td>plasmid-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_31_Sample2_S3_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-2-plasmid-210409</td>
+    </tr>
+    <tr>
+      <td>lib-3</td>
+      <td>plasmid-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_31_Sample3_S4_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-3-plasmid-210409</td>
+    </tr>
+    <tr>
+      <td>wildtype</td>
+      <td>plasmid-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_31_Sample4_S5_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wildtype-plasmid-210409</td>
+    </tr>
+    <tr>
+      <td>lib-1</td>
+      <td>virus-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample1_S6_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-1-virus-210409</td>
+    </tr>
+    <tr>
+      <td>lib-2</td>
+      <td>virus-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample2_S7_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-2-virus-210409</td>
+    </tr>
+    <tr>
+      <td>lib-3</td>
+      <td>virus-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample3_S8_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>lib-3-virus-210409</td>
+    </tr>
+    <tr>
+      <td>wildtype</td>
+      <td>virus-210409</td>
+      <td>none</td>
+      <td>NaN</td>
+      <td>/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample4_S9_R1_001.fastq.gz</td>
+      <td>NaN</td>
+      <td>wildtype-virus-210409</td>
+    </tr>
   </tbody>
 </table>
 
@@ -227,6 +299,10 @@ os.makedirs(countsdir, exist_ok=True)
 
 bcsubamp_batchfile = os.path.join(countsdir, 'batch.csv')
 samples[['name', 'R1']].to_csv(bcsubamp_batchfile, index=False)
+
+for r1 in samples['R1'].tolist():
+    if not os.path.isfile(r1):
+        raise ValueError(f"Missing file {r1}")
 
 log = ! dms2_batch_bcsubamp \
         --batchfile {bcsubamp_batchfile} \
@@ -264,13 +340,20 @@ This indicates we need more sequencing depth given the number of unique molecule
 
 
 ```python
-showPDF([bcsubamp_plot_prefix + 'readstats.pdf',
-         bcsubamp_plot_prefix + 'bcstats.pdf'])
+showPDF(bcsubamp_plot_prefix + 'readstats.pdf')
+
+showPDF(bcsubamp_plot_prefix + 'bcstats.pdf')
 ```
 
 
     
 ![png](map_analysis_files/map_analysis_17_0.png)
+    
+
+
+
+    
+![png](map_analysis_files/map_analysis_17_1.png)
     
 
 
@@ -369,3 +452,8 @@ showPDF(bcsubamp_plot_prefix + 'cumulmutcounts.pdf')
 ![png](map_analysis_files/map_analysis_31_0.png)
     
 
+
+
+```python
+
+```
