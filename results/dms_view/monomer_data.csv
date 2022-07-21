@@ -1,4 +1,4 @@
-site,wildtype,mutation,mutdiffsel,condition,protein_chain,protein_site
+site,wildtype,mutation,mut_diffsel,condition,protein_chain,protein_site
 1,I,R,0.000312,C10-150,A,1
 1,I,N,-0.236,C10-150,A,1
 1,I,T,-0.885,C10-150,A,1
