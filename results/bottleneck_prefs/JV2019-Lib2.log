@@ -1,0 +1,3682 @@
+2022-07-20 17:26:01,853 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-20 17:26:01,853 - INFO - Progress is being logged to results/bottleneck_prefs/JV2019-Lib2.log
+2022-07-20 17:26:01,887 - INFO - Version information:
+	Time and date: Wed Jul 20 17:26:01 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-20 17:26:01,887 - INFO - Parsed the following arguments:
+	outdir = results/bottleneck_prefs
+	ncpus = 3
+	use_existing = yes
+	method = bayesian
+	indir = results/bottleneck_codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	conc = [1.0, 1.0, 1.0]
+	pseudocount = 1
+	pre = JV2019-Lib2-plasmid
+	post = JV2019-Lib2-virus
+	name = JV2019-Lib2
+	err = ['JV2019-wildtype-plasmid', 'JV2019-wildtype-virus']
+
+2022-07-20 17:26:01,893 - INFO - Reading pre-selection counts from results/bottleneck_codoncounts/JV2019-Lib2-plasmid_codoncounts.csv
+2022-07-20 17:26:01,906 - INFO - Reading post-selection counts from results/bottleneck_codoncounts/JV2019-Lib2-virus_codoncounts.csv
+2022-07-20 17:26:01,911 - INFO - Reading pre-selection error-control counts from pre
+2022-07-20 17:26:01,917 - INFO - Reading post-selection error-control counts from post
+2022-07-20 17:26:01,946 - INFO - Read counts for 504 sites.
+2022-07-20 17:26:01,946 - INFO - Here are sites and wildtype identities:
+	1	ATC
+	2	AGG
+	3	TGC
+	4	ATT
+	5	GGA
+	6	GTC
+	7	AGC
+	8	AAT
+	9	AGA
+	10	GAC
+	11	TTC
+	12	GTG
+	13	GAG
+	14	GGC
+	15	ATG
+	16	TCA
+	17	GGT
+	18	GGG
+	19	ACC
+	20	TGG
+	21	GTT
+	22	GAT
+	23	GTT
+	24	GTC
+	25	TTG
+	26	GAA
+	27	CAT
+	28	GGA
+	29	GGC
+	30	TGC
+	31	GTT
+	32	ACC
+	33	GTG
+	34	ATG
+	35	GCA
+	36	CAG
+	37	GAC
+	38	AAG
+	39	CCA
+	40	ACA
+	41	GTT
+	42	GAC
+	43	ATA
+	44	GAG
+	45	TTG
+	46	GTC
+	47	ACG
+	48	ACG
+	49	ACG
+	50	GTT
+	51	AGT
+	52	AAC
+	53	ATG
+	54	GCC
+	55	GAG
+	56	GTA
+	57	AGA
+	58	TCC
+	59	TAT
+	60	TGC
+	61	TAC
+	62	GAG
+	63	GCA
+	64	TCG
+	65	ATA
+	66	TCG
+	67	GAC
+	68	ATG
+	69	GCT
+	70	TCG
+	71	GAC
+	72	AGT
+	73	CGT
+	74	TGC
+	75	CCA
+	76	ACA
+	77	CAA
+	78	GGT
+	79	GAG
+	80	GCC
+	81	TAC
+	82	CTT
+	83	GAC
+	84	AAG
+	85	CAA
+	86	TCA
+	87	GAC
+	88	ACT
+	89	CAA
+	90	TAT
+	91	GTC
+	92	TGC
+	93	AAA
+	94	AGA
+	95	ACA
+	96	TTA
+	97	GTG
+	98	GAC
+	99	AGA
+	100	GGT
+	101	TGG
+	102	GGA
+	103	AAC
+	104	GGT
+	105	TGT
+	106	GGA
+	107	CTT
+	108	TTT
+	109	GGC
+	110	AAA
+	111	GGG
+	112	AGC
+	113	TTG
+	114	GTG
+	115	ACA
+	116	TGT
+	117	GCC
+	118	AAG
+	119	TTT
+	120	ACG
+	121	TGT
+	122	TCT
+	123	AAG
+	124	AAG
+	125	ATG
+	126	ACC
+	127	GGG
+	128	AAG
+	129	AGC
+	130	ATT
+	131	CAA
+	132	CCG
+	133	GAA
+	134	AAT
+	135	CTG
+	136	GAG
+	137	TAT
+	138	CGG
+	139	ATA
+	140	ATG
+	141	CTA
+	142	TCA
+	143	GTG
+	144	CAT
+	145	GGC
+	146	TCC
+	147	CAG
+	148	CAT
+	149	AGC
+	150	GGG
+	151	ATG
+	152	ATT
+	153	GTC
+	154	AAT
+	155	GAT
+	156	ACA
+	157	GGA
+	158	TAT
+	159	GAA
+	160	ACT
+	161	GAC
+	162	GAA
+	163	AAT
+	164	AGA
+	165	GCG
+	166	AAA
+	167	GTC
+	168	GAG
+	169	GTT
+	170	ACG
+	171	CCT
+	172	AAT
+	173	TCA
+	174	CCA
+	175	AGA
+	176	GCG
+	177	GAA
+	178	GCA
+	179	ACC
+	180	TTG
+	181	GGA
+	182	GGC
+	183	TTT
+	184	GGA
+	185	AGC
+	186	TTA
+	187	GGA
+	188	CTT
+	189	GAC
+	190	TGT
+	191	GAA
+	192	CCA
+	193	AGG
+	194	ACA
+	195	GGC
+	196	CTT
+	197	GAC
+	198	TTT
+	199	TCA
+	200	GAT
+	201	CTG
+	202	TAT
+	203	TAC
+	204	CTG
+	205	ACC
+	206	ATG
+	207	AAC
+	208	AAT
+	209	AAG
+	210	CAT
+	211	TGG
+	212	TTG
+	213	GTG
+	214	CAC
+	215	AAA
+	216	GAG
+	217	TGG
+	218	TTT
+	219	CAT
+	220	GAC
+	221	ATC
+	222	CCA
+	223	TTG
+	224	CCT
+	225	TGG
+	226	CAT
+	227	GCT
+	228	GGG
+	229	GCA
+	230	GAC
+	231	ACC
+	232	GGA
+	233	ACT
+	234	CCA
+	235	CAC
+	236	TGG
+	237	AAC
+	238	AAC
+	239	AAA
+	240	GAG
+	241	GCA
+	242	TTG
+	243	GTA
+	244	GAA
+	245	TTC
+	246	AAG
+	247	GAT
+	248	GCC
+	249	CAC
+	250	GCC
+	251	AAG
+	252	AGG
+	253	CAA
+	254	ACC
+	255	GTC
+	256	GTC
+	257	GTT
+	258	CTG
+	259	GGG
+	260	AGC
+	261	CAG
+	262	GAA
+	263	GGA
+	264	GCC
+	265	GTT
+	266	CAC
+	267	ACG
+	268	GCT
+	269	CTC
+	270	GCT
+	271	GGA
+	272	GCT
+	273	CTA
+	274	GAG
+	275	GCT
+	276	GAG
+	277	ATG
+	278	GAT
+	279	GGT
+	280	GCA
+	281	AAG
+	282	GGA
+	283	AAG
+	284	CTG
+	285	TTC
+	286	TCT
+	287	GGC
+	288	CAC
+	289	TTG
+	290	AAA
+	291	TGC
+	292	CGC
+	293	CTA
+	294	AAA
+	295	ATG
+	296	GAC
+	297	AAG
+	298	CTT
+	299	AGA
+	300	TTG
+	301	AAG
+	302	GGC
+	303	GTG
+	304	TCA
+	305	TAT
+	306	TCC
+	307	TTG
+	308	TGC
+	309	ACT
+	310	GCG
+	311	GCA
+	312	TTC
+	313	ACA
+	314	TTC
+	315	ACC
+	316	AAG
+	317	GTC
+	318	CCA
+	319	GCT
+	320	GAA
+	321	ACA
+	322	CTG
+	323	CAT
+	324	GGA
+	325	ACA
+	326	GTC
+	327	ACA
+	328	GTG
+	329	GAG
+	330	GTG
+	331	CAG
+	332	TAT
+	333	GCA
+	334	GGG
+	335	ACA
+	336	GAT
+	337	GGA
+	338	CCC
+	339	TGC
+	340	AAG
+	341	ATC
+	342	CCA
+	343	GTC
+	344	CAG
+	345	ATG
+	346	GCG
+	347	GTG
+	348	GAC
+	349	ATG
+	350	CAG
+	351	ACC
+	352	CTG
+	353	ACC
+	354	CCA
+	355	GTT
+	356	GGA
+	357	AGG
+	358	CTG
+	359	ATA
+	360	ACC
+	361	GCC
+	362	AAC
+	363	CCC
+	364	GTG
+	365	ATT
+	366	ACT
+	367	GAA
+	368	AGC
+	369	ACT
+	370	GAG
+	371	AAC
+	372	TCA
+	373	AAG
+	374	ATG
+	375	ATG
+	376	TTG
+	377	GAG
+	378	CTT
+	379	GAC
+	380	CCA
+	381	CCA
+	382	TTT
+	383	GGG
+	384	GAT
+	385	TCT
+	386	TAC
+	387	ATT
+	388	GTC
+	389	ATA
+	390	GGA
+	391	GTT
+	392	GGG
+	393	GAC
+	394	AAG
+	395	AAA
+	396	ATC
+	397	ACC
+	398	CAC
+	399	CAC
+	400	TGG
+	401	CAT
+	402	AGG
+	403	AGT
+	404	GGT
+	405	AGC
+	406	ACC
+	407	ATC
+	408	GGA
+	409	AAG
+	410	GCA
+	411	TTT
+	412	GAG
+	413	GCC
+	414	ACT
+	415	GTG
+	416	AGA
+	417	GGC
+	418	GCC
+	419	AAG
+	420	AGA
+	421	ATG
+	422	GCA
+	423	GTC
+	424	CTG
+	425	GGG
+	426	GAT
+	427	ACA
+	428	GCC
+	429	TGG
+	430	GAC
+	431	TTC
+	432	GGA
+	433	TCA
+	434	GTC
+	435	GGG
+	436	GGT
+	437	GTG
+	438	TTC
+	439	AAC
+	440	TCA
+	441	CTG
+	442	GGT
+	443	AAG
+	444	GGC
+	445	ATT
+	446	CAC
+	447	CAG
+	448	ATT
+	449	TTT
+	450	GGA
+	451	GCA
+	452	GCC
+	453	TTC
+	454	AAA
+	455	TCA
+	456	CTG
+	457	TTT
+	458	GGA
+	459	GGA
+	460	ATG
+	461	TCC
+	462	TGG
+	463	TTC
+	464	TCA
+	465	CAG
+	466	ATC
+	467	CTC
+	468	ATA
+	469	GGC
+	470	ACG
+	471	CTG
+	472	CTA
+	473	GTG
+	474	TGG
+	475	TTA
+	476	GGT
+	477	TTG
+	478	AAC
+	479	ACA
+	480	AAG
+	481	AAT
+	482	GGA
+	483	TCT
+	484	ATC
+	485	TCC
+	486	CTC
+	487	ACA
+	488	TGC
+	489	TTG
+	490	GCC
+	491	CTG
+	492	GGG
+	493	GGA
+	494	GTG
+	495	ATG
+	496	ATC
+	497	TTC
+	498	CTC
+	499	TCC
+	500	ACG
+	501	GCT
+	502	GTT
+	503	TCT
+	504	GCT
+
+2022-07-20 17:26:01,946 - INFO - Setting up for Bayesian inference of the prefs
+2022-07-20 17:26:03,448 - INFO - Average mutation, pre-selection, and post-selection error rates:
+	0.004390301188034983
+	[2.31799834e-04 9.43766923e-07 2.45630786e-07]
+	[3.61810161e-04 3.89035388e-07 3.55284676e-07]
+2022-07-20 17:26:03,448 - INFO - Compiling ``pystan`` model...
+2022-07-20 17:26:49,409 - INFO - Completed compiling ``pystan`` model.
+
+2022-07-20 17:26:49,443 - INFO - Beginning MCMC runs...
+2022-07-20 17:28:15,108 - INFO - Getting results for site 2...
+2022-07-20 17:28:15,111 - INFO - Finished for site 2:
+	Beginning MCMC at Wed Jul 20 17:26:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0181984497991357 and mean Neff = 219.3993111269627
+	MCMC converged at Wed Jul 20 17:28:14 2022.
+
+2022-07-20 17:28:18,116 - INFO - Getting results for site 1...
+2022-07-20 17:28:18,116 - INFO - Finished for site 1:
+	Beginning MCMC at Wed Jul 20 17:26:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0260765617390102 and mean Neff = 224.34623030985955
+	MCMC converged at Wed Jul 20 17:28:17 2022.
+
+2022-07-20 17:28:23,125 - INFO - Getting results for site 3...
+2022-07-20 17:28:23,127 - INFO - Finished for site 3:
+	Beginning MCMC at Wed Jul 20 17:26:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0279156224101644 and mean Neff = 225.11207040857204
+	MCMC converged at Wed Jul 20 17:28:22 2022.
+
+2022-07-20 17:29:36,226 - INFO - Getting results for site 5...
+2022-07-20 17:29:36,229 - INFO - Finished for site 5:
+	Beginning MCMC at Wed Jul 20 17:28:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0358208721384388 and mean Neff = 149.15545191474587
+	MCMC converged at Wed Jul 20 17:29:35 2022.
+
+2022-07-20 17:29:47,244 - INFO - Getting results for site 4...
+2022-07-20 17:29:47,246 - INFO - Finished for site 4:
+	Beginning MCMC at Wed Jul 20 17:28:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0245809509567245 and mean Neff = 194.19684882579313
+	MCMC converged at Wed Jul 20 17:29:46 2022.
+
+2022-07-20 17:30:32,305 - INFO - Getting results for site 6...
+2022-07-20 17:30:32,307 - INFO - Finished for site 6:
+	Beginning MCMC at Wed Jul 20 17:28:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0186155773011802 and mean Neff = 235.08208617861493
+	MCMC converged at Wed Jul 20 17:30:31 2022.
+
+2022-07-20 17:30:48,334 - INFO - Getting results for site 7...
+2022-07-20 17:30:48,337 - INFO - Finished for site 7:
+	Beginning MCMC at Wed Jul 20 17:29:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0306532359849678 and mean Neff = 138.02521348832477
+	MCMC converged at Wed Jul 20 17:30:47 2022.
+
+2022-07-20 17:31:28,400 - INFO - Getting results for site 8...
+2022-07-20 17:31:28,401 - INFO - Finished for site 8:
+	Beginning MCMC at Wed Jul 20 17:29:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0249163171779987 and mean Neff = 166.81421288327272
+	MCMC converged at Wed Jul 20 17:31:27 2022.
+
+2022-07-20 17:31:46,430 - INFO - Getting results for site 9...
+2022-07-20 17:31:46,431 - INFO - Finished for site 9:
+	Beginning MCMC at Wed Jul 20 17:30:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0263659931664906 and mean Neff = 173.90210807605843
+	MCMC converged at Wed Jul 20 17:31:46 2022.
+
+2022-07-20 17:32:20,488 - INFO - Getting results for site 10...
+2022-07-20 17:32:20,491 - INFO - Finished for site 10:
+	Beginning MCMC at Wed Jul 20 17:30:47 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.021577296145702 and mean Neff = 220.68214231069834
+	MCMC converged at Wed Jul 20 17:32:20 2022.
+
+2022-07-20 17:32:44,532 - INFO - Getting results for site 11...
+2022-07-20 17:32:44,532 - INFO - Finished for site 11:
+	Beginning MCMC at Wed Jul 20 17:31:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0195382120843524 and mean Neff = 186.51871851603818
+	MCMC converged at Wed Jul 20 17:32:43 2022.
+
+2022-07-20 17:33:14,582 - INFO - Getting results for site 12...
+2022-07-20 17:33:14,583 - INFO - Finished for site 12:
+	Beginning MCMC at Wed Jul 20 17:31:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02619773827236 and mean Neff = 177.7539844550522
+	MCMC converged at Wed Jul 20 17:33:14 2022.
+
+2022-07-20 17:34:05,670 - INFO - Getting results for site 14...
+2022-07-20 17:34:05,670 - INFO - Finished for site 14:
+	Beginning MCMC at Wed Jul 20 17:32:43 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0292258336395785 and mean Neff = 155.35745314674554
+	MCMC converged at Wed Jul 20 17:34:05 2022.
+
+2022-07-20 17:34:36,723 - INFO - Getting results for site 15...
+2022-07-20 17:34:36,724 - INFO - Finished for site 15:
+	Beginning MCMC at Wed Jul 20 17:33:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0197290046751941 and mean Neff = 223.02456948910358
+	MCMC converged at Wed Jul 20 17:34:36 2022.
+
+2022-07-20 17:35:15,790 - INFO - Getting results for site 16...
+2022-07-20 17:35:15,790 - INFO - Finished for site 16:
+	Beginning MCMC at Wed Jul 20 17:34:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.035989813862021 and mean Neff = 133.29949274921643
+	MCMC converged at Wed Jul 20 17:35:15 2022.
+
+2022-07-20 17:35:26,809 - INFO - Getting results for site 13...
+2022-07-20 17:35:26,811 - INFO - Finished for site 13:
+	Beginning MCMC at Wed Jul 20 17:32:20 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0220641884321058 and mean Neff = 203.20231357719123
+	MCMC converged at Wed Jul 20 17:35:26 2022.
+
+2022-07-20 17:36:08,883 - INFO - Getting results for site 17...
+2022-07-20 17:36:08,886 - INFO - Finished for site 17:
+	Beginning MCMC at Wed Jul 20 17:34:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0268082315745952 and mean Neff = 177.98597723390438
+	MCMC converged at Wed Jul 20 17:36:08 2022.
+
+2022-07-20 17:36:37,932 - INFO - Getting results for site 18...
+2022-07-20 17:36:37,933 - INFO - Finished for site 18:
+	Beginning MCMC at Wed Jul 20 17:35:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.024652439837867 and mean Neff = 187.5853040729957
+	MCMC converged at Wed Jul 20 17:36:37 2022.
+
+2022-07-20 17:36:44,944 - INFO - Getting results for site 19...
+2022-07-20 17:36:44,946 - INFO - Finished for site 19:
+	Beginning MCMC at Wed Jul 20 17:35:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0286052575957507 and mean Neff = 184.06657461005707
+	MCMC converged at Wed Jul 20 17:36:44 2022.
+
+2022-07-20 17:38:00,072 - INFO - Getting results for site 21...
+2022-07-20 17:38:00,074 - INFO - Finished for site 21:
+	Beginning MCMC at Wed Jul 20 17:36:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0195725364393031 and mean Neff = 201.90105536993494
+	MCMC converged at Wed Jul 20 17:37:59 2022.
+
+2022-07-20 17:38:38,136 - INFO - Getting results for site 22...
+2022-07-20 17:38:38,137 - INFO - Finished for site 22:
+	Beginning MCMC at Wed Jul 20 17:36:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0133669443953408 and mean Neff = 268.7557272696457
+	MCMC converged at Wed Jul 20 17:38:37 2022.
+
+2022-07-20 17:39:24,212 - INFO - Getting results for site 20...
+2022-07-20 17:39:24,213 - INFO - Finished for site 20:
+	Beginning MCMC at Wed Jul 20 17:36:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0168683338311046 and mean Neff = 263.30254212800617
+	MCMC converged at Wed Jul 20 17:39:23 2022.
+
+2022-07-20 17:40:51,354 - INFO - Getting results for site 25...
+2022-07-20 17:40:51,355 - INFO - Finished for site 25:
+	Beginning MCMC at Wed Jul 20 17:39:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.016259813307438 and mean Neff = 218.54648730974878
+	MCMC converged at Wed Jul 20 17:40:50 2022.
+
+2022-07-20 17:41:04,373 - INFO - Getting results for site 24...
+2022-07-20 17:41:04,374 - INFO - Finished for site 24:
+	Beginning MCMC at Wed Jul 20 17:38:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0243203241591055 and mean Neff = 216.24295967610252
+	MCMC converged at Wed Jul 20 17:41:04 2022.
+
+2022-07-20 17:41:09,382 - INFO - Getting results for site 23...
+2022-07-20 17:41:09,383 - INFO - Finished for site 23:
+	Beginning MCMC at Wed Jul 20 17:37:59 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0170573102052174 and mean Neff = 238.1344670364991
+	MCMC converged at Wed Jul 20 17:41:08 2022.
+
+2022-07-20 17:42:23,505 - INFO - Getting results for site 26...
+2022-07-20 17:42:23,505 - INFO - Finished for site 26:
+	Beginning MCMC at Wed Jul 20 17:40:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.021787531012979 and mean Neff = 222.9527771904139
+	MCMC converged at Wed Jul 20 17:42:22 2022.
+
+2022-07-20 17:42:30,517 - INFO - Getting results for site 28...
+2022-07-20 17:42:30,518 - INFO - Finished for site 28:
+	Beginning MCMC at Wed Jul 20 17:41:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.025316198144184 and mean Neff = 151.44603311478141
+	MCMC converged at Wed Jul 20 17:42:29 2022.
+
+2022-07-20 17:43:06,579 - INFO - Getting results for site 27...
+2022-07-20 17:43:06,579 - INFO - Finished for site 27:
+	Beginning MCMC at Wed Jul 20 17:41:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0343795892343521 and mean Neff = 180.1017895927834
+	MCMC converged at Wed Jul 20 17:43:05 2022.
+
+2022-07-20 17:44:01,668 - INFO - Getting results for site 30...
+2022-07-20 17:44:01,670 - INFO - Finished for site 30:
+	Beginning MCMC at Wed Jul 20 17:42:29 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.016917269848617 and mean Neff = 253.6199810210619
+	MCMC converged at Wed Jul 20 17:44:01 2022.
+
+2022-07-20 17:44:08,681 - INFO - Getting results for site 29...
+2022-07-20 17:44:08,682 - INFO - Finished for site 29:
+	Beginning MCMC at Wed Jul 20 17:42:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0349563427756547 and mean Neff = 182.00554381075526
+	MCMC converged at Wed Jul 20 17:44:08 2022.
+
+2022-07-20 17:44:40,732 - INFO - Getting results for site 31...
+2022-07-20 17:44:40,733 - INFO - Finished for site 31:
+	Beginning MCMC at Wed Jul 20 17:43:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0178178586361584 and mean Neff = 212.99658292791258
+	MCMC converged at Wed Jul 20 17:44:40 2022.
+
+2022-07-20 17:45:19,798 - INFO - Getting results for site 32...
+2022-07-20 17:45:19,799 - INFO - Finished for site 32:
+	Beginning MCMC at Wed Jul 20 17:44:01 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0219833733425747 and mean Neff = 202.7563955733984
+	MCMC converged at Wed Jul 20 17:45:19 2022.
+
+2022-07-20 17:45:34,825 - INFO - Getting results for site 33...
+2022-07-20 17:45:34,827 - INFO - Finished for site 33:
+	Beginning MCMC at Wed Jul 20 17:44:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0328309409075846 and mean Neff = 167.1719863458295
+	MCMC converged at Wed Jul 20 17:45:34 2022.
+
+2022-07-20 17:46:27,917 - INFO - Getting results for site 34...
+2022-07-20 17:46:27,918 - INFO - Finished for site 34:
+	Beginning MCMC at Wed Jul 20 17:44:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0186871914555087 and mean Neff = 227.11165179333344
+	MCMC converged at Wed Jul 20 17:46:27 2022.
+
+2022-07-20 17:46:57,969 - INFO - Getting results for site 36...
+2022-07-20 17:46:57,971 - INFO - Finished for site 36:
+	Beginning MCMC at Wed Jul 20 17:45:34 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0497277248202506 and mean Neff = 123.39444204571039
+	MCMC converged at Wed Jul 20 17:46:57 2022.
+
+2022-07-20 17:46:58,973 - INFO - Getting results for site 35...
+2022-07-20 17:46:58,973 - INFO - Finished for site 35:
+	Beginning MCMC at Wed Jul 20 17:45:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.017086021474464 and mean Neff = 239.34875232793388
+	MCMC converged at Wed Jul 20 17:46:58 2022.
+
+2022-07-20 17:47:52,064 - INFO - Getting results for site 37...
+2022-07-20 17:47:52,065 - INFO - Finished for site 37:
+	Beginning MCMC at Wed Jul 20 17:46:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0462462330768365 and mean Neff = 160.57587277721422
+	MCMC converged at Wed Jul 20 17:47:51 2022.
+
+2022-07-20 17:48:24,120 - INFO - Getting results for site 38...
+2022-07-20 17:48:24,122 - INFO - Finished for site 38:
+	Beginning MCMC at Wed Jul 20 17:46:57 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0223735139839187 and mean Neff = 179.7289998009506
+	MCMC converged at Wed Jul 20 17:48:23 2022.
+
+2022-07-20 17:48:26,126 - INFO - Getting results for site 39...
+2022-07-20 17:48:26,126 - INFO - Finished for site 39:
+	Beginning MCMC at Wed Jul 20 17:46:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.029316661683564 and mean Neff = 214.96507604967246
+	MCMC converged at Wed Jul 20 17:48:25 2022.
+
+2022-07-20 17:49:39,251 - INFO - Getting results for site 40...
+2022-07-20 17:49:39,251 - INFO - Finished for site 40:
+	Beginning MCMC at Wed Jul 20 17:47:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0202424449741496 and mean Neff = 226.18128392757157
+	MCMC converged at Wed Jul 20 17:49:39 2022.
+
+2022-07-20 17:49:42,257 - INFO - Getting results for site 41...
+2022-07-20 17:49:42,257 - INFO - Finished for site 41:
+	Beginning MCMC at Wed Jul 20 17:48:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0259234142149036 and mean Neff = 186.1354647956812
+	MCMC converged at Wed Jul 20 17:49:42 2022.
+
+2022-07-20 17:49:55,279 - INFO - Getting results for site 42...
+2022-07-20 17:49:55,280 - INFO - Finished for site 42:
+	Beginning MCMC at Wed Jul 20 17:48:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0140454848874618 and mean Neff = 276.583865870639
+	MCMC converged at Wed Jul 20 17:49:54 2022.
+
+2022-07-20 17:51:04,397 - INFO - Getting results for site 43...
+2022-07-20 17:51:04,398 - INFO - Finished for site 43:
+	Beginning MCMC at Wed Jul 20 17:49:39 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0207131395182016 and mean Neff = 220.41815070250126
+	MCMC converged at Wed Jul 20 17:51:04 2022.
+
+2022-07-20 17:51:08,405 - INFO - Getting results for site 44...
+2022-07-20 17:51:08,405 - INFO - Finished for site 44:
+	Beginning MCMC at Wed Jul 20 17:49:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0166961280432059 and mean Neff = 234.5773702632505
+	MCMC converged at Wed Jul 20 17:51:08 2022.
+
+2022-07-20 17:51:38,456 - INFO - Getting results for site 45...
+2022-07-20 17:51:38,456 - INFO - Finished for site 45:
+	Beginning MCMC at Wed Jul 20 17:49:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0189898092816176 and mean Neff = 208.25703165763747
+	MCMC converged at Wed Jul 20 17:51:38 2022.
+
+2022-07-20 17:52:26,532 - INFO - Getting results for site 46...
+2022-07-20 17:52:26,534 - INFO - Finished for site 46:
+	Beginning MCMC at Wed Jul 20 17:51:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.029147129969979 and mean Neff = 156.3258508906614
+	MCMC converged at Wed Jul 20 17:52:25 2022.
+
+2022-07-20 17:52:53,579 - INFO - Getting results for site 47...
+2022-07-20 17:52:53,585 - INFO - Finished for site 47:
+	Beginning MCMC at Wed Jul 20 17:51:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0310186228718599 and mean Neff = 174.4521758845986
+	MCMC converged at Wed Jul 20 17:52:53 2022.
+
+2022-07-20 17:52:57,592 - INFO - Getting results for site 48...
+2022-07-20 17:52:57,593 - INFO - Finished for site 48:
+	Beginning MCMC at Wed Jul 20 17:51:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0226493949687347 and mean Neff = 164.42735355186716
+	MCMC converged at Wed Jul 20 17:52:56 2022.
+
+2022-07-20 17:54:07,710 - INFO - Getting results for site 49...
+2022-07-20 17:54:07,710 - INFO - Finished for site 49:
+	Beginning MCMC at Wed Jul 20 17:52:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0356932948628619 and mean Neff = 182.69061365441397
+	MCMC converged at Wed Jul 20 17:54:06 2022.
+
+2022-07-20 17:54:10,716 - INFO - Getting results for site 51...
+2022-07-20 17:54:10,716 - INFO - Finished for site 51:
+	Beginning MCMC at Wed Jul 20 17:52:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0234926415035435 and mean Neff = 190.62376478940877
+	MCMC converged at Wed Jul 20 17:54:09 2022.
+
+2022-07-20 17:54:19,731 - INFO - Getting results for site 50...
+2022-07-20 17:54:19,732 - INFO - Finished for site 50:
+	Beginning MCMC at Wed Jul 20 17:52:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0188585741974365 and mean Neff = 192.71812116340027
+	MCMC converged at Wed Jul 20 17:54:19 2022.
+
+2022-07-20 17:55:35,836 - INFO - Getting results for site 52...
+2022-07-20 17:55:35,836 - INFO - Finished for site 52:
+	Beginning MCMC at Wed Jul 20 17:54:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0178693058284078 and mean Neff = 223.18911276050508
+	MCMC converged at Wed Jul 20 17:55:35 2022.
+
+2022-07-20 17:55:52,864 - INFO - Getting results for site 54...
+2022-07-20 17:55:52,867 - INFO - Finished for site 54:
+	Beginning MCMC at Wed Jul 20 17:54:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02087987767734 and mean Neff = 188.28482434463984
+	MCMC converged at Wed Jul 20 17:55:52 2022.
+
+2022-07-20 17:56:52,969 - INFO - Getting results for site 53...
+2022-07-20 17:56:52,970 - INFO - Finished for site 53:
+	Beginning MCMC at Wed Jul 20 17:54:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0167098376409318 and mean Neff = 252.99791464414642
+	MCMC converged at Wed Jul 20 17:56:52 2022.
+
+2022-07-20 17:57:27,028 - INFO - Getting results for site 56...
+2022-07-20 17:57:27,036 - INFO - Finished for site 56:
+	Beginning MCMC at Wed Jul 20 17:55:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0183648886732242 and mean Neff = 227.57915592927233
+	MCMC converged at Wed Jul 20 17:57:26 2022.
+
+2022-07-20 17:58:40,152 - INFO - Getting results for site 57...
+2022-07-20 17:58:40,154 - INFO - Finished for site 57:
+	Beginning MCMC at Wed Jul 20 17:56:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0277117078259586 and mean Neff = 189.04321818147397
+	MCMC converged at Wed Jul 20 17:58:40 2022.
+
+2022-07-20 17:58:47,167 - INFO - Getting results for site 55...
+2022-07-20 17:58:47,167 - INFO - Finished for site 55:
+	Beginning MCMC at Wed Jul 20 17:55:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.043838683218417 and mean Neff = 102.71333120728181
+	MCMC converged at Wed Jul 20 17:58:46 2022.
+
+2022-07-20 17:58:56,183 - INFO - Getting results for site 58...
+2022-07-20 17:58:56,183 - INFO - Finished for site 58:
+	Beginning MCMC at Wed Jul 20 17:57:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0261067300327524 and mean Neff = 161.61484692022265
+	MCMC converged at Wed Jul 20 17:58:55 2022.
+
+2022-07-20 18:00:15,318 - INFO - Getting results for site 60...
+2022-07-20 18:00:15,325 - INFO - Finished for site 60:
+	Beginning MCMC at Wed Jul 20 17:58:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0219964484360315 and mean Neff = 216.1165111630782
+	MCMC converged at Wed Jul 20 18:00:14 2022.
+
+2022-07-20 18:00:45,367 - INFO - Getting results for site 61...
+2022-07-20 18:00:45,368 - INFO - Finished for site 61:
+	Beginning MCMC at Wed Jul 20 17:58:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0243409383337567 and mean Neff = 178.15078090756467
+	MCMC converged at Wed Jul 20 18:00:45 2022.
+
+2022-07-20 18:00:55,385 - INFO - Getting results for site 59...
+2022-07-20 18:00:55,386 - INFO - Finished for site 59:
+	Beginning MCMC at Wed Jul 20 17:58:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.013974667468608 and mean Neff = 272.8603186793314
+	MCMC converged at Wed Jul 20 18:00:54 2022.
+
+2022-07-20 18:01:29,440 - INFO - Getting results for site 62...
+2022-07-20 18:01:29,440 - INFO - Finished for site 62:
+	Beginning MCMC at Wed Jul 20 18:00:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0292871407213762 and mean Neff = 154.61196828414504
+	MCMC converged at Wed Jul 20 18:01:29 2022.
+
+2022-07-20 18:02:35,529 - INFO - Getting results for site 63...
+2022-07-20 18:02:35,530 - INFO - Finished for site 63:
+	Beginning MCMC at Wed Jul 20 18:00:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0236080231868132 and mean Neff = 200.5145862262526
+	MCMC converged at Wed Jul 20 18:02:35 2022.
+
+2022-07-20 18:02:39,536 - INFO - Getting results for site 64...
+2022-07-20 18:02:39,536 - INFO - Finished for site 64:
+	Beginning MCMC at Wed Jul 20 18:00:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0442063577499265 and mean Neff = 109.01926690993723
+	MCMC converged at Wed Jul 20 18:02:38 2022.
+
+2022-07-20 18:03:40,617 - INFO - Getting results for site 65...
+2022-07-20 18:03:40,620 - INFO - Finished for site 65:
+	Beginning MCMC at Wed Jul 20 18:01:29 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0227574019949062 and mean Neff = 197.49580711070035
+	MCMC converged at Wed Jul 20 18:03:39 2022.
+
+2022-07-20 18:03:57,642 - INFO - Getting results for site 66...
+2022-07-20 18:03:57,643 - INFO - Finished for site 66:
+	Beginning MCMC at Wed Jul 20 18:02:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0411707606203269 and mean Neff = 118.76804417711847
+	MCMC converged at Wed Jul 20 18:03:56 2022.
+
+2022-07-20 18:04:09,658 - INFO - Getting results for site 67...
+2022-07-20 18:04:09,661 - INFO - Finished for site 67:
+	Beginning MCMC at Wed Jul 20 18:02:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0206615878018002 and mean Neff = 202.21658084264132
+	MCMC converged at Wed Jul 20 18:04:08 2022.
+
+2022-07-20 18:05:26,764 - INFO - Getting results for site 68...
+2022-07-20 18:05:26,764 - INFO - Finished for site 68:
+	Beginning MCMC at Wed Jul 20 18:03:39 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0283969777681694 and mean Neff = 187.28057082763513
+	MCMC converged at Wed Jul 20 18:05:25 2022.
+
+2022-07-20 18:05:32,773 - INFO - Getting results for site 69...
+2022-07-20 18:05:32,776 - INFO - Finished for site 69:
+	Beginning MCMC at Wed Jul 20 18:03:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0230534254760772 and mean Neff = 159.3464926695455
+	MCMC converged at Wed Jul 20 18:05:32 2022.
+
+2022-07-20 18:05:33,777 - INFO - Getting results for site 70...
+2022-07-20 18:05:33,777 - INFO - Finished for site 70:
+	Beginning MCMC at Wed Jul 20 18:04:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0210145740010177 and mean Neff = 174.87870852357193
+	MCMC converged at Wed Jul 20 18:05:32 2022.
+
+2022-07-20 18:06:41,885 - INFO - Getting results for site 73...
+2022-07-20 18:06:41,886 - INFO - Finished for site 73:
+	Beginning MCMC at Wed Jul 20 18:05:33 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0220489000159054 and mean Neff = 160.9632658344919
+	MCMC converged at Wed Jul 20 18:06:41 2022.
+
+2022-07-20 18:06:50,902 - INFO - Getting results for site 72...
+2022-07-20 18:06:50,903 - INFO - Finished for site 72:
+	Beginning MCMC at Wed Jul 20 18:05:32 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0219131701063713 and mean Neff = 192.62964479240622
+	MCMC converged at Wed Jul 20 18:06:50 2022.
+
+2022-07-20 18:07:45,997 - INFO - Getting results for site 71...
+2022-07-20 18:07:45,998 - INFO - Finished for site 71:
+	Beginning MCMC at Wed Jul 20 18:05:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0186636248720424 and mean Neff = 251.9816830991971
+	MCMC converged at Wed Jul 20 18:07:45 2022.
+
+2022-07-20 18:08:24,064 - INFO - Getting results for site 75...
+2022-07-20 18:08:24,064 - INFO - Finished for site 75:
+	Beginning MCMC at Wed Jul 20 18:06:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.024354569750561 and mean Neff = 184.58025969838442
+	MCMC converged at Wed Jul 20 18:08:23 2022.
+
+2022-07-20 18:08:38,088 - INFO - Getting results for site 74...
+2022-07-20 18:08:38,091 - INFO - Finished for site 74:
+	Beginning MCMC at Wed Jul 20 18:06:41 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0177155731956409 and mean Neff = 272.73996799686086
+	MCMC converged at Wed Jul 20 18:08:37 2022.
+
+2022-07-20 18:09:05,137 - INFO - Getting results for site 76...
+2022-07-20 18:09:05,138 - INFO - Finished for site 76:
+	Beginning MCMC at Wed Jul 20 18:07:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0254904213998013 and mean Neff = 182.2273317377521
+	MCMC converged at Wed Jul 20 18:09:04 2022.
+
+2022-07-20 18:09:40,197 - INFO - Getting results for site 77...
+2022-07-20 18:09:40,201 - INFO - Finished for site 77:
+	Beginning MCMC at Wed Jul 20 18:08:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0329650595606537 and mean Neff = 154.43238252453543
+	MCMC converged at Wed Jul 20 18:09:39 2022.
+
+2022-07-20 18:09:58,230 - INFO - Getting results for site 78...
+2022-07-20 18:09:58,231 - INFO - Finished for site 78:
+	Beginning MCMC at Wed Jul 20 18:08:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0218589746932771 and mean Neff = 201.83727664008242
+	MCMC converged at Wed Jul 20 18:09:58 2022.
+
+2022-07-20 18:11:01,337 - INFO - Getting results for site 80...
+2022-07-20 18:11:01,338 - INFO - Finished for site 80:
+	Beginning MCMC at Wed Jul 20 18:09:39 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0254748107806608 and mean Neff = 175.8055557709967
+	MCMC converged at Wed Jul 20 18:11:00 2022.
+
+2022-07-20 18:11:12,357 - INFO - Getting results for site 79...
+2022-07-20 18:11:12,360 - INFO - Finished for site 79:
+	Beginning MCMC at Wed Jul 20 18:09:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0207407576318004 and mean Neff = 222.7315384716985
+	MCMC converged at Wed Jul 20 18:11:11 2022.
+
+2022-07-20 18:11:17,368 - INFO - Getting results for site 81...
+2022-07-20 18:11:17,370 - INFO - Finished for site 81:
+	Beginning MCMC at Wed Jul 20 18:09:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0391861071959403 and mean Neff = 135.009501351471
+	MCMC converged at Wed Jul 20 18:11:17 2022.
+
+2022-07-20 18:12:10,441 - INFO - Getting results for site 82...
+2022-07-20 18:12:10,442 - INFO - Finished for site 82:
+	Beginning MCMC at Wed Jul 20 18:11:00 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0352777263993411 and mean Neff = 150.74523485464664
+	MCMC converged at Wed Jul 20 18:12:10 2022.
+
+2022-07-20 18:12:24,460 - INFO - Getting results for site 83...
+2022-07-20 18:12:24,461 - INFO - Finished for site 83:
+	Beginning MCMC at Wed Jul 20 18:11:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0389465654287868 and mean Neff = 115.6093945080986
+	MCMC converged at Wed Jul 20 18:12:23 2022.
+
+2022-07-20 18:12:51,506 - INFO - Getting results for site 84...
+2022-07-20 18:12:51,509 - INFO - Finished for site 84:
+	Beginning MCMC at Wed Jul 20 18:11:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.035792220307687 and mean Neff = 146.9554253600565
+	MCMC converged at Wed Jul 20 18:12:50 2022.
+
+2022-07-20 18:13:24,565 - INFO - Getting results for site 85...
+2022-07-20 18:13:24,567 - INFO - Finished for site 85:
+	Beginning MCMC at Wed Jul 20 18:12:10 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0490211776138172 and mean Neff = 110.65022416728061
+	MCMC converged at Wed Jul 20 18:13:23 2022.
+
+2022-07-20 18:13:58,625 - INFO - Getting results for site 86...
+2022-07-20 18:13:58,628 - INFO - Finished for site 86:
+	Beginning MCMC at Wed Jul 20 18:12:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0244515561680836 and mean Neff = 149.32998615548226
+	MCMC converged at Wed Jul 20 18:13:58 2022.
+
+2022-07-20 18:14:25,673 - INFO - Getting results for site 87...
+2022-07-20 18:14:25,673 - INFO - Finished for site 87:
+	Beginning MCMC at Wed Jul 20 18:12:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.018634187665779 and mean Neff = 232.58134355869166
+	MCMC converged at Wed Jul 20 18:14:24 2022.
+
+2022-07-20 18:14:46,709 - INFO - Getting results for site 88...
+2022-07-20 18:14:46,711 - INFO - Finished for site 88:
+	Beginning MCMC at Wed Jul 20 18:13:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0376315255269408 and mean Neff = 119.29438262581536
+	MCMC converged at Wed Jul 20 18:14:46 2022.
+
+2022-07-20 18:15:22,772 - INFO - Getting results for site 89...
+2022-07-20 18:15:22,774 - INFO - Finished for site 89:
+	Beginning MCMC at Wed Jul 20 18:13:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0626643500645088 and mean Neff = 138.68214737933437
+	MCMC converged at Wed Jul 20 18:15:22 2022.
+
+2022-07-20 18:16:17,845 - INFO - Getting results for site 91...
+2022-07-20 18:16:17,848 - INFO - Finished for site 91:
+	Beginning MCMC at Wed Jul 20 18:14:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0244875702164815 and mean Neff = 186.71543460499862
+	MCMC converged at Wed Jul 20 18:16:17 2022.
+
+2022-07-20 18:16:31,866 - INFO - Getting results for site 90...
+2022-07-20 18:16:31,867 - INFO - Finished for site 90:
+	Beginning MCMC at Wed Jul 20 18:14:24 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.029381674387691 and mean Neff = 153.0342634158512
+	MCMC converged at Wed Jul 20 18:16:31 2022.
+
+2022-07-20 18:17:05,922 - INFO - Getting results for site 92...
+2022-07-20 18:17:05,923 - INFO - Finished for site 92:
+	Beginning MCMC at Wed Jul 20 18:15:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0185124637092613 and mean Neff = 227.10823504154115
+	MCMC converged at Wed Jul 20 18:17:05 2022.
+
+2022-07-20 18:19:15,110 - INFO - Getting results for site 95...
+2022-07-20 18:19:15,113 - INFO - Finished for site 95:
+	Beginning MCMC at Wed Jul 20 18:17:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.030865952564017 and mean Neff = 152.10922613770657
+	MCMC converged at Wed Jul 20 18:19:14 2022.
+
+2022-07-20 18:19:20,120 - INFO - Getting results for site 94...
+2022-07-20 18:19:20,120 - INFO - Finished for site 94:
+	Beginning MCMC at Wed Jul 20 18:16:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.036442703430898 and mean Neff = 123.87011480302719
+	MCMC converged at Wed Jul 20 18:19:19 2022.
+
+2022-07-20 18:20:09,185 - INFO - Getting results for site 93...
+2022-07-20 18:20:09,187 - INFO - Finished for site 93:
+	Beginning MCMC at Wed Jul 20 18:16:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0277893926921726 and mean Neff = 151.8949875846621
+	MCMC converged at Wed Jul 20 18:20:08 2022.
+
+2022-07-20 18:20:38,225 - INFO - Getting results for site 96...
+2022-07-20 18:20:38,226 - INFO - Finished for site 96:
+	Beginning MCMC at Wed Jul 20 18:19:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0340419281623088 and mean Neff = 153.42379779479856
+	MCMC converged at Wed Jul 20 18:20:37 2022.
+
+2022-07-20 18:20:46,237 - INFO - Getting results for site 97...
+2022-07-20 18:20:46,238 - INFO - Finished for site 97:
+	Beginning MCMC at Wed Jul 20 18:19:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0299519830113808 and mean Neff = 164.06862671182876
+	MCMC converged at Wed Jul 20 18:20:45 2022.
+
+2022-07-20 18:22:07,346 - INFO - Getting results for site 100...
+2022-07-20 18:22:07,349 - INFO - Finished for site 100:
+	Beginning MCMC at Wed Jul 20 18:20:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0219607256928485 and mean Neff = 204.42614863680421
+	MCMC converged at Wed Jul 20 18:22:06 2022.
+
+2022-07-20 18:22:09,352 - INFO - Getting results for site 99...
+2022-07-20 18:22:09,352 - INFO - Finished for site 99:
+	Beginning MCMC at Wed Jul 20 18:20:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0247265913193597 and mean Neff = 190.97455234667063
+	MCMC converged at Wed Jul 20 18:22:09 2022.
+
+2022-07-20 18:23:07,429 - INFO - Getting results for site 98...
+2022-07-20 18:23:07,430 - INFO - Finished for site 98:
+	Beginning MCMC at Wed Jul 20 18:20:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0163321382196808 and mean Neff = 271.16395141595774
+	MCMC converged at Wed Jul 20 18:23:07 2022.
+
+2022-07-20 18:23:41,489 - INFO - Getting results for site 102...
+2022-07-20 18:23:41,492 - INFO - Finished for site 102:
+	Beginning MCMC at Wed Jul 20 18:22:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0234864615596604 and mean Neff = 192.0832135514091
+	MCMC converged at Wed Jul 20 18:23:40 2022.
+
+2022-07-20 18:24:42,597 - INFO - Getting results for site 103...
+2022-07-20 18:24:42,597 - INFO - Finished for site 103:
+	Beginning MCMC at Wed Jul 20 18:23:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0218110257462345 and mean Neff = 229.06855703585285
+	MCMC converged at Wed Jul 20 18:24:41 2022.
+
+2022-07-20 18:25:03,632 - INFO - Getting results for site 104...
+2022-07-20 18:25:03,632 - INFO - Finished for site 104:
+	Beginning MCMC at Wed Jul 20 18:23:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0243856883264417 and mean Neff = 196.28580982714726
+	MCMC converged at Wed Jul 20 18:25:03 2022.
+
+2022-07-20 18:25:55,713 - INFO - Getting results for site 101...
+2022-07-20 18:25:55,713 - INFO - Finished for site 101:
+	Beginning MCMC at Wed Jul 20 18:22:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0191907212911353 and mean Neff = 237.8153813061731
+	MCMC converged at Wed Jul 20 18:25:55 2022.
+
+2022-07-20 18:26:06,732 - INFO - Getting results for site 105...
+2022-07-20 18:26:06,733 - INFO - Finished for site 105:
+	Beginning MCMC at Wed Jul 20 18:24:41 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.019737111989937 and mean Neff = 191.38672832236296
+	MCMC converged at Wed Jul 20 18:26:06 2022.
+
+2022-07-20 18:27:07,839 - INFO - Getting results for site 106...
+2022-07-20 18:27:07,839 - INFO - Finished for site 106:
+	Beginning MCMC at Wed Jul 20 18:25:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0201573896629823 and mean Neff = 200.74282471195488
+	MCMC converged at Wed Jul 20 18:27:07 2022.
+
+2022-07-20 18:27:42,899 - INFO - Getting results for site 107...
+2022-07-20 18:27:42,900 - INFO - Finished for site 107:
+	Beginning MCMC at Wed Jul 20 18:25:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0241870550768524 and mean Neff = 192.04367192473563
+	MCMC converged at Wed Jul 20 18:27:42 2022.
+
+2022-07-20 18:27:51,916 - INFO - Getting results for site 108...
+2022-07-20 18:27:51,918 - INFO - Finished for site 108:
+	Beginning MCMC at Wed Jul 20 18:26:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0188136013369733 and mean Neff = 238.48749416908908
+	MCMC converged at Wed Jul 20 18:27:51 2022.
+
+2022-07-20 18:28:44,008 - INFO - Getting results for site 109...
+2022-07-20 18:28:44,010 - INFO - Finished for site 109:
+	Beginning MCMC at Wed Jul 20 18:27:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.016765752542492 and mean Neff = 242.02961755211624
+	MCMC converged at Wed Jul 20 18:28:43 2022.
+
+2022-07-20 18:28:53,026 - INFO - Getting results for site 110...
+2022-07-20 18:28:53,027 - INFO - Finished for site 110:
+	Beginning MCMC at Wed Jul 20 18:27:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0288474704190218 and mean Neff = 157.6306488925381
+	MCMC converged at Wed Jul 20 18:28:52 2022.
+
+2022-07-20 18:29:24,080 - INFO - Getting results for site 111...
+2022-07-20 18:29:24,083 - INFO - Finished for site 111:
+	Beginning MCMC at Wed Jul 20 18:27:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0225186068205754 and mean Neff = 217.88967518719807
+	MCMC converged at Wed Jul 20 18:29:23 2022.
+
+2022-07-20 18:30:19,174 - INFO - Getting results for site 113...
+2022-07-20 18:30:19,176 - INFO - Finished for site 113:
+	Beginning MCMC at Wed Jul 20 18:28:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0246851494948972 and mean Neff = 182.2759947970745
+	MCMC converged at Wed Jul 20 18:30:18 2022.
+
+2022-07-20 18:31:01,247 - INFO - Getting results for site 114...
+2022-07-20 18:31:01,247 - INFO - Finished for site 114:
+	Beginning MCMC at Wed Jul 20 18:29:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0203870435687297 and mean Neff = 204.3225923251018
+	MCMC converged at Wed Jul 20 18:31:00 2022.
+
+2022-07-20 18:31:32,300 - INFO - Getting results for site 112...
+2022-07-20 18:31:32,303 - INFO - Finished for site 112:
+	Beginning MCMC at Wed Jul 20 18:28:43 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.037666465970173 and mean Neff = 153.7879713031926
+	MCMC converged at Wed Jul 20 18:31:31 2022.
+
+2022-07-20 18:32:01,353 - INFO - Getting results for site 115...
+2022-07-20 18:32:01,353 - INFO - Finished for site 115:
+	Beginning MCMC at Wed Jul 20 18:30:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0201825376002296 and mean Neff = 232.68880859107804
+	MCMC converged at Wed Jul 20 18:32:01 2022.
+
+2022-07-20 18:32:27,398 - INFO - Getting results for site 116...
+2022-07-20 18:32:27,401 - INFO - Finished for site 116:
+	Beginning MCMC at Wed Jul 20 18:31:00 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0205273345547714 and mean Neff = 219.02844651552746
+	MCMC converged at Wed Jul 20 18:32:27 2022.
+
+2022-07-20 18:33:01,459 - INFO - Getting results for site 117...
+2022-07-20 18:33:01,462 - INFO - Finished for site 117:
+	Beginning MCMC at Wed Jul 20 18:31:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0230872224816572 and mean Neff = 193.43125522724114
+	MCMC converged at Wed Jul 20 18:33:00 2022.
+
+2022-07-20 18:33:46,539 - INFO - Getting results for site 118...
+2022-07-20 18:33:46,541 - INFO - Finished for site 118:
+	Beginning MCMC at Wed Jul 20 18:32:01 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0262686250586348 and mean Neff = 162.75957644147456
+	MCMC converged at Wed Jul 20 18:33:45 2022.
+
+2022-07-20 18:33:50,548 - INFO - Getting results for site 119...
+2022-07-20 18:33:50,549 - INFO - Finished for site 119:
+	Beginning MCMC at Wed Jul 20 18:32:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0262368120891412 and mean Neff = 182.23134918780715
+	MCMC converged at Wed Jul 20 18:33:49 2022.
+
+2022-07-20 18:34:23,605 - INFO - Getting results for site 120...
+2022-07-20 18:34:23,606 - INFO - Finished for site 120:
+	Beginning MCMC at Wed Jul 20 18:33:00 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0397859614413438 and mean Neff = 136.65303143588585
+	MCMC converged at Wed Jul 20 18:34:22 2022.
+
+2022-07-20 18:35:11,688 - INFO - Getting results for site 122...
+2022-07-20 18:35:11,691 - INFO - Finished for site 122:
+	Beginning MCMC at Wed Jul 20 18:33:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0278275632730505 and mean Neff = 131.21568983497602
+	MCMC converged at Wed Jul 20 18:35:11 2022.
+
+2022-07-20 18:35:21,708 - INFO - Getting results for site 121...
+2022-07-20 18:35:21,709 - INFO - Finished for site 121:
+	Beginning MCMC at Wed Jul 20 18:33:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0183686004711219 and mean Neff = 249.0639633683385
+	MCMC converged at Wed Jul 20 18:35:21 2022.
+
+2022-07-20 18:36:24,816 - INFO - Getting results for site 124...
+2022-07-20 18:36:24,818 - INFO - Finished for site 124:
+	Beginning MCMC at Wed Jul 20 18:35:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.031792544242228 and mean Neff = 129.22292250998674
+	MCMC converged at Wed Jul 20 18:36:24 2022.
+
+2022-07-20 18:36:31,830 - INFO - Getting results for site 123...
+2022-07-20 18:36:31,830 - INFO - Finished for site 123:
+	Beginning MCMC at Wed Jul 20 18:34:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0282986517355028 and mean Neff = 185.50596977067568
+	MCMC converged at Wed Jul 20 18:36:31 2022.
+
+2022-07-20 18:36:52,865 - INFO - Getting results for site 125...
+2022-07-20 18:36:52,867 - INFO - Finished for site 125:
+	Beginning MCMC at Wed Jul 20 18:35:21 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0202566301644835 and mean Neff = 225.26979881882653
+	MCMC converged at Wed Jul 20 18:36:52 2022.
+
+2022-07-20 18:37:40,950 - INFO - Getting results for site 126...
+2022-07-20 18:37:40,950 - INFO - Finished for site 126:
+	Beginning MCMC at Wed Jul 20 18:36:24 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0252207851059405 and mean Neff = 163.88143581132508
+	MCMC converged at Wed Jul 20 18:37:40 2022.
+
+2022-07-20 18:38:01,982 - INFO - Getting results for site 127...
+2022-07-20 18:38:01,985 - INFO - Finished for site 127:
+	Beginning MCMC at Wed Jul 20 18:36:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0244163358086689 and mean Neff = 215.71209053354187
+	MCMC converged at Wed Jul 20 18:38:01 2022.
+
+2022-07-20 18:38:16,009 - INFO - Getting results for site 128...
+2022-07-20 18:38:16,010 - INFO - Finished for site 128:
+	Beginning MCMC at Wed Jul 20 18:36:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0369071135099186 and mean Neff = 140.21367769310365
+	MCMC converged at Wed Jul 20 18:38:15 2022.
+
+2022-07-20 18:38:52,073 - INFO - Getting results for site 129...
+2022-07-20 18:38:52,073 - INFO - Finished for site 129:
+	Beginning MCMC at Wed Jul 20 18:37:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0464332769331297 and mean Neff = 125.37596795072461
+	MCMC converged at Wed Jul 20 18:38:51 2022.
+
+2022-07-20 18:39:20,121 - INFO - Getting results for site 130...
+2022-07-20 18:39:20,122 - INFO - Finished for site 130:
+	Beginning MCMC at Wed Jul 20 18:38:01 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0258201319775024 and mean Neff = 171.99641653281117
+	MCMC converged at Wed Jul 20 18:39:19 2022.
+
+2022-07-20 18:39:32,142 - INFO - Getting results for site 131...
+2022-07-20 18:39:32,143 - INFO - Finished for site 131:
+	Beginning MCMC at Wed Jul 20 18:38:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.040039685729333 and mean Neff = 131.9414206042025
+	MCMC converged at Wed Jul 20 18:39:31 2022.
+
+2022-07-20 18:40:41,247 - INFO - Getting results for site 132...
+2022-07-20 18:40:41,248 - INFO - Finished for site 132:
+	Beginning MCMC at Wed Jul 20 18:38:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0283170588737913 and mean Neff = 173.56839043329933
+	MCMC converged at Wed Jul 20 18:40:40 2022.
+
+2022-07-20 18:40:52,267 - INFO - Getting results for site 134...
+2022-07-20 18:40:52,269 - INFO - Finished for site 134:
+	Beginning MCMC at Wed Jul 20 18:39:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0257257440782028 and mean Neff = 197.3479662667465
+	MCMC converged at Wed Jul 20 18:40:51 2022.
+
+2022-07-20 18:41:48,365 - INFO - Getting results for site 133...
+2022-07-20 18:41:48,367 - INFO - Finished for site 133:
+	Beginning MCMC at Wed Jul 20 18:39:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0199698314250427 and mean Neff = 196.8762477886926
+	MCMC converged at Wed Jul 20 18:41:47 2022.
+
+2022-07-20 18:42:20,421 - INFO - Getting results for site 136...
+2022-07-20 18:42:20,424 - INFO - Finished for site 136:
+	Beginning MCMC at Wed Jul 20 18:40:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0181190171884809 and mean Neff = 234.25938365492553
+	MCMC converged at Wed Jul 20 18:42:19 2022.
+
+2022-07-20 18:43:22,528 - INFO - Getting results for site 137...
+2022-07-20 18:43:22,529 - INFO - Finished for site 137:
+	Beginning MCMC at Wed Jul 20 18:41:47 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0194978825410401 and mean Neff = 195.75988611542465
+	MCMC converged at Wed Jul 20 18:43:21 2022.
+
+2022-07-20 18:43:23,531 - INFO - Getting results for site 135...
+2022-07-20 18:43:23,531 - INFO - Finished for site 135:
+	Beginning MCMC at Wed Jul 20 18:40:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0237017930974228 and mean Neff = 189.88912011344766
+	MCMC converged at Wed Jul 20 18:43:23 2022.
+
+2022-07-20 18:44:31,648 - INFO - Getting results for site 139...
+2022-07-20 18:44:31,649 - INFO - Finished for site 139:
+	Beginning MCMC at Wed Jul 20 18:43:21 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0322257346547257 and mean Neff = 166.95577858547048
+	MCMC converged at Wed Jul 20 18:44:31 2022.
+
+2022-07-20 18:45:05,706 - INFO - Getting results for site 138...
+2022-07-20 18:45:05,707 - INFO - Finished for site 138:
+	Beginning MCMC at Wed Jul 20 18:42:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0483053785470156 and mean Neff = 164.0188576955564
+	MCMC converged at Wed Jul 20 18:45:05 2022.
+
+2022-07-20 18:45:05,707 - INFO - Getting results for site 140...
+2022-07-20 18:45:05,707 - INFO - Finished for site 140:
+	Beginning MCMC at Wed Jul 20 18:43:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0268682494080932 and mean Neff = 170.78870911653667
+	MCMC converged at Wed Jul 20 18:45:04 2022.
+
+2022-07-20 18:46:15,812 - INFO - Getting results for site 142...
+2022-07-20 18:46:15,813 - INFO - Finished for site 142:
+	Beginning MCMC at Wed Jul 20 18:45:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0352227137841985 and mean Neff = 132.77134037135244
+	MCMC converged at Wed Jul 20 18:46:15 2022.
+
+2022-07-20 18:46:33,837 - INFO - Getting results for site 143...
+2022-07-20 18:46:33,838 - INFO - Finished for site 143:
+	Beginning MCMC at Wed Jul 20 18:45:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0193619819799637 and mean Neff = 217.90980095640572
+	MCMC converged at Wed Jul 20 18:46:33 2022.
+
+2022-07-20 18:48:06,961 - INFO - Getting results for site 145...
+2022-07-20 18:48:06,964 - INFO - Finished for site 145:
+	Beginning MCMC at Wed Jul 20 18:46:33 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.016299410491785 and mean Neff = 232.54745103986156
+	MCMC converged at Wed Jul 20 18:48:06 2022.
+
+2022-07-20 18:48:18,985 - INFO - Getting results for site 141...
+2022-07-20 18:48:18,989 - INFO - Finished for site 141:
+	Beginning MCMC at Wed Jul 20 18:44:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0278353659244694 and mean Neff = 169.98881654700833
+	MCMC converged at Wed Jul 20 18:48:18 2022.
+
+2022-07-20 18:48:18,989 - INFO - Getting results for site 144...
+2022-07-20 18:48:18,989 - INFO - Finished for site 144:
+	Beginning MCMC at Wed Jul 20 18:46:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0175259189997963 and mean Neff = 289.8241771584875
+	MCMC converged at Wed Jul 20 18:48:18 2022.
+
+2022-07-20 18:49:27,094 - INFO - Getting results for site 146...
+2022-07-20 18:49:27,095 - INFO - Finished for site 146:
+	Beginning MCMC at Wed Jul 20 18:48:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0557614153658776 and mean Neff = 135.92026145703417
+	MCMC converged at Wed Jul 20 18:49:26 2022.
+
+2022-07-20 18:50:42,222 - INFO - Getting results for site 149...
+2022-07-20 18:50:42,224 - INFO - Finished for site 149:
+	Beginning MCMC at Wed Jul 20 18:49:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0357551445118698 and mean Neff = 131.09128795228716
+	MCMC converged at Wed Jul 20 18:50:41 2022.
+
+2022-07-20 18:50:59,253 - INFO - Getting results for site 147...
+2022-07-20 18:50:59,254 - INFO - Finished for site 147:
+	Beginning MCMC at Wed Jul 20 18:48:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0423947625236167 and mean Neff = 146.16876030282762
+	MCMC converged at Wed Jul 20 18:50:58 2022.
+
+2022-07-20 18:52:22,376 - INFO - Getting results for site 151...
+2022-07-20 18:52:22,378 - INFO - Finished for site 151:
+	Beginning MCMC at Wed Jul 20 18:50:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0368319438711036 and mean Neff = 137.3551018840124
+	MCMC converged at Wed Jul 20 18:52:21 2022.
+
+2022-07-20 18:52:57,438 - INFO - Getting results for site 148...
+2022-07-20 18:52:57,439 - INFO - Finished for site 148:
+	Beginning MCMC at Wed Jul 20 18:48:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0541724124529683 and mean Neff = 117.8712212164623
+	MCMC converged at Wed Jul 20 18:52:56 2022.
+
+2022-07-20 18:53:17,472 - INFO - Getting results for site 150...
+2022-07-20 18:53:17,475 - INFO - Finished for site 150:
+	Beginning MCMC at Wed Jul 20 18:50:41 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0306638656225247 and mean Neff = 162.86539268464813
+	MCMC converged at Wed Jul 20 18:53:17 2022.
+
+2022-07-20 18:53:46,522 - INFO - Getting results for site 152...
+2022-07-20 18:53:46,525 - INFO - Finished for site 152:
+	Beginning MCMC at Wed Jul 20 18:52:21 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0521524451998236 and mean Neff = 135.33072998621222
+	MCMC converged at Wed Jul 20 18:53:46 2022.
+
+2022-07-20 18:54:20,584 - INFO - Getting results for site 153...
+2022-07-20 18:54:20,586 - INFO - Finished for site 153:
+	Beginning MCMC at Wed Jul 20 18:52:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0273228933240819 and mean Neff = 154.91364263726922
+	MCMC converged at Wed Jul 20 18:54:20 2022.
+
+2022-07-20 18:54:51,640 - INFO - Getting results for site 154...
+2022-07-20 18:54:51,642 - INFO - Finished for site 154:
+	Beginning MCMC at Wed Jul 20 18:53:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0299324755666894 and mean Neff = 158.86423384179972
+	MCMC converged at Wed Jul 20 18:54:51 2022.
+
+2022-07-20 18:55:54,749 - INFO - Getting results for site 156...
+2022-07-20 18:55:54,751 - INFO - Finished for site 156:
+	Beginning MCMC at Wed Jul 20 18:54:20 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0305455914033603 and mean Neff = 164.09561543431244
+	MCMC converged at Wed Jul 20 18:55:54 2022.
+
+2022-07-20 18:56:09,778 - INFO - Getting results for site 155...
+2022-07-20 18:56:09,780 - INFO - Finished for site 155:
+	Beginning MCMC at Wed Jul 20 18:53:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02485438809327 and mean Neff = 191.91411815795558
+	MCMC converged at Wed Jul 20 18:56:09 2022.
+
+2022-07-20 18:56:14,789 - INFO - Getting results for site 157...
+2022-07-20 18:56:14,789 - INFO - Finished for site 157:
+	Beginning MCMC at Wed Jul 20 18:54:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0407110160387534 and mean Neff = 123.53620790315308
+	MCMC converged at Wed Jul 20 18:56:13 2022.
+
+2022-07-20 18:57:42,906 - INFO - Getting results for site 160...
+2022-07-20 18:57:42,910 - INFO - Finished for site 160:
+	Beginning MCMC at Wed Jul 20 18:56:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0561384990913412 and mean Neff = 119.77167088126532
+	MCMC converged at Wed Jul 20 18:57:42 2022.
+
+2022-07-20 18:59:32,053 - INFO - Getting results for site 161...
+2022-07-20 18:59:32,055 - INFO - Finished for site 161:
+	Beginning MCMC at Wed Jul 20 18:57:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0535672286923625 and mean Neff = 146.70339615710697
+	MCMC converged at Wed Jul 20 18:59:31 2022.
+
+2022-07-20 18:59:38,062 - INFO - Getting results for site 159...
+2022-07-20 18:59:38,064 - INFO - Finished for site 159:
+	Beginning MCMC at Wed Jul 20 18:56:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0898346502862397 and mean Neff = 88.48891031482495
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0409465454584073 and mean Neff = 151.1218129381803
+	MCMC converged at Wed Jul 20 18:59:37 2022.
+
+2022-07-20 18:59:53,084 - INFO - Getting results for site 158...
+2022-07-20 18:59:53,084 - INFO - Finished for site 158:
+	Beginning MCMC at Wed Jul 20 18:55:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0276488470562533 and mean Neff = 185.8843642065462
+	MCMC converged at Wed Jul 20 18:59:52 2022.
+
+2022-07-20 19:00:53,165 - INFO - Getting results for site 163...
+2022-07-20 19:00:53,166 - INFO - Finished for site 163:
+	Beginning MCMC at Wed Jul 20 18:59:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0369998694771456 and mean Neff = 114.94444791901094
+	MCMC converged at Wed Jul 20 19:00:52 2022.
+
+2022-07-20 19:01:08,187 - INFO - Getting results for site 162...
+2022-07-20 19:01:08,189 - INFO - Finished for site 162:
+	Beginning MCMC at Wed Jul 20 18:59:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0255169209621093 and mean Neff = 160.3849985087627
+	MCMC converged at Wed Jul 20 19:01:07 2022.
+
+2022-07-20 19:01:10,193 - INFO - Getting results for site 164...
+2022-07-20 19:01:10,193 - INFO - Finished for site 164:
+	Beginning MCMC at Wed Jul 20 18:59:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0325205385152347 and mean Neff = 136.22783724120768
+	MCMC converged at Wed Jul 20 19:01:09 2022.
+
+2022-07-20 19:02:18,310 - INFO - Getting results for site 166...
+2022-07-20 19:02:18,313 - INFO - Finished for site 166:
+	Beginning MCMC at Wed Jul 20 19:01:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0281887313322073 and mean Neff = 132.08773138002644
+	MCMC converged at Wed Jul 20 19:02:18 2022.
+
+2022-07-20 19:02:31,335 - INFO - Getting results for site 165...
+2022-07-20 19:02:31,336 - INFO - Finished for site 165:
+	Beginning MCMC at Wed Jul 20 19:00:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0311303745770444 and mean Neff = 181.8313133246107
+	MCMC converged at Wed Jul 20 19:02:30 2022.
+
+2022-07-20 19:03:08,401 - INFO - Getting results for site 167...
+2022-07-20 19:03:08,404 - INFO - Finished for site 167:
+	Beginning MCMC at Wed Jul 20 19:01:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0265764119458953 and mean Neff = 184.76769885481616
+	MCMC converged at Wed Jul 20 19:03:07 2022.
+
+2022-07-20 19:03:17,418 - INFO - Getting results for site 168...
+2022-07-20 19:03:17,419 - INFO - Finished for site 168:
+	Beginning MCMC at Wed Jul 20 19:02:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0439259885917587 and mean Neff = 137.30089945604715
+	MCMC converged at Wed Jul 20 19:03:17 2022.
+
+2022-07-20 19:03:59,474 - INFO - Getting results for site 169...
+2022-07-20 19:03:59,476 - INFO - Finished for site 169:
+	Beginning MCMC at Wed Jul 20 19:02:30 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0196896317266622 and mean Neff = 208.50121528375962
+	MCMC converged at Wed Jul 20 19:03:58 2022.
+
+2022-07-20 19:04:26,512 - INFO - Getting results for site 170...
+2022-07-20 19:04:26,512 - INFO - Finished for site 170:
+	Beginning MCMC at Wed Jul 20 19:03:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.025455485787001 and mean Neff = 184.04480971063003
+	MCMC converged at Wed Jul 20 19:04:26 2022.
+
+2022-07-20 19:05:02,563 - INFO - Getting results for site 171...
+2022-07-20 19:05:02,564 - INFO - Finished for site 171:
+	Beginning MCMC at Wed Jul 20 19:03:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0263378860167172 and mean Neff = 174.55151432965104
+	MCMC converged at Wed Jul 20 19:05:02 2022.
+
+2022-07-20 19:05:22,598 - INFO - Getting results for site 172...
+2022-07-20 19:05:22,599 - INFO - Finished for site 172:
+	Beginning MCMC at Wed Jul 20 19:03:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0257684845339152 and mean Neff = 186.8793534727278
+	MCMC converged at Wed Jul 20 19:05:21 2022.
+
+2022-07-20 19:05:34,620 - INFO - Getting results for site 173...
+2022-07-20 19:05:34,622 - INFO - Finished for site 173:
+	Beginning MCMC at Wed Jul 20 19:04:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0349347139981178 and mean Neff = 145.69737235167833
+	MCMC converged at Wed Jul 20 19:05:34 2022.
+
+2022-07-20 19:06:33,718 - INFO - Getting results for site 174...
+2022-07-20 19:06:33,718 - INFO - Finished for site 174:
+	Beginning MCMC at Wed Jul 20 19:05:02 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0239979564210415 and mean Neff = 188.3225680950357
+	MCMC converged at Wed Jul 20 19:06:33 2022.
+
+2022-07-20 19:07:06,762 - INFO - Getting results for site 175...
+2022-07-20 19:07:06,765 - INFO - Finished for site 175:
+	Beginning MCMC at Wed Jul 20 19:05:21 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0222255310014643 and mean Neff = 179.78714815525768
+	MCMC converged at Wed Jul 20 19:07:05 2022.
+
+2022-07-20 19:07:11,772 - INFO - Getting results for site 176...
+2022-07-20 19:07:11,772 - INFO - Finished for site 176:
+	Beginning MCMC at Wed Jul 20 19:05:34 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0204286048865925 and mean Neff = 221.9627699734138
+	MCMC converged at Wed Jul 20 19:07:11 2022.
+
+2022-07-20 19:07:36,805 - INFO - Getting results for site 177...
+2022-07-20 19:07:36,808 - INFO - Finished for site 177:
+	Beginning MCMC at Wed Jul 20 19:06:33 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0285161033037817 and mean Neff = 128.6345681448812
+	MCMC converged at Wed Jul 20 19:07:36 2022.
+
+2022-07-20 19:08:25,873 - INFO - Getting results for site 179...
+2022-07-20 19:08:25,875 - INFO - Finished for site 179:
+	Beginning MCMC at Wed Jul 20 19:07:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0435042393534406 and mean Neff = 137.2909342497599
+	MCMC converged at Wed Jul 20 19:08:25 2022.
+
+2022-07-20 19:08:44,901 - INFO - Getting results for site 178...
+2022-07-20 19:08:44,904 - INFO - Finished for site 178:
+	Beginning MCMC at Wed Jul 20 19:07:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0252179727234714 and mean Neff = 197.23887113884265
+	MCMC converged at Wed Jul 20 19:08:44 2022.
+
+2022-07-20 19:09:15,958 - INFO - Getting results for site 180...
+2022-07-20 19:09:15,958 - INFO - Finished for site 180:
+	Beginning MCMC at Wed Jul 20 19:07:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0197047396560444 and mean Neff = 204.98819794352076
+	MCMC converged at Wed Jul 20 19:09:15 2022.
+
+2022-07-20 19:09:58,031 - INFO - Getting results for site 181...
+2022-07-20 19:09:58,032 - INFO - Finished for site 181:
+	Beginning MCMC at Wed Jul 20 19:08:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0282707067993937 and mean Neff = 186.71792407224706
+	MCMC converged at Wed Jul 20 19:09:57 2022.
+
+2022-07-20 19:10:13,058 - INFO - Getting results for site 182...
+2022-07-20 19:10:13,059 - INFO - Finished for site 182:
+	Beginning MCMC at Wed Jul 20 19:08:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0199502289126543 and mean Neff = 202.9778900230511
+	MCMC converged at Wed Jul 20 19:10:12 2022.
+
+2022-07-20 19:10:51,104 - INFO - Getting results for site 183...
+2022-07-20 19:10:51,107 - INFO - Finished for site 183:
+	Beginning MCMC at Wed Jul 20 19:09:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0168174114897592 and mean Neff = 259.1493091800292
+	MCMC converged at Wed Jul 20 19:10:50 2022.
+
+2022-07-20 19:11:50,208 - INFO - Getting results for site 184...
+2022-07-20 19:11:50,210 - INFO - Finished for site 184:
+	Beginning MCMC at Wed Jul 20 19:09:57 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.019571457957884 and mean Neff = 174.66199075655874
+	MCMC converged at Wed Jul 20 19:11:49 2022.
+
+2022-07-20 19:11:53,215 - INFO - Getting results for site 185...
+2022-07-20 19:11:53,215 - INFO - Finished for site 185:
+	Beginning MCMC at Wed Jul 20 19:10:12 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0307967504229514 and mean Neff = 160.07850366552063
+	MCMC converged at Wed Jul 20 19:11:52 2022.
+
+2022-07-20 19:12:17,257 - INFO - Getting results for site 186...
+2022-07-20 19:12:17,257 - INFO - Finished for site 186:
+	Beginning MCMC at Wed Jul 20 19:10:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0427647223333545 and mean Neff = 128.53246272459438
+	MCMC converged at Wed Jul 20 19:12:16 2022.
+
+2022-07-20 19:13:26,375 - INFO - Getting results for site 187...
+2022-07-20 19:13:26,376 - INFO - Finished for site 187:
+	Beginning MCMC at Wed Jul 20 19:11:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0348218202777968 and mean Neff = 151.04847787882915
+	MCMC converged at Wed Jul 20 19:13:25 2022.
+
+2022-07-20 19:14:12,450 - INFO - Getting results for site 188...
+2022-07-20 19:14:12,451 - INFO - Finished for site 188:
+	Beginning MCMC at Wed Jul 20 19:11:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0156034868357973 and mean Neff = 255.27683631366358
+	MCMC converged at Wed Jul 20 19:14:12 2022.
+
+2022-07-20 19:14:50,506 - INFO - Getting results for site 189...
+2022-07-20 19:14:50,508 - INFO - Finished for site 189:
+	Beginning MCMC at Wed Jul 20 19:12:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0177962380512855 and mean Neff = 314.0067472246298
+	MCMC converged at Wed Jul 20 19:14:50 2022.
+
+2022-07-20 19:15:14,548 - INFO - Getting results for site 190...
+2022-07-20 19:15:14,548 - INFO - Finished for site 190:
+	Beginning MCMC at Wed Jul 20 19:13:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0184031080813525 and mean Neff = 225.02308933922131
+	MCMC converged at Wed Jul 20 19:15:14 2022.
+
+2022-07-20 19:16:16,654 - INFO - Getting results for site 192...
+2022-07-20 19:16:16,655 - INFO - Finished for site 192:
+	Beginning MCMC at Wed Jul 20 19:14:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.019164766933319 and mean Neff = 191.70962678089063
+	MCMC converged at Wed Jul 20 19:16:16 2022.
+
+2022-07-20 19:16:20,662 - INFO - Getting results for site 191...
+2022-07-20 19:16:20,663 - INFO - Finished for site 191:
+	Beginning MCMC at Wed Jul 20 19:14:12 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0248726373082488 and mean Neff = 180.95718888920743
+	MCMC converged at Wed Jul 20 19:16:20 2022.
+
+2022-07-20 19:16:53,720 - INFO - Getting results for site 193...
+2022-07-20 19:16:53,720 - INFO - Finished for site 193:
+	Beginning MCMC at Wed Jul 20 19:15:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0199988818878913 and mean Neff = 224.6564219263551
+	MCMC converged at Wed Jul 20 19:16:53 2022.
+
+2022-07-20 19:17:39,789 - INFO - Getting results for site 194...
+2022-07-20 19:17:39,791 - INFO - Finished for site 194:
+	Beginning MCMC at Wed Jul 20 19:16:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0730915337691278 and mean Neff = 100.71609227081527
+	MCMC converged at Wed Jul 20 19:17:39 2022.
+
+2022-07-20 19:18:06,837 - INFO - Getting results for site 195...
+2022-07-20 19:18:06,840 - INFO - Finished for site 195:
+	Beginning MCMC at Wed Jul 20 19:16:20 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0164511302073163 and mean Neff = 211.35486689406662
+	MCMC converged at Wed Jul 20 19:18:06 2022.
+
+2022-07-20 19:18:09,845 - INFO - Getting results for site 196...
+2022-07-20 19:18:09,845 - INFO - Finished for site 196:
+	Beginning MCMC at Wed Jul 20 19:16:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0263314697134143 and mean Neff = 158.9141159749521
+	MCMC converged at Wed Jul 20 19:18:09 2022.
+
+2022-07-20 19:19:23,948 - INFO - Getting results for site 198...
+2022-07-20 19:19:23,950 - INFO - Finished for site 198:
+	Beginning MCMC at Wed Jul 20 19:18:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0352286987972756 and mean Neff = 164.98900642462237
+	MCMC converged at Wed Jul 20 19:19:23 2022.
+
+2022-07-20 19:19:48,994 - INFO - Getting results for site 199...
+2022-07-20 19:19:48,994 - INFO - Finished for site 199:
+	Beginning MCMC at Wed Jul 20 19:18:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0335662980393265 and mean Neff = 161.0190575096021
+	MCMC converged at Wed Jul 20 19:19:48 2022.
+
+2022-07-20 19:20:47,090 - INFO - Getting results for site 197...
+2022-07-20 19:20:47,092 - INFO - Finished for site 197:
+	Beginning MCMC at Wed Jul 20 19:17:39 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0197313812556916 and mean Neff = 242.47101344208326
+	MCMC converged at Wed Jul 20 19:20:46 2022.
+
+2022-07-20 19:21:02,113 - INFO - Getting results for site 200...
+2022-07-20 19:21:02,115 - INFO - Finished for site 200:
+	Beginning MCMC at Wed Jul 20 19:19:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0203783445844872 and mean Neff = 219.21157402895386
+	MCMC converged at Wed Jul 20 19:21:01 2022.
+
+2022-07-20 19:21:13,134 - INFO - Getting results for site 201...
+2022-07-20 19:21:13,134 - INFO - Finished for site 201:
+	Beginning MCMC at Wed Jul 20 19:19:48 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0220744141347025 and mean Neff = 159.1422214421063
+	MCMC converged at Wed Jul 20 19:21:12 2022.
+
+2022-07-20 19:22:27,261 - INFO - Getting results for site 202...
+2022-07-20 19:22:27,261 - INFO - Finished for site 202:
+	Beginning MCMC at Wed Jul 20 19:20:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.027811956479694 and mean Neff = 191.94712874276362
+	MCMC converged at Wed Jul 20 19:22:26 2022.
+
+2022-07-20 19:22:31,269 - INFO - Getting results for site 204...
+2022-07-20 19:22:31,269 - INFO - Finished for site 204:
+	Beginning MCMC at Wed Jul 20 19:21:12 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0292407868947457 and mean Neff = 158.050427387847
+	MCMC converged at Wed Jul 20 19:22:30 2022.
+
+2022-07-20 19:22:41,286 - INFO - Getting results for site 203...
+2022-07-20 19:22:41,286 - INFO - Finished for site 203:
+	Beginning MCMC at Wed Jul 20 19:21:01 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0167863266194335 and mean Neff = 227.54026739197224
+	MCMC converged at Wed Jul 20 19:22:40 2022.
+
+2022-07-20 19:23:55,410 - INFO - Getting results for site 206...
+2022-07-20 19:23:55,412 - INFO - Finished for site 206:
+	Beginning MCMC at Wed Jul 20 19:22:30 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.020474819128104 and mean Neff = 206.36343782425587
+	MCMC converged at Wed Jul 20 19:23:55 2022.
+
+2022-07-20 19:24:14,444 - INFO - Getting results for site 205...
+2022-07-20 19:24:14,445 - INFO - Finished for site 205:
+	Beginning MCMC at Wed Jul 20 19:22:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0366526760387675 and mean Neff = 174.48590081277106
+	MCMC converged at Wed Jul 20 19:24:13 2022.
+
+2022-07-20 19:24:20,455 - INFO - Getting results for site 207...
+2022-07-20 19:24:20,455 - INFO - Finished for site 207:
+	Beginning MCMC at Wed Jul 20 19:22:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.023741897136048 and mean Neff = 196.84245769134537
+	MCMC converged at Wed Jul 20 19:24:19 2022.
+
+2022-07-20 19:25:27,570 - INFO - Getting results for site 208...
+2022-07-20 19:25:27,572 - INFO - Finished for site 208:
+	Beginning MCMC at Wed Jul 20 19:23:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0261313839394695 and mean Neff = 165.88350066059985
+	MCMC converged at Wed Jul 20 19:25:26 2022.
+
+2022-07-20 19:25:43,600 - INFO - Getting results for site 209...
+2022-07-20 19:25:43,603 - INFO - Finished for site 209:
+	Beginning MCMC at Wed Jul 20 19:24:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0188933961043707 and mean Neff = 192.0441186880815
+	MCMC converged at Wed Jul 20 19:25:43 2022.
+
+2022-07-20 19:26:06,642 - INFO - Getting results for site 210...
+2022-07-20 19:26:06,645 - INFO - Finished for site 210:
+	Beginning MCMC at Wed Jul 20 19:24:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0268800685839332 and mean Neff = 188.22265925178024
+	MCMC converged at Wed Jul 20 19:26:05 2022.
+
+2022-07-20 19:26:48,717 - INFO - Getting results for site 211...
+2022-07-20 19:26:48,720 - INFO - Finished for site 211:
+	Beginning MCMC at Wed Jul 20 19:25:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0251971396075974 and mean Neff = 169.32467694291344
+	MCMC converged at Wed Jul 20 19:26:48 2022.
+
+2022-07-20 19:27:15,766 - INFO - Getting results for site 212...
+2022-07-20 19:27:15,768 - INFO - Finished for site 212:
+	Beginning MCMC at Wed Jul 20 19:25:43 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0376252170023854 and mean Neff = 144.08313391866713
+	MCMC converged at Wed Jul 20 19:27:15 2022.
+
+2022-07-20 19:27:26,787 - INFO - Getting results for site 213...
+2022-07-20 19:27:26,788 - INFO - Finished for site 213:
+	Beginning MCMC at Wed Jul 20 19:26:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0254419329153228 and mean Neff = 198.78651456987745
+	MCMC converged at Wed Jul 20 19:27:26 2022.
+
+2022-07-20 19:28:26,890 - INFO - Getting results for site 214...
+2022-07-20 19:28:26,892 - INFO - Finished for site 214:
+	Beginning MCMC at Wed Jul 20 19:26:48 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0217765028797627 and mean Neff = 242.77570013341952
+	MCMC converged at Wed Jul 20 19:28:26 2022.
+
+2022-07-20 19:28:40,916 - INFO - Getting results for site 216...
+2022-07-20 19:28:40,916 - INFO - Finished for site 216:
+	Beginning MCMC at Wed Jul 20 19:27:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02934537052085 and mean Neff = 166.2643302253577
+	MCMC converged at Wed Jul 20 19:28:40 2022.
+
+2022-07-20 19:28:44,921 - INFO - Getting results for site 215...
+2022-07-20 19:28:44,922 - INFO - Finished for site 215:
+	Beginning MCMC at Wed Jul 20 19:27:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.034076900461259 and mean Neff = 125.7141944204598
+	MCMC converged at Wed Jul 20 19:28:44 2022.
+
+2022-07-20 19:29:46,003 - INFO - Getting results for site 217...
+2022-07-20 19:29:46,003 - INFO - Finished for site 217:
+	Beginning MCMC at Wed Jul 20 19:28:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0242152781715501 and mean Neff = 175.80379667719552
+	MCMC converged at Wed Jul 20 19:29:45 2022.
+
+2022-07-20 19:30:10,036 - INFO - Getting results for site 218...
+2022-07-20 19:30:10,036 - INFO - Finished for site 218:
+	Beginning MCMC at Wed Jul 20 19:28:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0230040895213919 and mean Neff = 198.4154955002445
+	MCMC converged at Wed Jul 20 19:30:09 2022.
+
+2022-07-20 19:30:26,058 - INFO - Getting results for site 219...
+2022-07-20 19:30:26,060 - INFO - Finished for site 219:
+	Beginning MCMC at Wed Jul 20 19:28:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.01954998880015 and mean Neff = 198.39875604523095
+	MCMC converged at Wed Jul 20 19:30:25 2022.
+
+2022-07-20 19:31:23,136 - INFO - Getting results for site 220...
+2022-07-20 19:31:23,139 - INFO - Finished for site 220:
+	Beginning MCMC at Wed Jul 20 19:29:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0184076550963277 and mean Neff = 237.36523255608313
+	MCMC converged at Wed Jul 20 19:31:22 2022.
+
+2022-07-20 19:31:43,173 - INFO - Getting results for site 221...
+2022-07-20 19:31:43,173 - INFO - Finished for site 221:
+	Beginning MCMC at Wed Jul 20 19:30:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0282632573059858 and mean Neff = 173.5690930881078
+	MCMC converged at Wed Jul 20 19:31:42 2022.
+
+2022-07-20 19:31:48,182 - INFO - Getting results for site 222...
+2022-07-20 19:31:48,183 - INFO - Finished for site 222:
+	Beginning MCMC at Wed Jul 20 19:30:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0234255120067004 and mean Neff = 193.51783866175566
+	MCMC converged at Wed Jul 20 19:31:47 2022.
+
+2022-07-20 19:32:42,272 - INFO - Getting results for site 223...
+2022-07-20 19:32:42,274 - INFO - Finished for site 223:
+	Beginning MCMC at Wed Jul 20 19:31:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0203712429035785 and mean Neff = 181.20739217059406
+	MCMC converged at Wed Jul 20 19:32:42 2022.
+
+2022-07-20 19:32:53,293 - INFO - Getting results for site 224...
+2022-07-20 19:32:53,295 - INFO - Finished for site 224:
+	Beginning MCMC at Wed Jul 20 19:31:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.025698964389189 and mean Neff = 182.71000404598496
+	MCMC converged at Wed Jul 20 19:32:53 2022.
+
+2022-07-20 19:33:27,354 - INFO - Getting results for site 225...
+2022-07-20 19:33:27,354 - INFO - Finished for site 225:
+	Beginning MCMC at Wed Jul 20 19:31:47 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0139408650423716 and mean Neff = 276.6359388775259
+	MCMC converged at Wed Jul 20 19:33:26 2022.
+
+2022-07-20 19:34:18,441 - INFO - Getting results for site 226...
+2022-07-20 19:34:18,443 - INFO - Finished for site 226:
+	Beginning MCMC at Wed Jul 20 19:32:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0323377899716437 and mean Neff = 160.1643828651075
+	MCMC converged at Wed Jul 20 19:34:17 2022.
+
+2022-07-20 19:34:25,456 - INFO - Getting results for site 227...
+2022-07-20 19:34:25,456 - INFO - Finished for site 227:
+	Beginning MCMC at Wed Jul 20 19:32:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.032280663719057 and mean Neff = 182.7381591475065
+	MCMC converged at Wed Jul 20 19:34:24 2022.
+
+2022-07-20 19:34:49,498 - INFO - Getting results for site 228...
+2022-07-20 19:34:49,499 - INFO - Finished for site 228:
+	Beginning MCMC at Wed Jul 20 19:33:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0301204720602333 and mean Neff = 160.39283610113839
+	MCMC converged at Wed Jul 20 19:34:48 2022.
+
+2022-07-20 19:35:43,575 - INFO - Getting results for site 229...
+2022-07-20 19:35:43,575 - INFO - Finished for site 229:
+	Beginning MCMC at Wed Jul 20 19:34:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0321086429526871 and mean Neff = 148.5324881723245
+	MCMC converged at Wed Jul 20 19:35:42 2022.
+
+2022-07-20 19:36:08,619 - INFO - Getting results for site 230...
+2022-07-20 19:36:08,620 - INFO - Finished for site 230:
+	Beginning MCMC at Wed Jul 20 19:34:24 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.023161499182461 and mean Neff = 184.5788600694359
+	MCMC converged at Wed Jul 20 19:36:07 2022.
+
+2022-07-20 19:37:24,738 - INFO - Getting results for site 231...
+2022-07-20 19:37:24,739 - INFO - Finished for site 231:
+	Beginning MCMC at Wed Jul 20 19:34:48 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0244461829796077 and mean Neff = 170.82410953715984
+	MCMC converged at Wed Jul 20 19:37:24 2022.
+
+2022-07-20 19:37:40,760 - INFO - Getting results for site 233...
+2022-07-20 19:37:40,760 - INFO - Finished for site 233:
+	Beginning MCMC at Wed Jul 20 19:36:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0324186393217396 and mean Neff = 130.6781087891198
+	MCMC converged at Wed Jul 20 19:37:40 2022.
+
+2022-07-20 19:38:17,810 - INFO - Getting results for site 232...
+2022-07-20 19:38:17,811 - INFO - Finished for site 232:
+	Beginning MCMC at Wed Jul 20 19:35:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0373170399914238 and mean Neff = 109.37370512758642
+	MCMC converged at Wed Jul 20 19:38:17 2022.
+
+2022-07-20 19:38:55,861 - INFO - Getting results for site 234...
+2022-07-20 19:38:55,862 - INFO - Finished for site 234:
+	Beginning MCMC at Wed Jul 20 19:37:24 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0367961276270845 and mean Neff = 146.72892093422084
+	MCMC converged at Wed Jul 20 19:38:55 2022.
+
+2022-07-20 19:39:14,889 - INFO - Getting results for site 235...
+2022-07-20 19:39:14,890 - INFO - Finished for site 235:
+	Beginning MCMC at Wed Jul 20 19:37:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.027256219182409 and mean Neff = 169.12525383923827
+	MCMC converged at Wed Jul 20 19:39:13 2022.
+
+2022-07-20 19:39:54,959 - INFO - Getting results for site 236...
+2022-07-20 19:39:54,960 - INFO - Finished for site 236:
+	Beginning MCMC at Wed Jul 20 19:38:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.016652921447108 and mean Neff = 257.30922404643115
+	MCMC converged at Wed Jul 20 19:39:54 2022.
+
+2022-07-20 19:40:13,992 - INFO - Getting results for site 237...
+2022-07-20 19:40:13,993 - INFO - Finished for site 237:
+	Beginning MCMC at Wed Jul 20 19:38:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0550905086558426 and mean Neff = 103.92135966454376
+	MCMC converged at Wed Jul 20 19:40:13 2022.
+
+2022-07-20 19:41:00,069 - INFO - Getting results for site 238...
+2022-07-20 19:41:00,070 - INFO - Finished for site 238:
+	Beginning MCMC at Wed Jul 20 19:39:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0221151096783818 and mean Neff = 194.65806905478885
+	MCMC converged at Wed Jul 20 19:40:59 2022.
+
+2022-07-20 19:41:08,084 - INFO - Getting results for site 239...
+2022-07-20 19:41:08,084 - INFO - Finished for site 239:
+	Beginning MCMC at Wed Jul 20 19:39:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.033345206799997 and mean Neff = 164.05984341461243
+	MCMC converged at Wed Jul 20 19:41:07 2022.
+
+2022-07-20 19:42:12,193 - INFO - Getting results for site 240...
+2022-07-20 19:42:12,194 - INFO - Finished for site 240:
+	Beginning MCMC at Wed Jul 20 19:40:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0303238100152468 and mean Neff = 192.77674722075278
+	MCMC converged at Wed Jul 20 19:42:11 2022.
+
+2022-07-20 19:42:27,220 - INFO - Getting results for site 242...
+2022-07-20 19:42:27,223 - INFO - Finished for site 242:
+	Beginning MCMC at Wed Jul 20 19:41:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02418604408708 and mean Neff = 194.5844592820009
+	MCMC converged at Wed Jul 20 19:42:26 2022.
+
+2022-07-20 19:42:57,275 - INFO - Getting results for site 241...
+2022-07-20 19:42:57,276 - INFO - Finished for site 241:
+	Beginning MCMC at Wed Jul 20 19:40:59 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0409226349877718 and mean Neff = 159.83244130589983
+	MCMC converged at Wed Jul 20 19:42:56 2022.
+
+2022-07-20 19:43:35,337 - INFO - Getting results for site 244...
+2022-07-20 19:43:35,338 - INFO - Finished for site 244:
+	Beginning MCMC at Wed Jul 20 19:42:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.046394101068398 and mean Neff = 104.66030984828517
+	MCMC converged at Wed Jul 20 19:43:35 2022.
+
+2022-07-20 19:44:23,403 - INFO - Getting results for site 245...
+2022-07-20 19:44:23,404 - INFO - Finished for site 245:
+	Beginning MCMC at Wed Jul 20 19:42:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0284180194417993 and mean Neff = 180.958876518316
+	MCMC converged at Wed Jul 20 19:44:22 2022.
+
+2022-07-20 19:44:58,451 - INFO - Getting results for site 246...
+2022-07-20 19:44:58,451 - INFO - Finished for site 246:
+	Beginning MCMC at Wed Jul 20 19:43:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0312720904036308 and mean Neff = 137.19768669124448
+	MCMC converged at Wed Jul 20 19:44:58 2022.
+
+2022-07-20 19:45:22,492 - INFO - Getting results for site 243...
+2022-07-20 19:45:22,495 - INFO - Finished for site 243:
+	Beginning MCMC at Wed Jul 20 19:42:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0169377624388 and mean Neff = 203.55986040707293
+	MCMC converged at Wed Jul 20 19:45:21 2022.
+
+2022-07-20 19:45:59,556 - INFO - Getting results for site 247...
+2022-07-20 19:45:59,557 - INFO - Finished for site 247:
+	Beginning MCMC at Wed Jul 20 19:44:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0191725819610522 and mean Neff = 240.48940849558477
+	MCMC converged at Wed Jul 20 19:45:59 2022.
+
+2022-07-20 19:46:17,588 - INFO - Getting results for site 248...
+2022-07-20 19:46:17,588 - INFO - Finished for site 248:
+	Beginning MCMC at Wed Jul 20 19:44:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0302190121751789 and mean Neff = 171.45675407720046
+	MCMC converged at Wed Jul 20 19:46:17 2022.
+
+2022-07-20 19:46:52,649 - INFO - Getting results for site 249...
+2022-07-20 19:46:52,651 - INFO - Finished for site 249:
+	Beginning MCMC at Wed Jul 20 19:45:21 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0204559331177694 and mean Neff = 219.96210588336007
+	MCMC converged at Wed Jul 20 19:46:51 2022.
+
+2022-07-20 19:47:29,714 - INFO - Getting results for site 250...
+2022-07-20 19:47:29,716 - INFO - Finished for site 250:
+	Beginning MCMC at Wed Jul 20 19:45:59 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.021938755405877 and mean Neff = 196.82316280884177
+	MCMC converged at Wed Jul 20 19:47:28 2022.
+
+2022-07-20 19:47:30,718 - INFO - Getting results for site 251...
+2022-07-20 19:47:30,718 - INFO - Finished for site 251:
+	Beginning MCMC at Wed Jul 20 19:46:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0252388132019037 and mean Neff = 148.8025466547968
+	MCMC converged at Wed Jul 20 19:47:29 2022.
+
+2022-07-20 19:48:41,822 - INFO - Getting results for site 253...
+2022-07-20 19:48:41,823 - INFO - Finished for site 253:
+	Beginning MCMC at Wed Jul 20 19:47:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0375993074835297 and mean Neff = 141.25003899618108
+	MCMC converged at Wed Jul 20 19:48:41 2022.
+
+2022-07-20 19:48:55,847 - INFO - Getting results for site 252...
+2022-07-20 19:48:55,848 - INFO - Finished for site 252:
+	Beginning MCMC at Wed Jul 20 19:46:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0202698240524222 and mean Neff = 263.72412789588526
+	MCMC converged at Wed Jul 20 19:48:55 2022.
+
+2022-07-20 19:49:01,858 - INFO - Getting results for site 254...
+2022-07-20 19:49:01,858 - INFO - Finished for site 254:
+	Beginning MCMC at Wed Jul 20 19:47:29 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0284414278464307 and mean Neff = 166.632299930241
+	MCMC converged at Wed Jul 20 19:49:01 2022.
+
+2022-07-20 19:50:15,986 - INFO - Getting results for site 255...
+2022-07-20 19:50:15,987 - INFO - Finished for site 255:
+	Beginning MCMC at Wed Jul 20 19:48:41 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0200554883534083 and mean Neff = 223.86990775304753
+	MCMC converged at Wed Jul 20 19:50:15 2022.
+
+2022-07-20 19:50:33,005 - INFO - Getting results for site 256...
+2022-07-20 19:50:33,006 - INFO - Finished for site 256:
+	Beginning MCMC at Wed Jul 20 19:48:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0325923291288839 and mean Neff = 134.70147043801322
+	MCMC converged at Wed Jul 20 19:50:32 2022.
+
+2022-07-20 19:51:27,096 - INFO - Getting results for site 257...
+2022-07-20 19:51:27,098 - INFO - Finished for site 257:
+	Beginning MCMC at Wed Jul 20 19:49:01 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.02468177698706 and mean Neff = 212.68599289353637
+	MCMC converged at Wed Jul 20 19:51:26 2022.
+
+2022-07-20 19:51:30,104 - INFO - Getting results for site 258...
+2022-07-20 19:51:30,104 - INFO - Finished for site 258:
+	Beginning MCMC at Wed Jul 20 19:50:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0243623671484274 and mean Neff = 168.25429897297425
+	MCMC converged at Wed Jul 20 19:51:29 2022.
+
+2022-07-20 19:51:56,150 - INFO - Getting results for site 259...
+2022-07-20 19:51:56,150 - INFO - Finished for site 259:
+	Beginning MCMC at Wed Jul 20 19:50:32 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0241480326594694 and mean Neff = 172.90502128936322
+	MCMC converged at Wed Jul 20 19:51:55 2022.
+
+2022-07-20 19:52:43,220 - INFO - Getting results for site 260...
+2022-07-20 19:52:43,221 - INFO - Finished for site 260:
+	Beginning MCMC at Wed Jul 20 19:51:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0388298542959002 and mean Neff = 129.18314784814189
+	MCMC converged at Wed Jul 20 19:52:42 2022.
+
+2022-07-20 19:52:50,230 - INFO - Getting results for site 261...
+2022-07-20 19:52:50,231 - INFO - Finished for site 261:
+	Beginning MCMC at Wed Jul 20 19:51:29 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.033739555772709 and mean Neff = 155.54301813429316
+	MCMC converged at Wed Jul 20 19:52:49 2022.
+
+2022-07-20 19:53:59,323 - INFO - Getting results for site 262...
+2022-07-20 19:53:59,325 - INFO - Finished for site 262:
+	Beginning MCMC at Wed Jul 20 19:51:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0334522622723414 and mean Neff = 140.50810784283573
+	MCMC converged at Wed Jul 20 19:53:59 2022.
+
+2022-07-20 19:54:29,375 - INFO - Getting results for site 263...
+2022-07-20 19:54:29,377 - INFO - Finished for site 263:
+	Beginning MCMC at Wed Jul 20 19:52:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.030754775251611 and mean Neff = 157.2172282386314
+	MCMC converged at Wed Jul 20 19:54:28 2022.
+
+2022-07-20 19:54:34,386 - INFO - Getting results for site 264...
+2022-07-20 19:54:34,388 - INFO - Finished for site 264:
+	Beginning MCMC at Wed Jul 20 19:52:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0355356741698627 and mean Neff = 127.00261826277105
+	MCMC converged at Wed Jul 20 19:54:34 2022.
+
+2022-07-20 19:55:17,467 - INFO - Getting results for site 265...
+2022-07-20 19:55:17,471 - INFO - Finished for site 265:
+	Beginning MCMC at Wed Jul 20 19:53:59 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0351308942779402 and mean Neff = 121.03023796051325
+	MCMC converged at Wed Jul 20 19:55:17 2022.
+
+2022-07-20 19:56:06,553 - INFO - Getting results for site 267...
+2022-07-20 19:56:06,554 - INFO - Finished for site 267:
+	Beginning MCMC at Wed Jul 20 19:54:34 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0399388815168367 and mean Neff = 132.08145338451186
+	MCMC converged at Wed Jul 20 19:56:06 2022.
+
+2022-07-20 19:56:37,607 - INFO - Getting results for site 266...
+2022-07-20 19:56:37,610 - INFO - Finished for site 266:
+	Beginning MCMC at Wed Jul 20 19:54:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.036564184839996 and mean Neff = 139.18777473687874
+	MCMC converged at Wed Jul 20 19:56:37 2022.
+
+2022-07-20 19:56:49,630 - INFO - Getting results for site 268...
+2022-07-20 19:56:49,631 - INFO - Finished for site 268:
+	Beginning MCMC at Wed Jul 20 19:55:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0259970012387198 and mean Neff = 170.41269065004775
+	MCMC converged at Wed Jul 20 19:56:48 2022.
+
+2022-07-20 19:57:16,677 - INFO - Getting results for site 269...
+2022-07-20 19:57:16,678 - INFO - Finished for site 269:
+	Beginning MCMC at Wed Jul 20 19:56:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0350317000164329 and mean Neff = 121.14030582432778
+	MCMC converged at Wed Jul 20 19:57:16 2022.
+
+2022-07-20 19:58:44,828 - INFO - Getting results for site 271...
+2022-07-20 19:58:44,831 - INFO - Finished for site 271:
+	Beginning MCMC at Wed Jul 20 19:56:48 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0295893688632796 and mean Neff = 149.113925452596
+	MCMC converged at Wed Jul 20 19:58:44 2022.
+
+2022-07-20 19:59:07,870 - INFO - Getting results for site 272...
+2022-07-20 19:59:07,870 - INFO - Finished for site 272:
+	Beginning MCMC at Wed Jul 20 19:57:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0219523065825569 and mean Neff = 164.7552938905658
+	MCMC converged at Wed Jul 20 19:59:07 2022.
+
+2022-07-20 19:59:16,886 - INFO - Getting results for site 270...
+2022-07-20 19:59:16,886 - INFO - Finished for site 270:
+	Beginning MCMC at Wed Jul 20 19:56:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0471241875835413 and mean Neff = 143.32218232653946
+	MCMC converged at Wed Jul 20 19:59:16 2022.
+
+2022-07-20 20:00:04,968 - INFO - Getting results for site 273...
+2022-07-20 20:00:04,969 - INFO - Finished for site 273:
+	Beginning MCMC at Wed Jul 20 19:58:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0362835146623053 and mean Neff = 116.8449892203389
+	MCMC converged at Wed Jul 20 20:00:04 2022.
+
+2022-07-20 20:00:46,034 - INFO - Getting results for site 274...
+2022-07-20 20:00:46,036 - INFO - Finished for site 274:
+	Beginning MCMC at Wed Jul 20 19:59:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0173453881124923 and mean Neff = 244.85200111494458
+	MCMC converged at Wed Jul 20 20:00:45 2022.
+
+2022-07-20 20:01:20,081 - INFO - Getting results for site 275...
+2022-07-20 20:01:20,082 - INFO - Finished for site 275:
+	Beginning MCMC at Wed Jul 20 19:59:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.016529371393159 and mean Neff = 209.27322274555385
+	MCMC converged at Wed Jul 20 20:01:19 2022.
+
+2022-07-20 20:01:32,099 - INFO - Getting results for site 276...
+2022-07-20 20:01:32,099 - INFO - Finished for site 276:
+	Beginning MCMC at Wed Jul 20 20:00:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0308169809013816 and mean Neff = 163.21891261066492
+	MCMC converged at Wed Jul 20 20:01:31 2022.
+
+2022-07-20 20:02:20,180 - INFO - Getting results for site 277...
+2022-07-20 20:02:20,181 - INFO - Finished for site 277:
+	Beginning MCMC at Wed Jul 20 20:00:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.028321081357221 and mean Neff = 163.06924966571216
+	MCMC converged at Wed Jul 20 20:02:19 2022.
+
+2022-07-20 20:02:57,236 - INFO - Getting results for site 278...
+2022-07-20 20:02:57,240 - INFO - Finished for site 278:
+	Beginning MCMC at Wed Jul 20 20:01:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0265057231795993 and mean Neff = 157.95779202047862
+	MCMC converged at Wed Jul 20 20:02:56 2022.
+
+2022-07-20 20:03:37,304 - INFO - Getting results for site 279...
+2022-07-20 20:03:37,307 - INFO - Finished for site 279:
+	Beginning MCMC at Wed Jul 20 20:01:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0239482200253993 and mean Neff = 171.51036806753922
+	MCMC converged at Wed Jul 20 20:03:36 2022.
+
+2022-07-20 20:03:55,337 - INFO - Getting results for site 280...
+2022-07-20 20:03:55,338 - INFO - Finished for site 280:
+	Beginning MCMC at Wed Jul 20 20:02:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0361014751812176 and mean Neff = 123.4820694518904
+	MCMC converged at Wed Jul 20 20:03:55 2022.
+
+2022-07-20 20:05:04,452 - INFO - Getting results for site 282...
+2022-07-20 20:05:04,455 - INFO - Finished for site 282:
+	Beginning MCMC at Wed Jul 20 20:03:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.034867588157203 and mean Neff = 154.002300767161
+	MCMC converged at Wed Jul 20 20:05:03 2022.
+
+2022-07-20 20:05:12,468 - INFO - Getting results for site 283...
+2022-07-20 20:05:12,471 - INFO - Finished for site 283:
+	Beginning MCMC at Wed Jul 20 20:03:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0382282189480387 and mean Neff = 126.16785291913575
+	MCMC converged at Wed Jul 20 20:05:11 2022.
+
+2022-07-20 20:06:15,578 - INFO - Getting results for site 281...
+2022-07-20 20:06:15,579 - INFO - Finished for site 281:
+	Beginning MCMC at Wed Jul 20 20:02:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0324098609094483 and mean Neff = 171.57818497035947
+	MCMC converged at Wed Jul 20 20:06:15 2022.
+
+2022-07-20 20:06:25,596 - INFO - Getting results for site 285...
+2022-07-20 20:06:25,598 - INFO - Finished for site 285:
+	Beginning MCMC at Wed Jul 20 20:05:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0376871092866118 and mean Neff = 156.40574623366683
+	MCMC converged at Wed Jul 20 20:06:25 2022.
+
+2022-07-20 20:06:50,642 - INFO - Getting results for site 284...
+2022-07-20 20:06:50,642 - INFO - Finished for site 284:
+	Beginning MCMC at Wed Jul 20 20:05:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0362394585746135 and mean Neff = 122.2425678508527
+	MCMC converged at Wed Jul 20 20:06:50 2022.
+
+2022-07-20 20:07:40,708 - INFO - Getting results for site 286...
+2022-07-20 20:07:40,708 - INFO - Finished for site 286:
+	Beginning MCMC at Wed Jul 20 20:06:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0369220020791832 and mean Neff = 160.41664345755623
+	MCMC converged at Wed Jul 20 20:07:40 2022.
+
+2022-07-20 20:08:13,754 - INFO - Getting results for site 287...
+2022-07-20 20:08:13,754 - INFO - Finished for site 287:
+	Beginning MCMC at Wed Jul 20 20:06:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.024940393562794 and mean Neff = 193.8581926598914
+	MCMC converged at Wed Jul 20 20:08:13 2022.
+
+2022-07-20 20:08:30,777 - INFO - Getting results for site 288...
+2022-07-20 20:08:30,779 - INFO - Finished for site 288:
+	Beginning MCMC at Wed Jul 20 20:06:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.020491192426563 and mean Neff = 236.27579637703735
+	MCMC converged at Wed Jul 20 20:08:29 2022.
+
+2022-07-20 20:09:21,847 - INFO - Getting results for site 289...
+2022-07-20 20:09:21,850 - INFO - Finished for site 289:
+	Beginning MCMC at Wed Jul 20 20:07:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0160201969171407 and mean Neff = 237.9268214033155
+	MCMC converged at Wed Jul 20 20:09:21 2022.
+
+2022-07-20 20:09:33,870 - INFO - Getting results for site 290...
+2022-07-20 20:09:33,871 - INFO - Finished for site 290:
+	Beginning MCMC at Wed Jul 20 20:08:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0358126036313624 and mean Neff = 165.7136215544518
+	MCMC converged at Wed Jul 20 20:09:33 2022.
+
+2022-07-20 20:10:32,973 - INFO - Getting results for site 291...
+2022-07-20 20:10:32,974 - INFO - Finished for site 291:
+	Beginning MCMC at Wed Jul 20 20:08:29 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.017603517716265 and mean Neff = 278.3342528140405
+	MCMC converged at Wed Jul 20 20:10:31 2022.
+
+2022-07-20 20:10:50,998 - INFO - Getting results for site 292...
+2022-07-20 20:10:50,998 - INFO - Finished for site 292:
+	Beginning MCMC at Wed Jul 20 20:09:21 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0183817065551546 and mean Neff = 201.41121346079294
+	MCMC converged at Wed Jul 20 20:10:50 2022.
+
+2022-07-20 20:11:57,087 - INFO - Getting results for site 294...
+2022-07-20 20:11:57,087 - INFO - Finished for site 294:
+	Beginning MCMC at Wed Jul 20 20:10:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.017053515202322 and mean Neff = 213.6968538046263
+	MCMC converged at Wed Jul 20 20:11:56 2022.
+
+2022-07-20 20:12:29,131 - INFO - Getting results for site 295...
+2022-07-20 20:12:29,133 - INFO - Finished for site 295:
+	Beginning MCMC at Wed Jul 20 20:10:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0293194839099449 and mean Neff = 184.5045862430881
+	MCMC converged at Wed Jul 20 20:12:28 2022.
+
+2022-07-20 20:13:28,212 - INFO - Getting results for site 296...
+2022-07-20 20:13:28,213 - INFO - Finished for site 296:
+	Beginning MCMC at Wed Jul 20 20:11:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0264588025308699 and mean Neff = 208.93495443731635
+	MCMC converged at Wed Jul 20 20:13:27 2022.
+
+2022-07-20 20:14:00,269 - INFO - Getting results for site 297...
+2022-07-20 20:14:00,270 - INFO - Finished for site 297:
+	Beginning MCMC at Wed Jul 20 20:12:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0339557573447304 and mean Neff = 166.41376510098027
+	MCMC converged at Wed Jul 20 20:13:59 2022.
+
+2022-07-20 20:14:14,294 - INFO - Getting results for site 293...
+2022-07-20 20:14:14,297 - INFO - Finished for site 293:
+	Beginning MCMC at Wed Jul 20 20:09:33 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.03836419996717 and mean Neff = 122.21721215418566
+	MCMC converged at Wed Jul 20 20:14:13 2022.
+
+2022-07-20 20:14:47,354 - INFO - Getting results for site 298...
+2022-07-20 20:14:47,354 - INFO - Finished for site 298:
+	Beginning MCMC at Wed Jul 20 20:13:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.022972934642988 and mean Neff = 163.99106669491005
+	MCMC converged at Wed Jul 20 20:14:46 2022.
+
+2022-07-20 20:15:20,411 - INFO - Getting results for site 299...
+2022-07-20 20:15:20,411 - INFO - Finished for site 299:
+	Beginning MCMC at Wed Jul 20 20:13:59 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0305407439926124 and mean Neff = 160.83006502091612
+	MCMC converged at Wed Jul 20 20:15:20 2022.
+
+2022-07-20 20:15:32,432 - INFO - Getting results for site 300...
+2022-07-20 20:15:32,434 - INFO - Finished for site 300:
+	Beginning MCMC at Wed Jul 20 20:14:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0243815148725535 and mean Neff = 150.74966380333746
+	MCMC converged at Wed Jul 20 20:15:31 2022.
+
+2022-07-20 20:16:19,505 - INFO - Getting results for site 301...
+2022-07-20 20:16:19,506 - INFO - Finished for site 301:
+	Beginning MCMC at Wed Jul 20 20:14:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0234075538071665 and mean Neff = 191.35398619493597
+	MCMC converged at Wed Jul 20 20:16:19 2022.
+
+2022-07-20 20:16:44,538 - INFO - Getting results for site 302...
+2022-07-20 20:16:44,540 - INFO - Finished for site 302:
+	Beginning MCMC at Wed Jul 20 20:15:20 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0256454512002056 and mean Neff = 198.97173077064107
+	MCMC converged at Wed Jul 20 20:16:43 2022.
+
+2022-07-20 20:17:23,592 - INFO - Getting results for site 304...
+2022-07-20 20:17:23,594 - INFO - Finished for site 304:
+	Beginning MCMC at Wed Jul 20 20:16:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0447148213546913 and mean Neff = 112.8731661537887
+	MCMC converged at Wed Jul 20 20:17:22 2022.
+
+2022-07-20 20:18:11,658 - INFO - Getting results for site 305...
+2022-07-20 20:18:11,658 - INFO - Finished for site 305:
+	Beginning MCMC at Wed Jul 20 20:16:43 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0195855705061347 and mean Neff = 206.77151135122466
+	MCMC converged at Wed Jul 20 20:18:11 2022.
+
+2022-07-20 20:18:27,686 - INFO - Getting results for site 303...
+2022-07-20 20:18:27,687 - INFO - Finished for site 303:
+	Beginning MCMC at Wed Jul 20 20:15:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0214645110627376 and mean Neff = 216.54229367134894
+	MCMC converged at Wed Jul 20 20:18:27 2022.
+
+2022-07-20 20:19:12,765 - INFO - Getting results for site 306...
+2022-07-20 20:19:12,765 - INFO - Finished for site 306:
+	Beginning MCMC at Wed Jul 20 20:17:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0276366857658257 and mean Neff = 166.1803661578972
+	MCMC converged at Wed Jul 20 20:19:12 2022.
+
+2022-07-20 20:19:46,824 - INFO - Getting results for site 308...
+2022-07-20 20:19:46,824 - INFO - Finished for site 308:
+	Beginning MCMC at Wed Jul 20 20:18:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0282753195612782 and mean Neff = 161.47025542019747
+	MCMC converged at Wed Jul 20 20:19:46 2022.
+
+2022-07-20 20:19:54,838 - INFO - Getting results for site 307...
+2022-07-20 20:19:54,841 - INFO - Finished for site 307:
+	Beginning MCMC at Wed Jul 20 20:18:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0403115739431674 and mean Neff = 125.00493302658012
+	MCMC converged at Wed Jul 20 20:19:54 2022.
+
+2022-07-20 20:20:33,899 - INFO - Getting results for site 309...
+2022-07-20 20:20:33,900 - INFO - Finished for site 309:
+	Beginning MCMC at Wed Jul 20 20:19:12 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0399960072049779 and mean Neff = 117.39830711789895
+	MCMC converged at Wed Jul 20 20:20:33 2022.
+
+2022-07-20 20:21:42,016 - INFO - Getting results for site 310...
+2022-07-20 20:21:42,018 - INFO - Finished for site 310:
+	Beginning MCMC at Wed Jul 20 20:19:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0386878205355345 and mean Neff = 128.72518166604212
+	MCMC converged at Wed Jul 20 20:21:41 2022.
+
+2022-07-20 20:21:57,044 - INFO - Getting results for site 312...
+2022-07-20 20:21:57,046 - INFO - Finished for site 312:
+	Beginning MCMC at Wed Jul 20 20:20:33 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0298705560888066 and mean Neff = 190.49169260796356
+	MCMC converged at Wed Jul 20 20:21:56 2022.
+
+2022-07-20 20:23:17,185 - INFO - Getting results for site 313...
+2022-07-20 20:23:17,185 - INFO - Finished for site 313:
+	Beginning MCMC at Wed Jul 20 20:21:41 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0539551403344136 and mean Neff = 117.46125973352375
+	MCMC converged at Wed Jul 20 20:23:16 2022.
+
+2022-07-20 20:23:28,205 - INFO - Getting results for site 314...
+2022-07-20 20:23:28,207 - INFO - Finished for site 314:
+	Beginning MCMC at Wed Jul 20 20:21:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0271481893577212 and mean Neff = 201.2592335461183
+	MCMC converged at Wed Jul 20 20:23:27 2022.
+
+2022-07-20 20:24:33,315 - INFO - Getting results for site 311...
+2022-07-20 20:24:33,317 - INFO - Finished for site 311:
+	Beginning MCMC at Wed Jul 20 20:19:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0772293947381193 and mean Neff = 90.81404865312868
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0425499641351474 and mean Neff = 222.8486842501433
+	MCMC converged at Wed Jul 20 20:24:32 2022.
+
+2022-07-20 20:24:46,339 - INFO - Getting results for site 316...
+2022-07-20 20:24:46,342 - INFO - Finished for site 316:
+	Beginning MCMC at Wed Jul 20 20:23:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0387552444178187 and mean Neff = 189.54203468015652
+	MCMC converged at Wed Jul 20 20:24:46 2022.
+
+2022-07-20 20:26:05,474 - INFO - Getting results for site 317...
+2022-07-20 20:26:05,476 - INFO - Finished for site 317:
+	Beginning MCMC at Wed Jul 20 20:24:32 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0354913444024856 and mean Neff = 152.58800102673067
+	MCMC converged at Wed Jul 20 20:26:05 2022.
+
+2022-07-20 20:26:17,496 - INFO - Getting results for site 318...
+2022-07-20 20:26:17,498 - INFO - Finished for site 318:
+	Beginning MCMC at Wed Jul 20 20:24:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0246688256592926 and mean Neff = 203.4811285000047
+	MCMC converged at Wed Jul 20 20:26:16 2022.
+
+2022-07-20 20:27:15,596 - INFO - Getting results for site 320...
+2022-07-20 20:27:15,598 - INFO - Finished for site 320:
+	Beginning MCMC at Wed Jul 20 20:26:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0483863365361392 and mean Neff = 103.53573108630842
+	MCMC converged at Wed Jul 20 20:27:14 2022.
+
+2022-07-20 20:27:36,626 - INFO - Getting results for site 319...
+2022-07-20 20:27:36,628 - INFO - Finished for site 319:
+	Beginning MCMC at Wed Jul 20 20:26:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.038196922246556 and mean Neff = 161.7383803816279
+	MCMC converged at Wed Jul 20 20:27:35 2022.
+
+2022-07-20 20:27:38,632 - INFO - Getting results for site 315...
+2022-07-20 20:27:38,632 - INFO - Finished for site 315:
+	Beginning MCMC at Wed Jul 20 20:23:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0547343996706462 and mean Neff = 93.19697647318874
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0261349897528542 and mean Neff = 185.76518660484084
+	MCMC converged at Wed Jul 20 20:27:38 2022.
+
+2022-07-20 20:28:37,731 - INFO - Getting results for site 321...
+2022-07-20 20:28:37,731 - INFO - Finished for site 321:
+	Beginning MCMC at Wed Jul 20 20:27:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0225861436246295 and mean Neff = 189.44647200558447
+	MCMC converged at Wed Jul 20 20:28:37 2022.
+
+2022-07-20 20:29:15,797 - INFO - Getting results for site 323...
+2022-07-20 20:29:15,798 - INFO - Finished for site 323:
+	Beginning MCMC at Wed Jul 20 20:27:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.024296665850968 and mean Neff = 210.05022645820495
+	MCMC converged at Wed Jul 20 20:29:15 2022.
+
+2022-07-20 20:30:05,884 - INFO - Getting results for site 324...
+2022-07-20 20:30:05,885 - INFO - Finished for site 324:
+	Beginning MCMC at Wed Jul 20 20:28:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.025287460314332 and mean Neff = 157.47580754102472
+	MCMC converged at Wed Jul 20 20:30:05 2022.
+
+2022-07-20 20:30:15,902 - INFO - Getting results for site 322...
+2022-07-20 20:30:15,905 - INFO - Finished for site 322:
+	Beginning MCMC at Wed Jul 20 20:27:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0383154819336202 and mean Neff = 153.0546396237875
+	MCMC converged at Wed Jul 20 20:30:15 2022.
+
+2022-07-20 20:31:29,028 - INFO - Getting results for site 327...
+2022-07-20 20:31:29,029 - INFO - Finished for site 327:
+	Beginning MCMC at Wed Jul 20 20:30:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.029646666876128 and mean Neff = 159.7752309148011
+	MCMC converged at Wed Jul 20 20:31:28 2022.
+
+2022-07-20 20:31:35,036 - INFO - Getting results for site 326...
+2022-07-20 20:31:35,039 - INFO - Finished for site 326:
+	Beginning MCMC at Wed Jul 20 20:30:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0228742215185105 and mean Neff = 197.09208171229548
+	MCMC converged at Wed Jul 20 20:31:34 2022.
+
+2022-07-20 20:31:45,052 - INFO - Getting results for site 325...
+2022-07-20 20:31:45,056 - INFO - Finished for site 325:
+	Beginning MCMC at Wed Jul 20 20:29:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0709325098121774 and mean Neff = 134.78527263475445
+	MCMC converged at Wed Jul 20 20:31:44 2022.
+
+2022-07-20 20:33:13,174 - INFO - Getting results for site 330...
+2022-07-20 20:33:13,177 - INFO - Finished for site 330:
+	Beginning MCMC at Wed Jul 20 20:31:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0234472747699046 and mean Neff = 201.60975269510925
+	MCMC converged at Wed Jul 20 20:33:12 2022.
+
+2022-07-20 20:33:21,191 - INFO - Getting results for site 328...
+2022-07-20 20:33:21,191 - INFO - Finished for site 328:
+	Beginning MCMC at Wed Jul 20 20:31:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0212225815494826 and mean Neff = 191.42155308517323
+	MCMC converged at Wed Jul 20 20:33:20 2022.
+
+2022-07-20 20:34:23,299 - INFO - Getting results for site 331...
+2022-07-20 20:34:23,301 - INFO - Finished for site 331:
+	Beginning MCMC at Wed Jul 20 20:33:12 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0384450327941006 and mean Neff = 124.53187173761705
+	MCMC converged at Wed Jul 20 20:34:22 2022.
+
+2022-07-20 20:34:40,331 - INFO - Getting results for site 329...
+2022-07-20 20:34:40,332 - INFO - Finished for site 329:
+	Beginning MCMC at Wed Jul 20 20:31:34 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0251337081448662 and mean Neff = 168.9777861403332
+	MCMC converged at Wed Jul 20 20:34:40 2022.
+
+2022-07-20 20:35:29,417 - INFO - Getting results for site 332...
+2022-07-20 20:35:29,418 - INFO - Finished for site 332:
+	Beginning MCMC at Wed Jul 20 20:33:20 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.021592651820183 and mean Neff = 238.580684740359
+	MCMC converged at Wed Jul 20 20:35:28 2022.
+
+2022-07-20 20:36:06,481 - INFO - Getting results for site 333...
+2022-07-20 20:36:06,482 - INFO - Finished for site 333:
+	Beginning MCMC at Wed Jul 20 20:34:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0318572348073154 and mean Neff = 156.44713985300118
+	MCMC converged at Wed Jul 20 20:36:06 2022.
+
+2022-07-20 20:36:31,525 - INFO - Getting results for site 334...
+2022-07-20 20:36:31,526 - INFO - Finished for site 334:
+	Beginning MCMC at Wed Jul 20 20:34:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0193855597016221 and mean Neff = 218.39247761102197
+	MCMC converged at Wed Jul 20 20:36:30 2022.
+
+2022-07-20 20:38:47,767 - INFO - Getting results for site 335...
+2022-07-20 20:38:47,768 - INFO - Finished for site 335:
+	Beginning MCMC at Wed Jul 20 20:35:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0729124482182337 and mean Neff = 109.13384938188942
+	MCMC converged at Wed Jul 20 20:38:47 2022.
+
+2022-07-20 20:38:58,787 - INFO - Getting results for site 336...
+2022-07-20 20:38:58,787 - INFO - Finished for site 336:
+	Beginning MCMC at Wed Jul 20 20:36:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0323351444732627 and mean Neff = 182.37959478173715
+	MCMC converged at Wed Jul 20 20:38:57 2022.
+
+2022-07-20 20:39:04,799 - INFO - Getting results for site 337...
+2022-07-20 20:39:04,801 - INFO - Finished for site 337:
+	Beginning MCMC at Wed Jul 20 20:36:30 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0429960789209667 and mean Neff = 143.0575054385899
+	MCMC converged at Wed Jul 20 20:39:03 2022.
+
+2022-07-20 20:40:07,905 - INFO - Getting results for site 338...
+2022-07-20 20:40:07,906 - INFO - Finished for site 338:
+	Beginning MCMC at Wed Jul 20 20:38:47 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.024056609794045 and mean Neff = 179.33790656410147
+	MCMC converged at Wed Jul 20 20:40:07 2022.
+
+2022-07-20 20:40:35,955 - INFO - Getting results for site 339...
+2022-07-20 20:40:35,955 - INFO - Finished for site 339:
+	Beginning MCMC at Wed Jul 20 20:38:57 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0132378634285162 and mean Neff = 297.82304484637064
+	MCMC converged at Wed Jul 20 20:40:35 2022.
+
+2022-07-20 20:40:40,964 - INFO - Getting results for site 340...
+2022-07-20 20:40:40,964 - INFO - Finished for site 340:
+	Beginning MCMC at Wed Jul 20 20:39:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0149497947714123 and mean Neff = 228.8611418575938
+	MCMC converged at Wed Jul 20 20:40:40 2022.
+
+2022-07-20 20:42:05,092 - INFO - Getting results for site 343...
+2022-07-20 20:42:05,097 - INFO - Finished for site 343:
+	Beginning MCMC at Wed Jul 20 20:40:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0277333913218127 and mean Neff = 177.4704091300277
+	MCMC converged at Wed Jul 20 20:42:04 2022.
+
+2022-07-20 20:42:32,152 - INFO - Getting results for site 342...
+2022-07-20 20:42:32,152 - INFO - Finished for site 342:
+	Beginning MCMC at Wed Jul 20 20:40:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0241126764821125 and mean Neff = 196.9749895062312
+	MCMC converged at Wed Jul 20 20:42:31 2022.
+
+2022-07-20 20:42:36,160 - INFO - Getting results for site 341...
+2022-07-20 20:42:36,160 - INFO - Finished for site 341:
+	Beginning MCMC at Wed Jul 20 20:40:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0359000726297924 and mean Neff = 128.81272424188396
+	MCMC converged at Wed Jul 20 20:42:35 2022.
+
+2022-07-20 20:44:12,323 - INFO - Getting results for site 346...
+2022-07-20 20:44:12,324 - INFO - Finished for site 346:
+	Beginning MCMC at Wed Jul 20 20:42:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0600976179836747 and mean Neff = 136.20026065884883
+	MCMC converged at Wed Jul 20 20:44:11 2022.
+
+2022-07-20 20:44:26,344 - INFO - Getting results for site 345...
+2022-07-20 20:44:26,345 - INFO - Finished for site 345:
+	Beginning MCMC at Wed Jul 20 20:42:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.078960202447326 and mean Neff = 138.65208108365792
+	MCMC converged at Wed Jul 20 20:44:26 2022.
+
+2022-07-20 20:45:53,462 - INFO - Getting results for site 347...
+2022-07-20 20:45:53,464 - INFO - Finished for site 347:
+	Beginning MCMC at Wed Jul 20 20:44:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0205705142110013 and mean Neff = 184.78096467491383
+	MCMC converged at Wed Jul 20 20:45:53 2022.
+
+2022-07-20 20:46:06,482 - INFO - Getting results for site 344...
+2022-07-20 20:46:06,484 - INFO - Finished for site 344:
+	Beginning MCMC at Wed Jul 20 20:42:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0536764736020776 and mean Neff = 84.89845516605037
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0269243070232876 and mean Neff = 164.97627241102776
+	MCMC converged at Wed Jul 20 20:46:06 2022.
+
+2022-07-20 20:46:08,488 - INFO - Getting results for site 348...
+2022-07-20 20:46:08,488 - INFO - Finished for site 348:
+	Beginning MCMC at Wed Jul 20 20:44:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0712472402632178 and mean Neff = 162.82669939063754
+	MCMC converged at Wed Jul 20 20:46:07 2022.
+
+2022-07-20 20:47:27,625 - INFO - Getting results for site 351...
+2022-07-20 20:47:27,628 - INFO - Finished for site 351:
+	Beginning MCMC at Wed Jul 20 20:46:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.056557902909594 and mean Neff = 113.82129176957122
+	MCMC converged at Wed Jul 20 20:47:27 2022.
+
+2022-07-20 20:47:38,647 - INFO - Getting results for site 349...
+2022-07-20 20:47:38,647 - INFO - Finished for site 349:
+	Beginning MCMC at Wed Jul 20 20:45:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0308807136347844 and mean Neff = 142.8431661040879
+	MCMC converged at Wed Jul 20 20:47:38 2022.
+
+2022-07-20 20:49:28,795 - INFO - Getting results for site 350...
+2022-07-20 20:49:28,797 - INFO - Finished for site 350:
+	Beginning MCMC at Wed Jul 20 20:46:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0667012855151876 and mean Neff = 80.07418903535364
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0215594469991713 and mean Neff = 190.4647026286323
+	MCMC converged at Wed Jul 20 20:49:28 2022.
+
+2022-07-20 20:50:53,911 - INFO - Getting results for site 352...
+2022-07-20 20:50:53,913 - INFO - Finished for site 352:
+	Beginning MCMC at Wed Jul 20 20:47:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0729813520924976 and mean Neff = 80.14084792502415
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0345354295035745 and mean Neff = 147.25585004700204
+	MCMC converged at Wed Jul 20 20:50:53 2022.
+
+2022-07-20 20:50:59,928 - INFO - Getting results for site 354...
+2022-07-20 20:50:59,932 - INFO - Finished for site 354:
+	Beginning MCMC at Wed Jul 20 20:49:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0476632685637686 and mean Neff = 115.79001622409399
+	MCMC converged at Wed Jul 20 20:50:59 2022.
+
+2022-07-20 20:52:18,067 - INFO - Getting results for site 355...
+2022-07-20 20:52:18,068 - INFO - Finished for site 355:
+	Beginning MCMC at Wed Jul 20 20:50:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0850331220908245 and mean Neff = 104.97653421385128
+	MCMC converged at Wed Jul 20 20:52:17 2022.
+
+2022-07-20 20:52:26,082 - INFO - Getting results for site 356...
+2022-07-20 20:52:26,083 - INFO - Finished for site 356:
+	Beginning MCMC at Wed Jul 20 20:50:59 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0219001121962816 and mean Neff = 178.70300889233826
+	MCMC converged at Wed Jul 20 20:52:25 2022.
+
+2022-07-20 20:52:48,121 - INFO - Getting results for site 353...
+2022-07-20 20:52:48,123 - INFO - Finished for site 353:
+	Beginning MCMC at Wed Jul 20 20:47:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0865492914273196 and mean Neff = 91.20770478918799
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0193864358996765 and mean Neff = 268.8594130882834
+	MCMC converged at Wed Jul 20 20:52:47 2022.
+
+2022-07-20 20:53:45,223 - INFO - Getting results for site 357...
+2022-07-20 20:53:45,226 - INFO - Finished for site 357:
+	Beginning MCMC at Wed Jul 20 20:52:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0310392269693573 and mean Neff = 194.12924541292105
+	MCMC converged at Wed Jul 20 20:53:45 2022.
+
+2022-07-20 20:54:24,293 - INFO - Getting results for site 359...
+2022-07-20 20:54:24,297 - INFO - Finished for site 359:
+	Beginning MCMC at Wed Jul 20 20:52:47 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.030838128548686 and mean Neff = 168.1782013769201
+	MCMC converged at Wed Jul 20 20:54:24 2022.
+
+2022-07-20 20:54:29,305 - INFO - Getting results for site 358...
+2022-07-20 20:54:29,306 - INFO - Finished for site 358:
+	Beginning MCMC at Wed Jul 20 20:52:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0306081365654483 and mean Neff = 167.93252475668362
+	MCMC converged at Wed Jul 20 20:54:28 2022.
+
+2022-07-20 20:55:07,373 - INFO - Getting results for site 360...
+2022-07-20 20:55:07,374 - INFO - Finished for site 360:
+	Beginning MCMC at Wed Jul 20 20:53:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0220059453190484 and mean Neff = 185.40128948516536
+	MCMC converged at Wed Jul 20 20:55:07 2022.
+
+2022-07-20 20:55:52,451 - INFO - Getting results for site 362...
+2022-07-20 20:55:52,454 - INFO - Finished for site 362:
+	Beginning MCMC at Wed Jul 20 20:54:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0293236396718954 and mean Neff = 152.00965830588993
+	MCMC converged at Wed Jul 20 20:55:52 2022.
+
+2022-07-20 20:56:09,484 - INFO - Getting results for site 361...
+2022-07-20 20:56:09,487 - INFO - Finished for site 361:
+	Beginning MCMC at Wed Jul 20 20:54:24 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0279577818606587 and mean Neff = 170.5735971284204
+	MCMC converged at Wed Jul 20 20:56:09 2022.
+
+2022-07-20 20:56:36,533 - INFO - Getting results for site 363...
+2022-07-20 20:56:36,534 - INFO - Finished for site 363:
+	Beginning MCMC at Wed Jul 20 20:55:07 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0262452109271503 and mean Neff = 181.4597837304074
+	MCMC converged at Wed Jul 20 20:56:35 2022.
+
+2022-07-20 20:57:31,627 - INFO - Getting results for site 365...
+2022-07-20 20:57:31,630 - INFO - Finished for site 365:
+	Beginning MCMC at Wed Jul 20 20:56:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0295972184186009 and mean Neff = 167.09030637443692
+	MCMC converged at Wed Jul 20 20:57:31 2022.
+
+2022-07-20 20:57:51,664 - INFO - Getting results for site 364...
+2022-07-20 20:57:51,667 - INFO - Finished for site 364:
+	Beginning MCMC at Wed Jul 20 20:55:52 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.024288584297508 and mean Neff = 191.05414653920255
+	MCMC converged at Wed Jul 20 20:57:51 2022.
+
+2022-07-20 20:58:09,694 - INFO - Getting results for site 366...
+2022-07-20 20:58:09,695 - INFO - Finished for site 366:
+	Beginning MCMC at Wed Jul 20 20:56:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0261606910285894 and mean Neff = 151.20003094257746
+	MCMC converged at Wed Jul 20 20:58:09 2022.
+
+2022-07-20 20:59:16,805 - INFO - Getting results for site 367...
+2022-07-20 20:59:16,806 - INFO - Finished for site 367:
+	Beginning MCMC at Wed Jul 20 20:57:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0312403216442865 and mean Neff = 140.17144606294605
+	MCMC converged at Wed Jul 20 20:59:16 2022.
+
+2022-07-20 20:59:32,834 - INFO - Getting results for site 368...
+2022-07-20 20:59:32,837 - INFO - Finished for site 368:
+	Beginning MCMC at Wed Jul 20 20:57:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0441037818289236 and mean Neff = 123.78864068071876
+	MCMC converged at Wed Jul 20 20:59:31 2022.
+
+2022-07-20 21:00:47,956 - INFO - Getting results for site 371...
+2022-07-20 21:00:47,957 - INFO - Finished for site 371:
+	Beginning MCMC at Wed Jul 20 20:59:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.046895352831598 and mean Neff = 106.40339311364616
+	MCMC converged at Wed Jul 20 21:00:47 2022.
+
+2022-07-20 21:01:41,047 - INFO - Getting results for site 369...
+2022-07-20 21:01:41,048 - INFO - Finished for site 369:
+	Beginning MCMC at Wed Jul 20 20:58:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0858381840153113 and mean Neff = 95.89530790043872
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0217535915720029 and mean Neff = 206.94961788322388
+	MCMC converged at Wed Jul 20 21:01:40 2022.
+
+2022-07-20 21:02:04,087 - INFO - Getting results for site 370...
+2022-07-20 21:02:04,088 - INFO - Finished for site 370:
+	Beginning MCMC at Wed Jul 20 20:59:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0516938613861535 and mean Neff = 137.2493859436384
+	MCMC converged at Wed Jul 20 21:02:03 2022.
+
+2022-07-20 21:02:17,111 - INFO - Getting results for site 372...
+2022-07-20 21:02:17,112 - INFO - Finished for site 372:
+	Beginning MCMC at Wed Jul 20 21:00:47 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0342239319757955 and mean Neff = 130.46775088719727
+	MCMC converged at Wed Jul 20 21:02:17 2022.
+
+2022-07-20 21:02:57,180 - INFO - Getting results for site 373...
+2022-07-20 21:02:57,181 - INFO - Finished for site 373:
+	Beginning MCMC at Wed Jul 20 21:01:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.031411924911558 and mean Neff = 137.9848789979265
+	MCMC converged at Wed Jul 20 21:02:56 2022.
+
+2022-07-20 21:03:37,251 - INFO - Getting results for site 374...
+2022-07-20 21:03:37,253 - INFO - Finished for site 374:
+	Beginning MCMC at Wed Jul 20 21:02:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0331591470102155 and mean Neff = 138.00351793859295
+	MCMC converged at Wed Jul 20 21:03:36 2022.
+
+2022-07-20 21:04:09,309 - INFO - Getting results for site 375...
+2022-07-20 21:04:09,310 - INFO - Finished for site 375:
+	Beginning MCMC at Wed Jul 20 21:02:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0404759406106334 and mean Neff = 154.34332736850484
+	MCMC converged at Wed Jul 20 21:04:09 2022.
+
+2022-07-20 21:04:33,352 - INFO - Getting results for site 376...
+2022-07-20 21:04:33,353 - INFO - Finished for site 376:
+	Beginning MCMC at Wed Jul 20 21:02:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0261882264582298 and mean Neff = 200.99386318108614
+	MCMC converged at Wed Jul 20 21:04:32 2022.
+
+2022-07-20 21:04:51,384 - INFO - Getting results for site 377...
+2022-07-20 21:04:51,386 - INFO - Finished for site 377:
+	Beginning MCMC at Wed Jul 20 21:03:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0180125149452446 and mean Neff = 230.448420779753
+	MCMC converged at Wed Jul 20 21:04:51 2022.
+
+2022-07-20 21:06:18,536 - INFO - Getting results for site 378...
+2022-07-20 21:06:18,539 - INFO - Finished for site 378:
+	Beginning MCMC at Wed Jul 20 21:04:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0319746029959214 and mean Neff = 145.4189537628888
+	MCMC converged at Wed Jul 20 21:06:18 2022.
+
+2022-07-20 21:06:18,539 - INFO - Getting results for site 379...
+2022-07-20 21:06:18,539 - INFO - Finished for site 379:
+	Beginning MCMC at Wed Jul 20 21:04:32 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.015143928488572 and mean Neff = 257.3287382385718
+	MCMC converged at Wed Jul 20 21:06:18 2022.
+
+2022-07-20 21:07:12,633 - INFO - Getting results for site 380...
+2022-07-20 21:07:12,636 - INFO - Finished for site 380:
+	Beginning MCMC at Wed Jul 20 21:04:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0314823911787283 and mean Neff = 173.23330990010032
+	MCMC converged at Wed Jul 20 21:07:12 2022.
+
+2022-07-20 21:07:40,685 - INFO - Getting results for site 381...
+2022-07-20 21:07:40,687 - INFO - Finished for site 381:
+	Beginning MCMC at Wed Jul 20 21:06:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0222146927335845 and mean Neff = 202.48749725794096
+	MCMC converged at Wed Jul 20 21:07:40 2022.
+
+2022-07-20 21:07:41,689 - INFO - Getting results for site 382...
+2022-07-20 21:07:41,689 - INFO - Finished for site 382:
+	Beginning MCMC at Wed Jul 20 21:06:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0290690558475002 and mean Neff = 160.3299645748928
+	MCMC converged at Wed Jul 20 21:07:40 2022.
+
+2022-07-20 21:08:44,797 - INFO - Getting results for site 383...
+2022-07-20 21:08:44,798 - INFO - Finished for site 383:
+	Beginning MCMC at Wed Jul 20 21:07:12 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0236111811913549 and mean Neff = 229.10270044533658
+	MCMC converged at Wed Jul 20 21:08:43 2022.
+
+2022-07-20 21:09:25,869 - INFO - Getting results for site 385...
+2022-07-20 21:09:25,870 - INFO - Finished for site 385:
+	Beginning MCMC at Wed Jul 20 21:07:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0260682581866747 and mean Neff = 174.5779661495849
+	MCMC converged at Wed Jul 20 21:09:25 2022.
+
+2022-07-20 21:09:38,893 - INFO - Getting results for site 384...
+2022-07-20 21:09:38,893 - INFO - Finished for site 384:
+	Beginning MCMC at Wed Jul 20 21:07:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.026651076310565 and mean Neff = 217.56898706642096
+	MCMC converged at Wed Jul 20 21:09:38 2022.
+
+2022-07-20 21:10:28,961 - INFO - Getting results for site 386...
+2022-07-20 21:10:28,962 - INFO - Finished for site 386:
+	Beginning MCMC at Wed Jul 20 21:08:43 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0264206811118242 and mean Neff = 187.4595322379988
+	MCMC converged at Wed Jul 20 21:10:28 2022.
+
+2022-07-20 21:10:44,984 - INFO - Getting results for site 387...
+2022-07-20 21:10:44,987 - INFO - Finished for site 387:
+	Beginning MCMC at Wed Jul 20 21:09:25 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.042330786670849 and mean Neff = 125.58479737204489
+	MCMC converged at Wed Jul 20 21:10:44 2022.
+
+2022-07-20 21:12:05,094 - INFO - Getting results for site 388...
+2022-07-20 21:12:05,094 - INFO - Finished for site 388:
+	Beginning MCMC at Wed Jul 20 21:09:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0203813452342254 and mean Neff = 194.96344061071167
+	MCMC converged at Wed Jul 20 21:12:04 2022.
+
+2022-07-20 21:12:39,140 - INFO - Getting results for site 390...
+2022-07-20 21:12:39,141 - INFO - Finished for site 390:
+	Beginning MCMC at Wed Jul 20 21:10:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0263929718788005 and mean Neff = 161.22263706780376
+	MCMC converged at Wed Jul 20 21:12:38 2022.
+
+2022-07-20 21:13:12,186 - INFO - Getting results for site 389...
+2022-07-20 21:13:12,188 - INFO - Finished for site 389:
+	Beginning MCMC at Wed Jul 20 21:10:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0190010280985349 and mean Neff = 236.74113102991276
+	MCMC converged at Wed Jul 20 21:13:11 2022.
+
+2022-07-20 21:13:27,214 - INFO - Getting results for site 391...
+2022-07-20 21:13:27,215 - INFO - Finished for site 391:
+	Beginning MCMC at Wed Jul 20 21:12:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0448833249974743 and mean Neff = 110.6567351541795
+	MCMC converged at Wed Jul 20 21:13:26 2022.
+
+2022-07-20 21:14:33,328 - INFO - Getting results for site 392...
+2022-07-20 21:14:33,328 - INFO - Finished for site 392:
+	Beginning MCMC at Wed Jul 20 21:12:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0210787584526737 and mean Neff = 177.99443334120446
+	MCMC converged at Wed Jul 20 21:14:32 2022.
+
+2022-07-20 21:15:11,396 - INFO - Getting results for site 393...
+2022-07-20 21:15:11,398 - INFO - Finished for site 393:
+	Beginning MCMC at Wed Jul 20 21:13:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0339257931154582 and mean Neff = 149.4331577652246
+	MCMC converged at Wed Jul 20 21:15:10 2022.
+
+2022-07-20 21:15:16,407 - INFO - Getting results for site 394...
+2022-07-20 21:15:16,407 - INFO - Finished for site 394:
+	Beginning MCMC at Wed Jul 20 21:13:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0257611882899489 and mean Neff = 179.40653324627692
+	MCMC converged at Wed Jul 20 21:15:15 2022.
+
+2022-07-20 21:15:42,452 - INFO - Getting results for site 395...
+2022-07-20 21:15:42,455 - INFO - Finished for site 395:
+	Beginning MCMC at Wed Jul 20 21:14:32 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0390167496085614 and mean Neff = 124.54725342637157
+	MCMC converged at Wed Jul 20 21:15:42 2022.
+
+2022-07-20 21:16:24,527 - INFO - Getting results for site 396...
+2022-07-20 21:16:24,527 - INFO - Finished for site 396:
+	Beginning MCMC at Wed Jul 20 21:15:10 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.043101498809698 and mean Neff = 106.05805790524252
+	MCMC converged at Wed Jul 20 21:16:24 2022.
+
+2022-07-20 21:16:56,582 - INFO - Getting results for site 397...
+2022-07-20 21:16:56,585 - INFO - Finished for site 397:
+	Beginning MCMC at Wed Jul 20 21:15:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0447358547058017 and mean Neff = 106.21869583161875
+	MCMC converged at Wed Jul 20 21:16:55 2022.
+
+2022-07-20 21:17:54,683 - INFO - Getting results for site 399...
+2022-07-20 21:17:54,684 - INFO - Finished for site 399:
+	Beginning MCMC at Wed Jul 20 21:16:24 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0463143288619454 and mean Neff = 156.5843470571717
+	MCMC converged at Wed Jul 20 21:17:53 2022.
+
+2022-07-20 21:18:23,733 - INFO - Getting results for site 400...
+2022-07-20 21:18:23,734 - INFO - Finished for site 400:
+	Beginning MCMC at Wed Jul 20 21:16:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0261478150567085 and mean Neff = 176.2762800799734
+	MCMC converged at Wed Jul 20 21:18:22 2022.
+
+2022-07-20 21:18:30,746 - INFO - Getting results for site 398...
+2022-07-20 21:18:30,746 - INFO - Finished for site 398:
+	Beginning MCMC at Wed Jul 20 21:15:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0438440659812818 and mean Neff = 170.64677647657817
+	MCMC converged at Wed Jul 20 21:18:30 2022.
+
+2022-07-20 21:20:05,901 - INFO - Getting results for site 402...
+2022-07-20 21:20:05,904 - INFO - Finished for site 402:
+	Beginning MCMC at Wed Jul 20 21:18:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.032123419615585 and mean Neff = 155.777556398804
+	MCMC converged at Wed Jul 20 21:20:05 2022.
+
+2022-07-20 21:20:39,963 - INFO - Getting results for site 401...
+2022-07-20 21:20:39,964 - INFO - Finished for site 401:
+	Beginning MCMC at Wed Jul 20 21:17:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0233790650758785 and mean Neff = 183.6411770832194
+	MCMC converged at Wed Jul 20 21:20:39 2022.
+
+2022-07-20 21:22:02,107 - INFO - Getting results for site 405...
+2022-07-20 21:22:02,107 - INFO - Finished for site 405:
+	Beginning MCMC at Wed Jul 20 21:20:39 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.030626269217486 and mean Neff = 165.43640221855
+	MCMC converged at Wed Jul 20 21:22:01 2022.
+
+2022-07-20 21:22:55,197 - INFO - Getting results for site 403...
+2022-07-20 21:22:55,200 - INFO - Finished for site 403:
+	Beginning MCMC at Wed Jul 20 21:18:30 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0792149373552908 and mean Neff = 86.36077603352199
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0429042324399647 and mean Neff = 160.1948792099975
+	MCMC converged at Wed Jul 20 21:22:54 2022.
+
+2022-07-20 21:23:07,221 - INFO - Getting results for site 404...
+2022-07-20 21:23:07,222 - INFO - Finished for site 404:
+	Beginning MCMC at Wed Jul 20 21:20:05 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0194782654752257 and mean Neff = 226.8333812556341
+	MCMC converged at Wed Jul 20 21:23:06 2022.
+
+2022-07-20 21:23:17,239 - INFO - Getting results for site 406...
+2022-07-20 21:23:17,242 - INFO - Finished for site 406:
+	Beginning MCMC at Wed Jul 20 21:22:01 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0502697041794309 and mean Neff = 106.89511542216228
+	MCMC converged at Wed Jul 20 21:23:16 2022.
+
+2022-07-20 21:24:45,393 - INFO - Getting results for site 409...
+2022-07-20 21:24:45,394 - INFO - Finished for site 409:
+	Beginning MCMC at Wed Jul 20 21:23:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0484974647423129 and mean Neff = 130.91937496454918
+	MCMC converged at Wed Jul 20 21:24:45 2022.
+
+2022-07-20 21:24:51,405 - INFO - Getting results for site 408...
+2022-07-20 21:24:51,407 - INFO - Finished for site 408:
+	Beginning MCMC at Wed Jul 20 21:23:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.035429847478158 and mean Neff = 159.31234328328955
+	MCMC converged at Wed Jul 20 21:24:50 2022.
+
+2022-07-20 21:25:05,431 - INFO - Getting results for site 407...
+2022-07-20 21:25:05,432 - INFO - Finished for site 407:
+	Beginning MCMC at Wed Jul 20 21:22:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0362216209148944 and mean Neff = 158.12031365317762
+	MCMC converged at Wed Jul 20 21:25:04 2022.
+
+2022-07-20 21:25:57,519 - INFO - Getting results for site 411...
+2022-07-20 21:25:57,521 - INFO - Finished for site 411:
+	Beginning MCMC at Wed Jul 20 21:24:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0651516189496602 and mean Neff = 102.55658216251577
+	MCMC converged at Wed Jul 20 21:25:57 2022.
+
+2022-07-20 21:26:57,602 - INFO - Getting results for site 410...
+2022-07-20 21:26:57,604 - INFO - Finished for site 410:
+	Beginning MCMC at Wed Jul 20 21:24:45 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0528788816294439 and mean Neff = 155.256243409687
+	MCMC converged at Wed Jul 20 21:26:56 2022.
+
+2022-07-20 21:27:56,683 - INFO - Getting results for site 412...
+2022-07-20 21:27:56,684 - INFO - Finished for site 412:
+	Beginning MCMC at Wed Jul 20 21:25:04 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0432869226347294 and mean Neff = 144.99114566716398
+	MCMC converged at Wed Jul 20 21:27:56 2022.
+
+2022-07-20 21:28:38,760 - INFO - Getting results for site 414...
+2022-07-20 21:28:38,762 - INFO - Finished for site 414:
+	Beginning MCMC at Wed Jul 20 21:26:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.026836509706165 and mean Neff = 178.67657687590253
+	MCMC converged at Wed Jul 20 21:28:38 2022.
+
+2022-07-20 21:32:46,190 - INFO - Getting results for site 416...
+2022-07-20 21:32:46,191 - INFO - Finished for site 416:
+	Beginning MCMC at Wed Jul 20 21:28:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0638161808957693 and mean Neff = 98.09103148184907
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.026650819013644 and mean Neff = 220.1013494395705
+	MCMC converged at Wed Jul 20 21:32:46 2022.
+
+2022-07-20 21:34:28,345 - INFO - Getting results for site 413...
+2022-07-20 21:34:28,346 - INFO - Finished for site 413:
+	Beginning MCMC at Wed Jul 20 21:25:57 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.1094822124379922 and mean Neff = 105.51342977592542
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0481319634879198 and mean Neff = 221.36224099179717
+	MCMC converged at Wed Jul 20 21:34:27 2022.
+
+2022-07-20 21:35:53,460 - INFO - Getting results for site 417...
+2022-07-20 21:35:53,462 - INFO - Finished for site 417:
+	Beginning MCMC at Wed Jul 20 21:32:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0179877338529935 and mean Neff = 244.50436101975941
+	MCMC converged at Wed Jul 20 21:35:53 2022.
+
+2022-07-20 21:37:07,561 - INFO - Getting results for site 418...
+2022-07-20 21:37:07,564 - INFO - Finished for site 418:
+	Beginning MCMC at Wed Jul 20 21:34:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0378307153587816 and mean Neff = 178.01861999897977
+	MCMC converged at Wed Jul 20 21:37:06 2022.
+
+2022-07-20 21:38:23,665 - INFO - Getting results for site 420...
+2022-07-20 21:38:23,666 - INFO - Finished for site 420:
+	Beginning MCMC at Wed Jul 20 21:37:06 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0320720894350042 and mean Neff = 130.93714699440525
+	MCMC converged at Wed Jul 20 21:38:23 2022.
+
+2022-07-20 21:39:37,761 - INFO - Getting results for site 421...
+2022-07-20 21:39:37,762 - INFO - Finished for site 421:
+	Beginning MCMC at Wed Jul 20 21:38:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0442218935606316 and mean Neff = 113.35536517307075
+	MCMC converged at Wed Jul 20 21:39:36 2022.
+
+2022-07-20 21:41:14,916 - INFO - Getting results for site 422...
+2022-07-20 21:41:14,918 - INFO - Finished for site 422:
+	Beginning MCMC at Wed Jul 20 21:39:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.066893852616584 and mean Neff = 108.67211082150584
+	MCMC converged at Wed Jul 20 21:41:14 2022.
+
+2022-07-20 21:43:02,096 - INFO - Getting results for site 423...
+2022-07-20 21:43:02,098 - INFO - Finished for site 423:
+	Beginning MCMC at Wed Jul 20 21:41:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0420640322513808 and mean Neff = 125.12221688396605
+	MCMC converged at Wed Jul 20 21:43:01 2022.
+
+2022-07-20 21:43:27,145 - INFO - Getting results for site 419...
+2022-07-20 21:43:27,146 - INFO - Finished for site 419:
+	Beginning MCMC at Wed Jul 20 21:35:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0974515886571965 and mean Neff = 64.62627286466389
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0362242429195507 and mean Neff = 236.7382103567035
+	MCMC converged at Wed Jul 20 21:43:26 2022.
+
+2022-07-20 21:44:16,238 - INFO - Getting results for site 424...
+2022-07-20 21:44:16,240 - INFO - Finished for site 424:
+	Beginning MCMC at Wed Jul 20 21:43:01 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.029220766521916 and mean Neff = 151.32079277155395
+	MCMC converged at Wed Jul 20 21:44:15 2022.
+
+2022-07-20 21:45:58,419 - INFO - Getting results for site 425...
+2022-07-20 21:45:58,421 - INFO - Finished for site 425:
+	Beginning MCMC at Wed Jul 20 21:43:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0380861594231625 and mean Neff = 151.7148305993729
+	MCMC converged at Wed Jul 20 21:45:57 2022.
+
+2022-07-20 21:48:44,695 - INFO - Getting results for site 427...
+2022-07-20 21:48:44,696 - INFO - Finished for site 427:
+	Beginning MCMC at Wed Jul 20 21:45:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.037980850768014 and mean Neff = 141.1345865004404
+	MCMC converged at Wed Jul 20 21:48:44 2022.
+
+2022-07-20 21:50:19,848 - INFO - Getting results for site 426...
+2022-07-20 21:50:19,851 - INFO - Finished for site 426:
+	Beginning MCMC at Wed Jul 20 21:44:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.110006836174712 and mean Neff = 72.56430843208742
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0243603359116946 and mean Neff = 335.3154307066003
+	MCMC converged at Wed Jul 20 21:50:19 2022.
+
+2022-07-20 21:50:51,906 - INFO - Getting results for site 428...
+2022-07-20 21:50:51,907 - INFO - Finished for site 428:
+	Beginning MCMC at Wed Jul 20 21:48:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0367256106118616 and mean Neff = 179.61594388481382
+	MCMC converged at Wed Jul 20 21:50:51 2022.
+
+2022-07-20 21:52:23,066 - INFO - Getting results for site 429...
+2022-07-20 21:52:23,066 - INFO - Finished for site 429:
+	Beginning MCMC at Wed Jul 20 21:50:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0236318249452476 and mean Neff = 193.46126181069798
+	MCMC converged at Wed Jul 20 21:52:22 2022.
+
+2022-07-20 21:52:36,089 - INFO - Getting results for site 430...
+2022-07-20 21:52:36,090 - INFO - Finished for site 430:
+	Beginning MCMC at Wed Jul 20 21:50:51 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.029366411621746 and mean Neff = 204.2699885461758
+	MCMC converged at Wed Jul 20 21:52:35 2022.
+
+2022-07-20 21:53:40,201 - INFO - Getting results for site 431...
+2022-07-20 21:53:40,203 - INFO - Finished for site 431:
+	Beginning MCMC at Wed Jul 20 21:52:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.033660574610585 and mean Neff = 120.63217122507133
+	MCMC converged at Wed Jul 20 21:53:40 2022.
+
+2022-07-20 21:55:54,383 - INFO - Getting results for site 433...
+2022-07-20 21:55:54,385 - INFO - Finished for site 433:
+	Beginning MCMC at Wed Jul 20 21:53:40 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0235479742423181 and mean Neff = 179.85540403149486
+	MCMC converged at Wed Jul 20 21:55:54 2022.
+
+2022-07-20 22:01:09,862 - INFO - Getting results for site 432...
+2022-07-20 22:01:09,866 - INFO - Finished for site 432:
+	Beginning MCMC at Wed Jul 20 21:52:35 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.2501558638818586 and mean Neff = 63.90423413052817
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0715994257390584 and mean Neff = 181.8154367530031
+	MCMC converged at Wed Jul 20 22:01:09 2022.
+
+2022-07-20 22:01:42,918 - INFO - Getting results for site 434...
+2022-07-20 22:01:42,918 - INFO - Finished for site 434:
+	Beginning MCMC at Wed Jul 20 21:55:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.073899112933128 and mean Neff = 92.01993597120551
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0434064942747723 and mean Neff = 217.23733633655297
+	MCMC converged at Wed Jul 20 22:01:42 2022.
+
+2022-07-20 22:02:54,040 - INFO - Getting results for site 435...
+2022-07-20 22:02:54,040 - INFO - Finished for site 435:
+	Beginning MCMC at Wed Jul 20 22:01:09 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0351449906238106 and mean Neff = 150.2477726025633
+	MCMC converged at Wed Jul 20 22:02:53 2022.
+
+2022-07-20 22:04:14,162 - INFO - Getting results for site 437...
+2022-07-20 22:04:14,165 - INFO - Finished for site 437:
+	Beginning MCMC at Wed Jul 20 22:02:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0488114002692277 and mean Neff = 141.27544297907733
+	MCMC converged at Wed Jul 20 22:04:13 2022.
+
+2022-07-20 22:04:39,199 - INFO - Getting results for site 436...
+2022-07-20 22:04:39,201 - INFO - Finished for site 436:
+	Beginning MCMC at Wed Jul 20 22:01:42 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.049592380700733 and mean Neff = 176.3543476608681
+	MCMC converged at Wed Jul 20 22:04:38 2022.
+
+2022-07-20 22:06:17,332 - INFO - Getting results for site 438...
+2022-07-20 22:06:17,333 - INFO - Finished for site 438:
+	Beginning MCMC at Wed Jul 20 22:04:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0469809886606023 and mean Neff = 185.83065177129035
+	MCMC converged at Wed Jul 20 22:06:17 2022.
+
+2022-07-20 22:08:03,505 - INFO - Getting results for site 440...
+2022-07-20 22:08:03,508 - INFO - Finished for site 440:
+	Beginning MCMC at Wed Jul 20 22:06:17 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0446615412361138 and mean Neff = 145.66446617007094
+	MCMC converged at Wed Jul 20 22:08:03 2022.
+
+2022-07-20 22:08:22,547 - INFO - Getting results for site 415...
+2022-07-20 22:08:22,549 - INFO - Finished for site 415:
+	Beginning MCMC at Wed Jul 20 21:27:56 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.163053171294424 and mean Neff = 75.53601393266564
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.1068670616340675 and mean Neff = 129.53521281780317
+	MCMC failed to converge. Doing retry 2 with 80000 iterations per chain.
+	After 4 MCMC chains each of 80000 steps, mean R = 1.2657885439248409 and mean Neff = 45.0676062363416
+	MCMC failed to converge. Doing retry 3 with 160000 iterations per chain.
+	After 4 MCMC chains each of 160000 steps, mean R = 1.0634448725361734 and mean Neff = 472.8545629715874
+	MCMC converged at Wed Jul 20 22:08:22 2022.
+
+2022-07-20 22:09:31,640 - INFO - Getting results for site 441...
+2022-07-20 22:09:31,642 - INFO - Finished for site 441:
+	Beginning MCMC at Wed Jul 20 22:08:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0354272998636393 and mean Neff = 127.77866505970269
+	MCMC converged at Wed Jul 20 22:09:31 2022.
+
+2022-07-20 22:09:49,677 - INFO - Getting results for site 439...
+2022-07-20 22:09:49,677 - INFO - Finished for site 439:
+	Beginning MCMC at Wed Jul 20 22:04:38 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0561613943882757 and mean Neff = 88.01847082866601
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0160004718475197 and mean Neff = 225.02327388130098
+	MCMC converged at Wed Jul 20 22:09:48 2022.
+
+2022-07-20 22:10:37,747 - INFO - Getting results for site 442...
+2022-07-20 22:10:37,749 - INFO - Finished for site 442:
+	Beginning MCMC at Wed Jul 20 22:08:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0487789217218715 and mean Neff = 147.73484717904248
+	MCMC converged at Wed Jul 20 22:10:37 2022.
+
+2022-07-20 22:11:46,848 - INFO - Getting results for site 444...
+2022-07-20 22:11:46,849 - INFO - Finished for site 444:
+	Beginning MCMC at Wed Jul 20 22:09:48 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0599177498632026 and mean Neff = 106.51730009290584
+	MCMC converged at Wed Jul 20 22:11:46 2022.
+
+2022-07-20 22:12:49,942 - INFO - Getting results for site 445...
+2022-07-20 22:12:49,944 - INFO - Finished for site 445:
+	Beginning MCMC at Wed Jul 20 22:10:37 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0570475162440502 and mean Neff = 119.70574312290401
+	MCMC converged at Wed Jul 20 22:12:49 2022.
+
+2022-07-20 22:13:50,058 - INFO - Getting results for site 446...
+2022-07-20 22:13:50,060 - INFO - Finished for site 446:
+	Beginning MCMC at Wed Jul 20 22:11:46 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0789185366020209 and mean Neff = 116.75989752321536
+	MCMC converged at Wed Jul 20 22:13:49 2022.
+
+2022-07-20 22:17:30,399 - INFO - Getting results for site 443...
+2022-07-20 22:17:30,400 - INFO - Finished for site 443:
+	Beginning MCMC at Wed Jul 20 22:09:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.093424004495227 and mean Neff = 71.33413714788242
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.066953449424722 and mean Neff = 179.62400200570082
+	MCMC converged at Wed Jul 20 22:17:29 2022.
+
+2022-07-20 22:18:49,505 - INFO - Getting results for site 449...
+2022-07-20 22:18:49,506 - INFO - Finished for site 449:
+	Beginning MCMC at Wed Jul 20 22:17:29 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0423260478919731 and mean Neff = 121.27355616821175
+	MCMC converged at Wed Jul 20 22:18:49 2022.
+
+2022-07-20 22:20:17,624 - INFO - Getting results for site 450...
+2022-07-20 22:20:17,625 - INFO - Finished for site 450:
+	Beginning MCMC at Wed Jul 20 22:18:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0356115038822908 and mean Neff = 140.37084604427383
+	MCMC converged at Wed Jul 20 22:20:16 2022.
+
+2022-07-20 22:23:13,883 - INFO - Getting results for site 447...
+2022-07-20 22:23:13,885 - INFO - Finished for site 447:
+	Beginning MCMC at Wed Jul 20 22:12:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.1232087258398047 and mean Neff = 68.02061986060919
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.14085158418997 and mean Neff = 116.29291113822237
+	MCMC failed to converge. Doing retry 2 with 80000 iterations per chain.
+	After 4 MCMC chains each of 80000 steps, mean R = 1.0177201084487149 and mean Neff = 362.6740385087825
+	MCMC converged at Wed Jul 20 22:23:13 2022.
+
+2022-07-20 22:24:56,028 - INFO - Getting results for site 452...
+2022-07-20 22:24:56,029 - INFO - Finished for site 452:
+	Beginning MCMC at Wed Jul 20 22:23:13 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.041422072656837 and mean Neff = 139.1335552641888
+	MCMC converged at Wed Jul 20 22:24:55 2022.
+
+2022-07-20 22:25:44,092 - INFO - Getting results for site 448...
+2022-07-20 22:25:44,093 - INFO - Finished for site 448:
+	Beginning MCMC at Wed Jul 20 22:13:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0759952643082178 and mean Neff = 94.16625582321754
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0625486042386643 and mean Neff = 183.1113817628058
+	MCMC converged at Wed Jul 20 22:25:43 2022.
+
+2022-07-20 22:26:24,153 - INFO - Getting results for site 451...
+2022-07-20 22:26:24,154 - INFO - Finished for site 451:
+	Beginning MCMC at Wed Jul 20 22:20:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.104494493269685 and mean Neff = 90.50616911211795
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.048151879717915 and mean Neff = 287.3832216222472
+	MCMC converged at Wed Jul 20 22:26:23 2022.
+
+2022-07-20 22:28:18,305 - INFO - Getting results for site 453...
+2022-07-20 22:28:18,307 - INFO - Finished for site 453:
+	Beginning MCMC at Wed Jul 20 22:24:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0334817114711174 and mean Neff = 186.69027933925753
+	MCMC converged at Wed Jul 20 22:28:18 2022.
+
+2022-07-20 22:28:19,309 - INFO - Getting results for site 454...
+2022-07-20 22:28:19,309 - INFO - Finished for site 454:
+	Beginning MCMC at Wed Jul 20 22:25:43 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0581460823901971 and mean Neff = 132.96586116530665
+	MCMC converged at Wed Jul 20 22:28:19 2022.
+
+2022-07-20 22:29:29,403 - INFO - Getting results for site 456...
+2022-07-20 22:29:29,403 - INFO - Finished for site 456:
+	Beginning MCMC at Wed Jul 20 22:28:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0468009123406128 and mean Neff = 108.84674668324854
+	MCMC converged at Wed Jul 20 22:29:28 2022.
+
+2022-07-20 22:30:04,451 - INFO - Getting results for site 457...
+2022-07-20 22:30:04,451 - INFO - Finished for site 457:
+	Beginning MCMC at Wed Jul 20 22:28:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0475306162746505 and mean Neff = 139.02622945231226
+	MCMC converged at Wed Jul 20 22:30:03 2022.
+
+2022-07-20 22:30:59,524 - INFO - Getting results for site 458...
+2022-07-20 22:30:59,526 - INFO - Finished for site 458:
+	Beginning MCMC at Wed Jul 20 22:29:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.033145417031095 and mean Neff = 160.01502607882324
+	MCMC converged at Wed Jul 20 22:30:58 2022.
+
+2022-07-20 22:32:33,666 - INFO - Getting results for site 460...
+2022-07-20 22:32:33,667 - INFO - Finished for site 460:
+	Beginning MCMC at Wed Jul 20 22:30:58 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0689281627097809 and mean Neff = 103.82430819001311
+	MCMC converged at Wed Jul 20 22:32:33 2022.
+
+2022-07-20 22:32:49,693 - INFO - Getting results for site 455...
+2022-07-20 22:32:49,697 - INFO - Finished for site 455:
+	Beginning MCMC at Wed Jul 20 22:26:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.1073562567973518 and mean Neff = 56.701588217924815
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0409384012461969 and mean Neff = 201.80993171846754
+	MCMC converged at Wed Jul 20 22:32:48 2022.
+
+2022-07-20 22:34:36,844 - INFO - Getting results for site 462...
+2022-07-20 22:34:36,846 - INFO - Finished for site 462:
+	Beginning MCMC at Wed Jul 20 22:32:48 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0649828792126448 and mean Neff = 116.38201621367807
+	MCMC converged at Wed Jul 20 22:34:36 2022.
+
+2022-07-20 22:34:39,849 - INFO - Getting results for site 461...
+2022-07-20 22:34:39,849 - INFO - Finished for site 461:
+	Beginning MCMC at Wed Jul 20 22:32:33 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0755169109976606 and mean Neff = 114.78936341193166
+	MCMC converged at Wed Jul 20 22:34:39 2022.
+
+2022-07-20 22:35:50,943 - INFO - Getting results for site 459...
+2022-07-20 22:35:50,945 - INFO - Finished for site 459:
+	Beginning MCMC at Wed Jul 20 22:30:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.114280062256762 and mean Neff = 86.97812053614373
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.052018651031877 and mean Neff = 195.2704932429119
+	MCMC converged at Wed Jul 20 22:35:50 2022.
+
+2022-07-20 22:36:22,987 - INFO - Getting results for site 464...
+2022-07-20 22:36:22,987 - INFO - Finished for site 464:
+	Beginning MCMC at Wed Jul 20 22:34:39 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0450792573459384 and mean Neff = 103.93856564518583
+	MCMC converged at Wed Jul 20 22:36:22 2022.
+
+2022-07-20 22:37:11,051 - INFO - Getting results for site 465...
+2022-07-20 22:37:11,051 - INFO - Finished for site 465:
+	Beginning MCMC at Wed Jul 20 22:35:50 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0512237168527285 and mean Neff = 114.65306820589615
+	MCMC converged at Wed Jul 20 22:37:10 2022.
+
+2022-07-20 22:38:00,116 - INFO - Getting results for site 466...
+2022-07-20 22:38:00,118 - INFO - Finished for site 466:
+	Beginning MCMC at Wed Jul 20 22:36:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0583685305334793 and mean Neff = 106.74802835161518
+	MCMC converged at Wed Jul 20 22:37:59 2022.
+
+2022-07-20 22:40:56,352 - INFO - Getting results for site 467...
+2022-07-20 22:40:56,354 - INFO - Finished for site 467:
+	Beginning MCMC at Wed Jul 20 22:37:10 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0738313347678776 and mean Neff = 81.56463549286667
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0309442152981008 and mean Neff = 190.22043072163348
+	MCMC converged at Wed Jul 20 22:40:55 2022.
+
+2022-07-20 22:41:15,390 - INFO - Getting results for site 463...
+2022-07-20 22:41:15,391 - INFO - Finished for site 463:
+	Beginning MCMC at Wed Jul 20 22:34:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0637539046658147 and mean Neff = 93.43023633719002
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.092590387160619 and mean Neff = 147.62056237790497
+	MCMC converged at Wed Jul 20 22:41:14 2022.
+
+2022-07-20 22:42:42,528 - INFO - Getting results for site 469...
+2022-07-20 22:42:42,529 - INFO - Finished for site 469:
+	Beginning MCMC at Wed Jul 20 22:40:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0291059086001666 and mean Neff = 176.49632275568817
+	MCMC converged at Wed Jul 20 22:42:41 2022.
+
+2022-07-20 22:45:28,820 - INFO - Getting results for site 468...
+2022-07-20 22:45:28,821 - INFO - Finished for site 468:
+	Beginning MCMC at Wed Jul 20 22:37:59 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.1066473481727228 and mean Neff = 85.77605990821108
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0337328477136283 and mean Neff = 207.51472802543094
+	MCMC converged at Wed Jul 20 22:45:27 2022.
+
+2022-07-20 22:46:23,917 - INFO - Getting results for site 470...
+2022-07-20 22:46:23,919 - INFO - Finished for site 470:
+	Beginning MCMC at Wed Jul 20 22:41:14 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0715873062080867 and mean Neff = 99.5330847166217
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0845043441542095 and mean Neff = 144.6359121463674
+	MCMC converged at Wed Jul 20 22:46:23 2022.
+
+2022-07-20 22:46:47,961 - INFO - Getting results for site 472...
+2022-07-20 22:46:47,966 - INFO - Finished for site 472:
+	Beginning MCMC at Wed Jul 20 22:45:27 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0461879640975582 and mean Neff = 122.09727041628102
+	MCMC converged at Wed Jul 20 22:46:47 2022.
+
+2022-07-20 22:47:56,084 - INFO - Getting results for site 473...
+2022-07-20 22:47:56,087 - INFO - Finished for site 473:
+	Beginning MCMC at Wed Jul 20 22:46:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0419853689283536 and mean Neff = 142.41036068913945
+	MCMC converged at Wed Jul 20 22:47:55 2022.
+
+2022-07-20 22:48:24,136 - INFO - Getting results for site 474...
+2022-07-20 22:48:24,138 - INFO - Finished for site 474:
+	Beginning MCMC at Wed Jul 20 22:46:47 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0353476486217166 and mean Neff = 155.36339644734105
+	MCMC converged at Wed Jul 20 22:48:23 2022.
+
+2022-07-20 22:49:29,253 - INFO - Getting results for site 476...
+2022-07-20 22:49:29,254 - INFO - Finished for site 476:
+	Beginning MCMC at Wed Jul 20 22:48:23 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0385584629967624 and mean Neff = 132.25458135477368
+	MCMC converged at Wed Jul 20 22:49:29 2022.
+
+2022-07-20 22:50:02,317 - INFO - Getting results for site 471...
+2022-07-20 22:50:02,319 - INFO - Finished for site 471:
+	Beginning MCMC at Wed Jul 20 22:42:41 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0581982572900193 and mean Neff = 87.71426993778076
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0690907237619292 and mean Neff = 131.63386296390422
+	MCMC converged at Wed Jul 20 22:50:02 2022.
+
+2022-07-20 22:50:55,421 - INFO - Getting results for site 477...
+2022-07-20 22:50:55,423 - INFO - Finished for site 477:
+	Beginning MCMC at Wed Jul 20 22:49:29 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0621626226215697 and mean Neff = 115.43859493561038
+	MCMC converged at Wed Jul 20 22:50:54 2022.
+
+2022-07-20 22:51:28,486 - INFO - Getting results for site 475...
+2022-07-20 22:51:28,486 - INFO - Finished for site 475:
+	Beginning MCMC at Wed Jul 20 22:47:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0755896325581962 and mean Neff = 87.96883913832487
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.056207589625148 and mean Neff = 118.58638102370237
+	MCMC converged at Wed Jul 20 22:51:28 2022.
+
+2022-07-20 22:51:49,526 - INFO - Getting results for site 478...
+2022-07-20 22:51:49,528 - INFO - Finished for site 478:
+	Beginning MCMC at Wed Jul 20 22:50:02 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0460543428203293 and mean Neff = 146.02760988863156
+	MCMC converged at Wed Jul 20 22:51:49 2022.
+
+2022-07-20 22:54:11,794 - INFO - Getting results for site 480...
+2022-07-20 22:54:11,795 - INFO - Finished for site 480:
+	Beginning MCMC at Wed Jul 20 22:51:28 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0513221246628466 and mean Neff = 106.8874217359054
+	MCMC converged at Wed Jul 20 22:54:10 2022.
+
+2022-07-20 22:55:11,908 - INFO - Getting results for site 479...
+2022-07-20 22:55:11,911 - INFO - Finished for site 479:
+	Beginning MCMC at Wed Jul 20 22:50:54 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0977258599361328 and mean Neff = 93.38817418504769
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0477636054743016 and mean Neff = 237.29580016275742
+	MCMC converged at Wed Jul 20 22:55:11 2022.
+
+2022-07-20 22:55:53,989 - INFO - Getting results for site 481...
+2022-07-20 22:55:53,990 - INFO - Finished for site 481:
+	Beginning MCMC at Wed Jul 20 22:51:49 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0503686466792228 and mean Neff = 95.07066788595411
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0253472637214214 and mean Neff = 181.15629570368202
+	MCMC converged at Wed Jul 20 22:55:53 2022.
+
+2022-07-20 22:56:04,010 - INFO - Getting results for site 482...
+2022-07-20 22:56:04,012 - INFO - Finished for site 482:
+	Beginning MCMC at Wed Jul 20 22:54:10 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0657130242212531 and mean Neff = 111.06124941496721
+	MCMC converged at Wed Jul 20 22:56:03 2022.
+
+2022-07-20 22:58:17,263 - INFO - Getting results for site 484...
+2022-07-20 22:58:17,265 - INFO - Finished for site 484:
+	Beginning MCMC at Wed Jul 20 22:55:53 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0503396110682761 and mean Neff = 108.89776555324511
+	MCMC converged at Wed Jul 20 22:58:16 2022.
+
+2022-07-20 22:58:17,265 - INFO - Getting results for site 485...
+2022-07-20 22:58:17,265 - INFO - Finished for site 485:
+	Beginning MCMC at Wed Jul 20 22:56:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0610118364120624 and mean Neff = 120.95940635877722
+	MCMC converged at Wed Jul 20 22:58:16 2022.
+
+2022-07-20 23:00:03,466 - INFO - Getting results for site 483...
+2022-07-20 23:00:03,469 - INFO - Finished for site 483:
+	Beginning MCMC at Wed Jul 20 22:55:11 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.087834838797955 and mean Neff = 85.49151492855034
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0252883165017175 and mean Neff = 216.9412417069753
+	MCMC converged at Wed Jul 20 23:00:03 2022.
+
+2022-07-20 23:00:08,478 - INFO - Getting results for site 487...
+2022-07-20 23:00:08,479 - INFO - Finished for site 487:
+	Beginning MCMC at Wed Jul 20 22:58:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.066947945449218 and mean Neff = 102.57552434309153
+	MCMC converged at Wed Jul 20 23:00:08 2022.
+
+2022-07-20 23:02:36,759 - INFO - Getting results for site 486...
+2022-07-20 23:02:36,760 - INFO - Finished for site 486:
+	Beginning MCMC at Wed Jul 20 22:58:16 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0656764119818853 and mean Neff = 95.8522501709789
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0576338571976265 and mean Neff = 151.50831519990933
+	MCMC converged at Wed Jul 20 23:02:36 2022.
+
+2022-07-20 23:05:16,047 - INFO - Getting results for site 488...
+2022-07-20 23:05:16,051 - INFO - Finished for site 488:
+	Beginning MCMC at Wed Jul 20 23:00:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0686564352808476 and mean Neff = 92.92835188870822
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0238074027519852 and mean Neff = 237.0009315446369
+	MCMC converged at Wed Jul 20 23:05:15 2022.
+
+2022-07-20 23:06:37,194 - INFO - Getting results for site 489...
+2022-07-20 23:06:37,196 - INFO - Finished for site 489:
+	Beginning MCMC at Wed Jul 20 23:00:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.1602183819081002 and mean Neff = 46.671660002207076
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0879585965613443 and mean Neff = 194.63758061110823
+	MCMC converged at Wed Jul 20 23:06:36 2022.
+
+2022-07-20 23:08:13,364 - INFO - Getting results for site 492...
+2022-07-20 23:08:13,366 - INFO - Finished for site 492:
+	Beginning MCMC at Wed Jul 20 23:06:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0439882166584071 and mean Neff = 142.6854516130306
+	MCMC converged at Wed Jul 20 23:08:12 2022.
+
+2022-07-20 23:08:26,391 - INFO - Getting results for site 490...
+2022-07-20 23:08:26,392 - INFO - Finished for site 490:
+	Beginning MCMC at Wed Jul 20 23:02:36 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0638118034834438 and mean Neff = 95.50240639318288
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.063379813000082 and mean Neff = 145.83168174791504
+	MCMC converged at Wed Jul 20 23:08:26 2022.
+
+2022-07-20 23:10:09,574 - INFO - Getting results for site 491...
+2022-07-20 23:10:09,577 - INFO - Finished for site 491:
+	Beginning MCMC at Wed Jul 20 23:05:15 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0811435171754475 and mean Neff = 81.16171738180736
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0491879021656043 and mean Neff = 231.56093496274016
+	MCMC converged at Wed Jul 20 23:10:08 2022.
+
+2022-07-20 23:14:49,068 - INFO - Getting results for site 494...
+2022-07-20 23:14:49,070 - INFO - Finished for site 494:
+	Beginning MCMC at Wed Jul 20 23:08:26 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.1869078478560697 and mean Neff = 50.106047186622874
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0982762494314344 and mean Neff = 157.88842716880788
+	MCMC converged at Wed Jul 20 23:14:48 2022.
+
+2022-07-20 23:17:18,332 - INFO - Getting results for site 495...
+2022-07-20 23:17:18,334 - INFO - Finished for site 495:
+	Beginning MCMC at Wed Jul 20 23:10:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0619841542241184 and mean Neff = 97.92313449433146
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0264950855314057 and mean Neff = 278.09651203764787
+	MCMC converged at Wed Jul 20 23:17:18 2022.
+
+2022-07-20 23:18:23,449 - INFO - Getting results for site 496...
+2022-07-20 23:18:23,450 - INFO - Finished for site 496:
+	Beginning MCMC at Wed Jul 20 23:14:48 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0617190387314088 and mean Neff = 80.76683298683152
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.050403571296806 and mean Neff = 178.0303146276621
+	MCMC converged at Wed Jul 20 23:18:22 2022.
+
+2022-07-20 23:19:31,570 - INFO - Getting results for site 497...
+2022-07-20 23:19:31,573 - INFO - Finished for site 497:
+	Beginning MCMC at Wed Jul 20 23:17:18 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.040787899514826 and mean Neff = 121.06093722660542
+	MCMC converged at Wed Jul 20 23:19:31 2022.
+
+2022-07-20 23:19:55,615 - INFO - Getting results for site 498...
+2022-07-20 23:19:55,617 - INFO - Finished for site 498:
+	Beginning MCMC at Wed Jul 20 23:18:22 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0462216683159218 and mean Neff = 128.09723841626905
+	MCMC converged at Wed Jul 20 23:19:55 2022.
+
+2022-07-20 23:22:19,872 - INFO - Getting results for site 499...
+2022-07-20 23:22:19,876 - INFO - Finished for site 499:
+	Beginning MCMC at Wed Jul 20 23:19:31 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0766943173517194 and mean Neff = 113.34631253926497
+	MCMC converged at Wed Jul 20 23:22:19 2022.
+
+2022-07-20 23:24:04,058 - INFO - Getting results for site 493...
+2022-07-20 23:24:04,061 - INFO - Finished for site 493:
+	Beginning MCMC at Wed Jul 20 23:08:12 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.1030952703638435 and mean Neff = 98.6646443764511
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.1020814231168037 and mean Neff = 83.34937050169381
+	MCMC failed to converge. Doing retry 2 with 80000 iterations per chain.
+	After 4 MCMC chains each of 80000 steps, mean R = 1.038858532653234 and mean Neff = 340.4870428347174
+	MCMC converged at Wed Jul 20 23:24:03 2022.
+
+2022-07-20 23:24:45,133 - INFO - Getting results for site 500...
+2022-07-20 23:24:45,136 - INFO - Finished for site 500:
+	Beginning MCMC at Wed Jul 20 23:19:55 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.049034672470921 and mean Neff = 114.69697898710788
+	MCMC converged at Wed Jul 20 23:24:44 2022.
+
+2022-07-20 23:28:08,519 - INFO - Getting results for site 502...
+2022-07-20 23:28:08,522 - INFO - Finished for site 502:
+	Beginning MCMC at Wed Jul 20 23:24:03 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0481010083069726 and mean Neff = 177.4140631836463
+	MCMC converged at Wed Jul 20 23:28:08 2022.
+
+2022-07-20 23:28:16,537 - INFO - Getting results for site 501...
+2022-07-20 23:28:16,538 - INFO - Finished for site 501:
+	Beginning MCMC at Wed Jul 20 23:22:19 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.123440962563535 and mean Neff = 71.13792508981534
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0771815467441168 and mean Neff = 160.35121982819177
+	MCMC converged at Wed Jul 20 23:28:16 2022.
+
+2022-07-20 23:29:18,656 - INFO - Getting results for site 503...
+2022-07-20 23:29:18,659 - INFO - Finished for site 503:
+	Beginning MCMC at Wed Jul 20 23:24:44 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.071668292326778 and mean Neff = 94.02873119000895
+	MCMC failed to converge. Doing retry 1 with 40000 iterations per chain.
+	After 4 MCMC chains each of 40000 steps, mean R = 1.0474679779024192 and mean Neff = 225.67643077629833
+	MCMC converged at Wed Jul 20 23:29:18 2022.
+
+2022-07-20 23:30:25,774 - INFO - Getting results for site 504...
+2022-07-20 23:30:25,776 - INFO - Finished for site 504:
+	Beginning MCMC at Wed Jul 20 23:28:08 2022
+	After 4 MCMC chains each of 20000 steps, mean R = 1.0777062990625952 and mean Neff = 109.21725589610362
+	MCMC converged at Wed Jul 20 23:30:25 2022.
+
+2022-07-20 23:30:25,807 - INFO - Finished inferring the preferences.
+
+2022-07-20 23:30:25,822 - INFO - Writing preferences to results/bottleneck_prefs/JV2019-Lib2_prefs.csv
+2022-07-20 23:30:25,873 - INFO - Successful completion of dms2_prefs

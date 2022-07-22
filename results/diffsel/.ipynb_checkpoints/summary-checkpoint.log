@@ -1,0 +1,89 @@
+2022-07-20 17:04:50,415 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-20 17:04:50,415 - INFO - Progress is being logged to ./results/diffsel/summary.log
+2022-07-20 17:04:50,454 - INFO - Version information:
+	Time and date: Wed Jul 20 17:04:50 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-20 17:04:50,454 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = 16
+	use_existing = no
+	indir = ./results/codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5
+	mincount = 0
+	batchfile = ./results/diffsel/batch.csv
+	summaryprefix = summary
+
+2022-07-20 17:04:50,454 - INFO - Parsing info from ./results/diffsel/batch.csv
+2022-07-20 17:04:50,462 - INFO - Read the following sample information:
+name,sel,mock,percent_infectivity
+C10-150,lib1-C10-150,lib1-no-antibody,0.51%
+C10-300,lib1-C10-300,lib1-no-antibody,0.11%
+C8-1600,lib1-C8-1600,lib1-no-antibody,0.01%
+C8-800,lib1-C8-800,lib1-no-antibody,0.57%
+MZ4-1200,lib1-MZ4-1200,lib1-no-antibody,5.22%
+MZ4-2400,lib1-MZ4-2400,lib1-no-antibody,0.98%
+MZ4-4800,lib1-MZ4-4800,lib1-no-antibody,0.46%
+ZKA64-750,lib1-ZKA64-750,lib1-no-antibody,0.57%
+ZV67-40000,lib1-ZV67-40000,lib1-no-antibody,0.84%
+ZV67-80000,lib1-ZV67-80000,lib1-no-antibody,0.26%
+
+
+2022-07-20 17:04:50,500 - INFO - Removing existing file ./results/diffsel/summary_meanpositivediffsel.pdf
+2022-07-20 17:04:50,511 - INFO - Removing existing file ./results/diffsel/summary_medianpositivediffsel.pdf
+2022-07-20 17:04:50,529 - INFO - Removing existing file ./results/diffsel/summary_meantotaldiffsel.pdf
+2022-07-20 17:04:50,550 - INFO - Removing existing file ./results/diffsel/summary_mediantotaldiffsel.pdf
+2022-07-20 17:04:50,566 - INFO - Removing existing file ./results/diffsel/summary_meanmaxdiffsel.pdf
+2022-07-20 17:04:50,585 - INFO - Removing existing file ./results/diffsel/summary_medianmaxdiffsel.pdf
+2022-07-20 17:04:50,606 - INFO - Removing existing file ./results/diffsel/summary_meanminmaxdiffsel.pdf
+2022-07-20 17:04:50,615 - INFO - Removing existing file ./results/diffsel/summary_medianminmaxdiffsel.pdf
+2022-07-20 17:04:50,627 - INFO - Removing existing file ./results/diffsel/summary_mutdiffselcorr.pdf
+2022-07-20 17:04:50,665 - INFO - Removing existing file ./results/diffsel/summary_absolutesitediffselcorr.pdf
+2022-07-20 17:04:50,678 - INFO - Removing existing file ./results/diffsel/summary_positivesitediffselcorr.pdf
+2022-07-20 17:04:50,697 - INFO - Removing existing file ./results/diffsel/summary_maxmutdiffselcorr.pdf
+2022-07-20 17:04:50,708 - INFO - Removing existing file ./results/diffsel/summary_meanmutdiffsel.csv
+2022-07-20 17:04:50,727 - INFO - Removing existing file ./results/diffsel/summary_meansitediffsel.csv
+2022-07-20 17:04:50,745 - INFO - Removing existing file ./results/diffsel/summary_medianmutdiffsel.csv
+2022-07-20 17:04:50,753 - INFO - Removing existing file ./results/diffsel/summary_mediansitediffsel.csv
+2022-07-20 17:04:50,771 - INFO - Running dms2_diffsel on all samples...
+2022-07-20 17:04:56,591 - INFO - Completed runs of dms2_diffsel.
+
+2022-07-20 17:04:56,602 - INFO - Analyzing the diffsel values for the 10 samples.
+2022-07-20 17:04:56,602 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_mutdiffselcorr.pdf
+2022-07-20 17:05:13,419 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_absolutesitediffselcorr.pdf
+2022-07-20 17:05:26,441 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_positivesitediffselcorr.pdf
+2022-07-20 17:05:39,413 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_maxmutdiffselcorr.pdf
+2022-07-20 17:05:52,649 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_meanmutdiffsel.csv
+2022-07-20 17:05:52,816 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_meansitediffsel.csv
+2022-07-20 17:05:52,855 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_medianmutdiffsel.csv
+2022-07-20 17:05:53,019 - INFO - Writing median sitediffsel to ./results/diffsel/summary_mediansitediffsel.csv
+2022-07-20 17:05:53,056 - INFO - Plotting mean positive diffsel to ./results/diffsel/summary_meanpositivediffsel.pdf
+2022-07-20 17:05:54,233 - INFO - Plotting mean total diffsel to ./results/diffsel/summary_meantotaldiffsel.pdf
+2022-07-20 17:05:55,290 - INFO - Plotting mean max diffsel to ./results/diffsel/summary_meanmaxdiffsel.pdf
+2022-07-20 17:05:56,365 - INFO - Plotting mean minmax diffsel to ./results/diffsel/summary_meanminmaxdiffsel.pdf
+2022-07-20 17:05:57,391 - INFO - Plotting median positive diffsel to ./results/diffsel/summary_medianpositivediffsel.pdf
+2022-07-20 17:05:58,416 - INFO - Plotting median total diffsel to ./results/diffsel/summary_mediantotaldiffsel.pdf
+2022-07-20 17:05:59,449 - INFO - Plotting median max diffsel to ./results/diffsel/summary_medianmaxdiffsel.pdf
+2022-07-20 17:06:00,500 - INFO - Plotting median minmax diffsel to ./results/diffsel/summary_medianminmaxdiffsel.pdf
+2022-07-20 17:06:01,554 - INFO - Successful completion of dms2_batch_diffsel

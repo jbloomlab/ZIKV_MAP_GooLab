@@ -1,0 +1,62 @@
+2022-07-20 17:06:46,082 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-20 17:06:46,082 - INFO - Progress is being logged to ./results/logoplots/C10-300.log
+2022-07-20 17:06:46,117 - INFO - Version information:
+	Time and date: Wed Jul 20 17:06:46 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-20 17:06:46,117 - INFO - Parsed the following arguments:
+	outdir = ./results/logoplots/
+	ncpus = 16
+	use_existing = no
+	prefs = None
+	diffsel = ./results/diffsel/summary_C10-300-meanmutdiffsel.csv
+	fracsurvive = None
+	diffprefs = None
+	muteffects = None
+	name = C10-300
+	nperline = 101
+	numberevery = 10
+	excludestop = no
+	stringency = 1
+	restrictdiffsel = positive
+	diffselrange = None
+	muteffectrange = None
+	fracsurvivemax = None
+	sortsites = yes
+	mapmetric = functionalgroup
+	colormap = jet
+	overlay1 = None
+	overlay2 = None
+	overlay3 = None
+	underlay = yes
+	scalebar = ['10', 'diffsel = 10']
+	overlaycolormap = jet
+	letterheight = 1
+	ignore_extracols = no
+	sepline = yes
+
+2022-07-20 17:06:46,121 - INFO - Reading diffsel from file ./results/diffsel/summary_C10-300-meanmutdiffsel.csv...
+2022-07-20 17:06:46,121 - ERROR - Terminating dms2_logoplot with ERROR.
+Traceback (most recent call last):
+  File "/home/ckikawa/.conda/envs/ZIKV_host_adaptation_NS5_DMS_EvansLab/bin/dms2_logoplot", line 114, in main
+    assert os.path.isfile(args[datatype]), "Can't find {0}".format(
+AssertionError: Can't find ./results/diffsel/summary_C10-300-meanmutdiffsel.csv

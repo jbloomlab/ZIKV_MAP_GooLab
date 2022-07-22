@@ -1,0 +1,74 @@
+2022-07-21 10:24:49,776 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-21 10:24:49,776 - INFO - Progress is being logged to ./results/diffsel/C10-300.log
+2022-07-21 10:24:49,812 - INFO - Version information:
+	Time and date: Thu Jul 21 10:24:49 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-21 10:24:49,812 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = 1
+	use_existing = no
+	indir = ./results/codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = C10-300
+	sel = lib1-C10-300
+	mock = lib1-no-antibody
+	err = None
+
+2022-07-21 10:24:49,816 - INFO - Removing existing file ./results/diffsel/C10-300_mutdiffsel.csv
+2022-07-21 10:24:49,826 - INFO - Removing existing file ./results/diffsel/C10-300_sitediffsel.csv
+2022-07-21 10:24:49,845 - INFO - Reading selected sample counts from lib1-C10-300
+2022-07-21 10:24:49,860 - INFO - Reading mock-selected sample counts from lib1-no-antibody
+2022-07-21 10:24:49,865 - INFO - Computing mutdiffsel...
+2022-07-21 10:24:51,283 - INFO - Mutations with largest mutdiffsel:
+ site wildtype mutation  mutdiffsel
+   85        Q        A        5.54
+  313        T        Q        5.49
+   46        V        W        5.35
+   33        V        I        5.04
+  307        L        G        4.78
+   49        T        P        4.40
+  120        T        K        4.34
+  451        A        L        4.06
+   55        E        C        4.05
+  346        A        G        4.03
+
+2022-07-21 10:24:51,283 - INFO - Writing to ./results/diffsel/C10-300_mutdiffsel.csv
+2022-07-21 10:24:51,317 - INFO - Computing sitediffsel...
+2022-07-21 10:24:51,345 - INFO - Sites with largest absolute sitediffsel:
+ site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+   84        24.66             15.67             -8.99         3.75        -3.38
+   88        23.93              7.97            -15.96         3.56        -3.88
+  403        23.91              9.90            -14.01         3.79        -2.43
+  375        23.86              1.63            -22.22         1.44        -3.95
+  283        23.75              6.66            -17.09         2.36        -3.19
+   49        22.93              8.98            -13.95         4.40        -4.46
+  443        22.74              0.00            -22.74         0.00        -4.26
+  349        21.88              3.03            -18.85         0.87        -3.95
+  350        21.07              9.94            -11.13         3.83        -1.83
+  148        20.47              0.72            -19.75         0.72        -3.15
+
+2022-07-21 10:24:51,345 - INFO - Writing to ./results/diffsel/C10-300_sitediffsel.csv
+2022-07-21 10:24:51,376 - INFO - Successful completion of dms2_diffsel

@@ -1,0 +1,90 @@
+2022-07-21 10:20:47,440 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-21 10:20:47,440 - INFO - Progress is being logged to ./results/codoncounts/summary.log
+2022-07-21 10:20:47,481 - INFO - Version information:
+	Time and date: Thu Jul 21 10:20:47 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-21 10:20:47,481 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = 16
+	use_existing = no
+	refseq = ./data/E.fasta
+	alignspecs = ['1,303,33,38', '304,609,38,40', '610,903,41,36', '904,1200,41,37', '1201,1512,36,35']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [200]
+	R2trim = [200]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	bcinfo_csv = False
+	batchfile = ./data/batchSubampIDs.csv
+	summaryprefix = summary
+
+2022-07-21 10:20:47,481 - INFO - Parsing sample info from ./data/batchSubampIDs.csv
+2022-07-21 10:20:47,490 - INFO - Read the following sample information:
+name,R1
+lib1-C10-150,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_C10_150_R1.fastq.gz
+lib1-C10-300,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_C10_300_R1.fastq.gz
+lib1-C8-1600,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_C8_1600_R1.fastq.gz
+lib1-C8-800,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_C8_800_R1.fastq.gz
+lib1-MZ4-1200,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_MZ4_1200_R1.fastq.gz
+lib1-MZ4-2400,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_MZ4_2400_R1.fastq.gz
+lib1-MZ4-4800,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_MZ4_4800_R1.fastq.gz
+lib1-ZKA64-750,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_ZKA64_750_R1.fastq.gz
+lib1-ZV67-40000,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_ZV67_40000_R1.fastq.gz
+lib1-ZV67-80000,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_ZV67_80000_R1.fastq.gz
+lib1-no-antibody,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_no_antibody_R1.fastq.gz
+
+
+2022-07-21 10:20:47,612 - INFO - Removing existing file ./results/codoncounts/summary_readstats.pdf
+2022-07-21 10:20:47,619 - INFO - Removing existing file ./results/codoncounts/summary_bcstats.pdf
+2022-07-21 10:20:47,624 - INFO - Removing existing file ./results/codoncounts/summary_readsperbc.pdf
+2022-07-21 10:20:47,642 - INFO - Removing existing file ./results/codoncounts/summary_depth.pdf
+2022-07-21 10:20:47,648 - INFO - Removing existing file ./results/codoncounts/summary_mutfreq.pdf
+2022-07-21 10:20:47,654 - INFO - Removing existing file ./results/codoncounts/summary_codonmuttypes.pdf
+2022-07-21 10:20:47,660 - INFO - Removing existing file ./results/codoncounts/summary_codonmuttypes.csv
+2022-07-21 10:20:47,665 - INFO - Removing existing file ./results/codoncounts/summary_codonntchanges.pdf
+2022-07-21 10:20:47,671 - INFO - Removing existing file ./results/codoncounts/summary_singlentchanges.pdf
+2022-07-21 10:20:47,681 - INFO - Removing existing file ./results/codoncounts/summary_cumulmutcounts.pdf
+2022-07-21 10:20:47,688 - INFO - Running dms2_bcsubamp on all samples using 16 CPUs...
+2022-07-21 10:22:53,934 - INFO - Completed runs of dms2_bcsubamp.
+
+2022-07-21 10:22:53,962 - INFO - Plotting read stats to ./results/codoncounts/summary_readstats.pdf
+2022-07-21 10:22:54,475 - INFO - Plotting barcode stats to ./results/codoncounts/summary_bcstats.pdf
+2022-07-21 10:22:54,903 - INFO - Plotting reads per barcode to ./results/codoncounts/summary_readsperbc.pdf
+2022-07-21 10:22:56,136 - INFO - Plotting count depth to ./results/codoncounts/summary_depth.pdf
+2022-07-21 10:22:57,357 - INFO - Plotting mutation frequencies to ./results/codoncounts/summary_mutfreq.pdf
+2022-07-21 10:23:02,102 - INFO - Plotting average frequencies of codon mutation types to ./results/codoncounts/summary_codonmuttypes.pdf, writing the data to ./results/codoncounts/summary_codonmuttypes.csv
+2022-07-21 10:23:06,207 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to ./results/codoncounts/summary_codonntchanges.pdf
+2022-07-21 10:23:10,571 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to ./results/codoncounts/summary_singlentchanges.pdf
+2022-07-21 10:23:15,138 - INFO - Plotting fraction of mutations seen less than some number of times to ./results/codoncounts/summary_cumulmutcounts.pdf
+2022-07-21 10:23:20,208 - INFO - Successful completion of dms2_batch_bcsubamp

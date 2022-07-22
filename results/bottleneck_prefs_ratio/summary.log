@@ -1,0 +1,58 @@
+2022-07-20 23:30:39,759 - INFO - Beginning execution of dms2_batch_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-20 23:30:39,759 - INFO - Progress is being logged to results/bottleneck_prefs_ratio/summary.log
+2022-07-20 23:30:39,799 - INFO - Version information:
+	Time and date: Wed Jul 20 23:30:39 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-20 23:30:39,799 - INFO - Parsed the following arguments:
+	outdir = results/bottleneck_prefs_ratio
+	ncpus = 16
+	use_existing = yes
+	method = ratio
+	indir = results/bottleneck_codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	conc = [1, 1, 1]
+	pseudocount = 1
+	batchfile = results/bottleneck_prefs_ratio/batch.csv
+	summaryprefix = summary
+	no_corr = False
+	no_avg = False
+
+2022-07-20 23:30:39,802 - INFO - Parsing info from results/bottleneck_prefs_ratio/batch.csv
+2022-07-20 23:30:39,813 - INFO - Read the following sample information:
+name,selection,library,pre,post,errpre,errpost
+GooCK-Lib1Goo,virus,Lib1Goo,GooJBS-Lib1Goo-plasmid,GooCK-Lib1Goo-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
+GooJBS-Lib1Goo,virus,Lib1Goo,GooJBS-Lib1Goo-plasmid,GooJBS-Lib1Goo-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
+JV2019-Lib1,virus,Lib1,JV2019-Lib1-plasmid,JV2019-Lib1-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
+JV2019-Lib2,virus,Lib2,JV2019-Lib2-plasmid,JV2019-Lib2-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
+JV2019-Lib3,virus,Lib3,JV2019-Lib3-plasmid,JV2019-Lib3-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
+
+
+2022-07-20 23:30:39,814 - INFO - Running dms2_prefs on all samples...
+2022-07-20 23:30:44,277 - INFO - Completed runs of dms2_prefs.
+
+2022-07-20 23:30:44,286 - INFO - Plotting correlations to results/bottleneck_prefs_ratio/summary_prefscorr.pdf
+
+2022-07-20 23:30:46,750 - INFO - Writing average preferences to results/bottleneck_prefs_ratio/summary_avgprefs.csv
+
+2022-07-20 23:30:46,801 - INFO - Successful completion of dms2_batch_prefs
