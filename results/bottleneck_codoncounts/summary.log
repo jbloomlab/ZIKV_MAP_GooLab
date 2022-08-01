@@ -1,9 +1,9 @@
-2022-07-20 17:18:50,485 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-07-29 17:32:08,060 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-20 17:18:50,486 - INFO - Progress is being logged to results/bottleneck_codoncounts/summary.log
-2022-07-20 17:18:50,517 - INFO - Version information:
-	Time and date: Wed Jul 20 17:18:50 2022
-	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+2022-07-29 17:32:08,061 - INFO - Progress is being logged to results/bottleneck_codoncounts/summary.log
+2022-07-29 17:32:08,201 - INFO - Version information:
+	Time and date: Fri Jul 29 17:32:08 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-20 17:18:50,517 - INFO - Parsed the following arguments:
+2022-07-29 17:32:08,201 - INFO - Parsed the following arguments:
 	outdir = results/bottleneck_codoncounts
 	ncpus = 16
 	use_existing = yes
@@ -49,12 +49,16 @@
 	batchfile = data/bottleneck/batchSubampIDs.csv
 	summaryprefix = summary
 
-2022-07-20 17:18:50,517 - INFO - Parsing sample info from data/bottleneck/batchSubampIDs.csv
-2022-07-20 17:18:50,522 - INFO - Read the following sample information:
+2022-07-29 17:32:08,201 - INFO - Parsing sample info from data/bottleneck/batchSubampIDs.csv
+2022-07-29 17:32:08,207 - INFO - Read the following sample information:
 name,R1
 GooCK-Lib1Goo-virus,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_no_antibody_R1.fastq.gz
 GooJBS-Lib1Goo-plasmid,/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib1_S1_L001_R1_001.fastq.gz
+GooJBS-Lib2Goo-plasmid,/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib2_S2_L001_R1_001.fastq.gz
+GooJBS-Lib3Goo-plasmid,/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib3_S3_L001_R1_001.fastq.gz
 GooJBS-Lib1Goo-virus,/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample1_S6_R1_001.fastq.gz
+GooJBS-Lib2Goo-virus,/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample2_S7_R1_001.fastq.gz
+GooJBS-Lib3Goo-virus,/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample3_S8_R1_001.fastq.gz
 JV2019-Lib1-plasmid,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-1/*R1*.fastq.gz
 JV2019-Lib2-plasmid,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/*R1*.fastq.gz
 JV2019-Lib3-plasmid,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-3/*R1*.fastq.gz
@@ -65,16 +69,4 @@ JV2019-Lib3-virus,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/180427_SN367_1155_B
 JV2019-wildtype-virus,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/180427_SN367_1155_BHHJMKBCX2/Unaligned/Project_bloom_lab/Sample_zikv_WT/*R1*.fastq.gz
 
 
-2022-07-20 17:18:50,532 - INFO - Running dms2_bcsubamp on all samples using 16 CPUs...
-2022-07-20 17:25:20,943 - INFO - Completed runs of dms2_bcsubamp.
-
-2022-07-20 17:25:20,959 - INFO - Plotting read stats to results/bottleneck_codoncounts/summary_readstats.pdf
-2022-07-20 17:25:21,352 - INFO - Plotting barcode stats to results/bottleneck_codoncounts/summary_bcstats.pdf
-2022-07-20 17:25:21,701 - INFO - Plotting reads per barcode to results/bottleneck_codoncounts/summary_readsperbc.pdf
-2022-07-20 17:25:22,909 - INFO - Plotting count depth to results/bottleneck_codoncounts/summary_depth.pdf
-2022-07-20 17:25:24,175 - INFO - Plotting mutation frequencies to results/bottleneck_codoncounts/summary_mutfreq.pdf
-2022-07-20 17:25:28,841 - INFO - Plotting average frequencies of codon mutation types to results/bottleneck_codoncounts/summary_codonmuttypes.pdf, writing the data to results/bottleneck_codoncounts/summary_codonmuttypes.csv
-2022-07-20 17:25:32,899 - INFO - Plotting average frequencies of nucleotide changes per codon mutation to results/bottleneck_codoncounts/summary_codonntchanges.pdf
-2022-07-20 17:25:36,849 - INFO - Plotting frequencies of nucleotide changes in 1-nucleotide mutations to results/bottleneck_codoncounts/summary_singlentchanges.pdf
-2022-07-20 17:25:40,829 - INFO - Plotting fraction of mutations seen less than some number of times to results/bottleneck_codoncounts/summary_cumulmutcounts.pdf
-2022-07-20 17:25:45,912 - INFO - Successful completion of dms2_batch_bcsubamp
+2022-07-29 17:32:08,424 - INFO - Output files already exist and '--use_existing' is 'yes', so exiting with no further action.

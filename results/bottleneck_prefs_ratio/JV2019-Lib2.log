@@ -1,9 +1,9 @@
-2022-07-20 23:30:42,899 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-07-26 13:17:12,075 - INFO - Beginning execution of dms2_prefs in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-20 23:30:42,899 - INFO - Progress is being logged to results/bottleneck_prefs_ratio/JV2019-Lib2.log
-2022-07-20 23:30:42,931 - INFO - Version information:
-	Time and date: Wed Jul 20 23:30:42 2022
-	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+2022-07-26 13:17:12,075 - INFO - Progress is being logged to results/bottleneck_prefs_ratio/JV2019-Lib2.log
+2022-07-26 13:17:12,112 - INFO - Version information:
+	Time and date: Tue Jul 26 13:17:12 2022
+	Platform: Linux-4.15.0-136-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
@@ -23,10 +23,10 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-20 23:30:42,932 - INFO - Parsed the following arguments:
+2022-07-26 13:17:12,112 - INFO - Parsed the following arguments:
 	outdir = results/bottleneck_prefs_ratio
-	ncpus = 3
-	use_existing = yes
+	ncpus = 2
+	use_existing = no
 	method = ratio
 	indir = results/bottleneck_codoncounts
 	chartype = codon_to_aa
@@ -38,12 +38,13 @@
 	name = JV2019-Lib2
 	err = ['JV2019-wildtype-plasmid', 'JV2019-wildtype-virus']
 
-2022-07-20 23:30:42,935 - INFO - Reading pre-selection counts from results/bottleneck_codoncounts/JV2019-Lib2-plasmid_codoncounts.csv
-2022-07-20 23:30:42,944 - INFO - Reading post-selection counts from results/bottleneck_codoncounts/JV2019-Lib2-virus_codoncounts.csv
-2022-07-20 23:30:42,950 - INFO - Reading pre-selection error-control counts from pre
-2022-07-20 23:30:42,956 - INFO - Reading post-selection error-control counts from post
-2022-07-20 23:30:42,983 - INFO - Read counts for 504 sites.
-2022-07-20 23:30:42,983 - INFO - Here are sites and wildtype identities:
+2022-07-26 13:17:12,121 - INFO - Removing existing file results/bottleneck_prefs_ratio/JV2019-Lib2_prefs.csv
+2022-07-26 13:17:12,125 - INFO - Reading pre-selection counts from results/bottleneck_codoncounts/JV2019-Lib2-plasmid_codoncounts.csv
+2022-07-26 13:17:12,141 - INFO - Reading post-selection counts from results/bottleneck_codoncounts/JV2019-Lib2-virus_codoncounts.csv
+2022-07-26 13:17:12,147 - INFO - Reading pre-selection error-control counts from pre
+2022-07-26 13:17:12,153 - INFO - Reading post-selection error-control counts from post
+2022-07-26 13:17:12,183 - INFO - Read counts for 504 sites.
+2022-07-26 13:17:12,183 - INFO - Here are sites and wildtype identities:
 	1	ATC
 	2	AGG
 	3	TGC
@@ -549,6 +550,6 @@
 	503	TCT
 	504	GCT
 
-2022-07-20 23:30:42,983 - INFO - Computing preferences as normalized enrichment ratios...
-2022-07-20 23:30:43,831 - INFO - Writing preferences to results/bottleneck_prefs_ratio/JV2019-Lib2_prefs.csv
-2022-07-20 23:30:43,849 - INFO - Successful completion of dms2_prefs
+2022-07-26 13:17:12,183 - INFO - Computing preferences as normalized enrichment ratios...
+2022-07-26 13:17:13,014 - INFO - Writing preferences to results/bottleneck_prefs_ratio/JV2019-Lib2_prefs.csv
+2022-07-26 13:17:13,034 - INFO - Successful completion of dms2_prefs
