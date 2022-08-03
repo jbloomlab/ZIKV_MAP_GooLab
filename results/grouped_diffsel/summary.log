@@ -1,8 +1,8 @@
-2022-07-21 10:23:31,321 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-08-02 17:10:19,762 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-21 10:23:31,321 - INFO - Progress is being logged to ./results/grouped_diffsel/summary.log
-2022-07-21 10:23:31,359 - INFO - Version information:
-	Time and date: Thu Jul 21 10:23:31 2022
+2022-08-02 17:10:19,762 - INFO - Progress is being logged to ./results/grouped_diffsel/summary.log
+2022-08-02 17:10:19,800 - INFO - Version information:
+	Time and date: Tue Aug  2 17:10:19 2022
 	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-21 10:23:31,359 - INFO - Parsed the following arguments:
+2022-08-02 17:10:19,800 - INFO - Parsed the following arguments:
 	outdir = ./results/grouped_diffsel
 	ncpus = 16
 	use_existing = no
@@ -35,8 +35,8 @@
 	batchfile = ./results/grouped_diffsel/batch.csv
 	summaryprefix = summary
 
-2022-07-21 10:23:31,359 - INFO - Parsing info from ./results/grouped_diffsel/batch.csv
-2022-07-21 10:23:31,366 - INFO - Read the following sample information:
+2022-08-02 17:10:19,800 - INFO - Parsing info from ./results/grouped_diffsel/batch.csv
+2022-08-02 17:10:19,807 - INFO - Read the following sample information:
 group,name,sel,mock,percent_infectivity
 EDE1-C10,C10-150,lib1-C10-150,lib1-no-antibody,0.51%
 EDE1-C10,C10-300,lib1-C10-300,lib1-no-antibody,0.11%
@@ -50,108 +50,108 @@ ZV-67,ZV67-40000,lib1-ZV67-40000,lib1-no-antibody,0.84%
 ZV-67,ZV67-80000,lib1-ZV67-80000,lib1-no-antibody,0.26%
 
 
-2022-07-21 10:23:31,377 - INFO - Removing existing file ./results/grouped_diffsel/summary_meanpositivediffsel.pdf
-2022-07-21 10:23:31,382 - INFO - Removing existing file ./results/grouped_diffsel/summary_medianpositivediffsel.pdf
-2022-07-21 10:23:31,387 - INFO - Removing existing file ./results/grouped_diffsel/summary_meantotaldiffsel.pdf
-2022-07-21 10:23:31,392 - INFO - Removing existing file ./results/grouped_diffsel/summary_mediantotaldiffsel.pdf
-2022-07-21 10:23:31,396 - INFO - Removing existing file ./results/grouped_diffsel/summary_meanmaxdiffsel.pdf
-2022-07-21 10:23:31,402 - INFO - Removing existing file ./results/grouped_diffsel/summary_medianmaxdiffsel.pdf
-2022-07-21 10:23:31,407 - INFO - Removing existing file ./results/grouped_diffsel/summary_meanminmaxdiffsel.pdf
-2022-07-21 10:23:31,411 - INFO - Removing existing file ./results/grouped_diffsel/summary_medianminmaxdiffsel.pdf
-2022-07-21 10:23:31,417 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-mutdiffselcorr.pdf
-2022-07-21 10:23:31,422 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-absolutesitediffselcorr.pdf
-2022-07-21 10:23:31,427 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-positivesitediffselcorr.pdf
-2022-07-21 10:23:31,432 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-maxmutdiffselcorr.pdf
-2022-07-21 10:23:31,437 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-meanmutdiffsel.csv
-2022-07-21 10:23:31,441 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-meansitediffsel.csv
-2022-07-21 10:23:31,448 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-medianmutdiffsel.csv
-2022-07-21 10:23:31,452 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-mediansitediffsel.csv
-2022-07-21 10:23:31,457 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-mutdiffselcorr.pdf
-2022-07-21 10:23:31,461 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-absolutesitediffselcorr.pdf
-2022-07-21 10:23:31,466 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-positivesitediffselcorr.pdf
-2022-07-21 10:23:31,471 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-maxmutdiffselcorr.pdf
-2022-07-21 10:23:31,475 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-meanmutdiffsel.csv
-2022-07-21 10:23:31,480 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-meansitediffsel.csv
-2022-07-21 10:23:31,484 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-medianmutdiffsel.csv
-2022-07-21 10:23:31,489 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-mediansitediffsel.csv
-2022-07-21 10:23:31,493 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-mutdiffselcorr.pdf
-2022-07-21 10:23:31,497 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-absolutesitediffselcorr.pdf
-2022-07-21 10:23:31,502 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-positivesitediffselcorr.pdf
-2022-07-21 10:23:31,506 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-maxmutdiffselcorr.pdf
-2022-07-21 10:23:31,510 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-meanmutdiffsel.csv
-2022-07-21 10:23:31,515 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-meansitediffsel.csv
-2022-07-21 10:23:31,519 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-medianmutdiffsel.csv
-2022-07-21 10:23:31,524 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-mediansitediffsel.csv
-2022-07-21 10:23:31,529 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-mutdiffselcorr.pdf
-2022-07-21 10:23:31,532 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-absolutesitediffselcorr.pdf
-2022-07-21 10:23:31,537 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-positivesitediffselcorr.pdf
-2022-07-21 10:23:31,541 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-maxmutdiffselcorr.pdf
-2022-07-21 10:23:31,545 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-meanmutdiffsel.csv
-2022-07-21 10:23:31,550 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-meansitediffsel.csv
-2022-07-21 10:23:31,554 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-medianmutdiffsel.csv
-2022-07-21 10:23:31,560 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-mediansitediffsel.csv
-2022-07-21 10:23:31,565 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-mutdiffselcorr.pdf
-2022-07-21 10:23:31,570 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-absolutesitediffselcorr.pdf
-2022-07-21 10:23:31,575 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-positivesitediffselcorr.pdf
-2022-07-21 10:23:31,579 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-maxmutdiffselcorr.pdf
-2022-07-21 10:23:31,584 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-meanmutdiffsel.csv
-2022-07-21 10:23:31,589 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-meansitediffsel.csv
-2022-07-21 10:23:31,593 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-medianmutdiffsel.csv
-2022-07-21 10:23:31,598 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-mediansitediffsel.csv
-2022-07-21 10:23:31,603 - INFO - Running dms2_diffsel on all samples...
-2022-07-21 10:23:37,160 - INFO - Completed runs of dms2_diffsel.
+2022-08-02 17:10:19,869 - INFO - Removing existing file ./results/grouped_diffsel/summary_meanpositivediffsel.pdf
+2022-08-02 17:10:19,874 - INFO - Removing existing file ./results/grouped_diffsel/summary_medianpositivediffsel.pdf
+2022-08-02 17:10:19,899 - INFO - Removing existing file ./results/grouped_diffsel/summary_meantotaldiffsel.pdf
+2022-08-02 17:10:19,904 - INFO - Removing existing file ./results/grouped_diffsel/summary_mediantotaldiffsel.pdf
+2022-08-02 17:10:19,934 - INFO - Removing existing file ./results/grouped_diffsel/summary_meanmaxdiffsel.pdf
+2022-08-02 17:10:19,941 - INFO - Removing existing file ./results/grouped_diffsel/summary_medianmaxdiffsel.pdf
+2022-08-02 17:10:19,974 - INFO - Removing existing file ./results/grouped_diffsel/summary_meanminmaxdiffsel.pdf
+2022-08-02 17:10:19,988 - INFO - Removing existing file ./results/grouped_diffsel/summary_medianminmaxdiffsel.pdf
+2022-08-02 17:10:19,993 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-mutdiffselcorr.pdf
+2022-08-02 17:10:19,998 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-absolutesitediffselcorr.pdf
+2022-08-02 17:10:20,002 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-positivesitediffselcorr.pdf
+2022-08-02 17:10:20,019 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-maxmutdiffselcorr.pdf
+2022-08-02 17:10:20,024 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-meanmutdiffsel.csv
+2022-08-02 17:10:20,047 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-meansitediffsel.csv
+2022-08-02 17:10:20,052 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-medianmutdiffsel.csv
+2022-08-02 17:10:20,057 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C10-mediansitediffsel.csv
+2022-08-02 17:10:20,062 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-mutdiffselcorr.pdf
+2022-08-02 17:10:20,066 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-absolutesitediffselcorr.pdf
+2022-08-02 17:10:20,070 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-positivesitediffselcorr.pdf
+2022-08-02 17:10:20,088 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-maxmutdiffselcorr.pdf
+2022-08-02 17:10:20,093 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-meanmutdiffsel.csv
+2022-08-02 17:10:20,107 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-meansitediffsel.csv
+2022-08-02 17:10:20,122 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-medianmutdiffsel.csv
+2022-08-02 17:10:20,237 - INFO - Removing existing file ./results/grouped_diffsel/summary_EDE1-C8-mediansitediffsel.csv
+2022-08-02 17:10:20,243 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-mutdiffselcorr.pdf
+2022-08-02 17:10:20,248 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-absolutesitediffselcorr.pdf
+2022-08-02 17:10:20,253 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-positivesitediffselcorr.pdf
+2022-08-02 17:10:20,258 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-maxmutdiffselcorr.pdf
+2022-08-02 17:10:20,264 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-meanmutdiffsel.csv
+2022-08-02 17:10:20,335 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-meansitediffsel.csv
+2022-08-02 17:10:20,341 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-medianmutdiffsel.csv
+2022-08-02 17:10:20,347 - INFO - Removing existing file ./results/grouped_diffsel/summary_MZ4-mediansitediffsel.csv
+2022-08-02 17:10:20,370 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-mutdiffselcorr.pdf
+2022-08-02 17:10:20,374 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-absolutesitediffselcorr.pdf
+2022-08-02 17:10:20,433 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-positivesitediffselcorr.pdf
+2022-08-02 17:10:20,438 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-maxmutdiffselcorr.pdf
+2022-08-02 17:10:20,449 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-meanmutdiffsel.csv
+2022-08-02 17:10:20,471 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-meansitediffsel.csv
+2022-08-02 17:10:20,477 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-medianmutdiffsel.csv
+2022-08-02 17:10:20,481 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZKA-64-mediansitediffsel.csv
+2022-08-02 17:10:20,509 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-mutdiffselcorr.pdf
+2022-08-02 17:10:20,531 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-absolutesitediffselcorr.pdf
+2022-08-02 17:10:20,536 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-positivesitediffselcorr.pdf
+2022-08-02 17:10:20,540 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-maxmutdiffselcorr.pdf
+2022-08-02 17:10:20,561 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-meanmutdiffsel.csv
+2022-08-02 17:10:20,807 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-meansitediffsel.csv
+2022-08-02 17:10:20,812 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-medianmutdiffsel.csv
+2022-08-02 17:10:20,821 - INFO - Removing existing file ./results/grouped_diffsel/summary_ZV-67-mediansitediffsel.csv
+2022-08-02 17:10:20,825 - INFO - Running dms2_diffsel on all samples...
+2022-08-02 17:10:26,452 - INFO - Completed runs of dms2_diffsel.
 
-2022-07-21 10:23:37,175 - INFO - Analyzing the diffsel values for the 2 samples in group EDE1-C10.
-2022-07-21 10:23:37,175 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-mutdiffselcorr.pdf
-2022-07-21 10:23:38,008 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-absolutesitediffselcorr.pdf
-2022-07-21 10:23:38,793 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-positivesitediffselcorr.pdf
-2022-07-21 10:23:39,455 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-maxmutdiffselcorr.pdf
-2022-07-21 10:23:40,145 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C10-meanmutdiffsel.csv
-2022-07-21 10:23:40,222 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_EDE1-C10-meansitediffsel.csv
-2022-07-21 10:23:40,258 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C10-medianmutdiffsel.csv
-2022-07-21 10:23:40,333 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_EDE1-C10-mediansitediffsel.csv
-2022-07-21 10:23:40,373 - INFO - Analyzing the diffsel values for the 2 samples in group EDE1-C8.
-2022-07-21 10:23:40,373 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-mutdiffselcorr.pdf
-2022-07-21 10:23:41,230 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-absolutesitediffselcorr.pdf
-2022-07-21 10:23:41,939 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-positivesitediffselcorr.pdf
-2022-07-21 10:23:42,734 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-maxmutdiffselcorr.pdf
-2022-07-21 10:23:43,401 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C8-meanmutdiffsel.csv
-2022-07-21 10:23:43,488 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_EDE1-C8-meansitediffsel.csv
-2022-07-21 10:23:43,522 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C8-medianmutdiffsel.csv
-2022-07-21 10:23:43,597 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_EDE1-C8-mediansitediffsel.csv
-2022-07-21 10:23:43,635 - INFO - Analyzing the diffsel values for the 3 samples in group MZ4.
-2022-07-21 10:23:43,635 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_MZ4-mutdiffselcorr.pdf
-2022-07-21 10:23:45,222 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_MZ4-absolutesitediffselcorr.pdf
-2022-07-21 10:23:46,560 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_MZ4-positivesitediffselcorr.pdf
-2022-07-21 10:23:47,842 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_MZ4-maxmutdiffselcorr.pdf
-2022-07-21 10:23:49,191 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_MZ4-meanmutdiffsel.csv
-2022-07-21 10:23:49,295 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_MZ4-meansitediffsel.csv
-2022-07-21 10:23:49,332 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_MZ4-medianmutdiffsel.csv
-2022-07-21 10:23:49,427 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_MZ4-mediansitediffsel.csv
-2022-07-21 10:23:49,465 - INFO - Analyzing the diffsel values for the 1 samples in group ZKA-64.
-2022-07-21 10:23:49,465 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-mutdiffselcorr.pdf
-2022-07-21 10:23:49,786 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-absolutesitediffselcorr.pdf
-2022-07-21 10:23:50,057 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-positivesitediffselcorr.pdf
-2022-07-21 10:23:50,321 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-maxmutdiffselcorr.pdf
-2022-07-21 10:23:50,736 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_ZKA-64-meanmutdiffsel.csv
-2022-07-21 10:23:50,795 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_ZKA-64-meansitediffsel.csv
-2022-07-21 10:23:50,828 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_ZKA-64-medianmutdiffsel.csv
-2022-07-21 10:23:50,890 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_ZKA-64-mediansitediffsel.csv
-2022-07-21 10:23:50,926 - INFO - Analyzing the diffsel values for the 2 samples in group ZV-67.
-2022-07-21 10:23:50,926 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_ZV-67-mutdiffselcorr.pdf
-2022-07-21 10:23:51,737 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_ZV-67-absolutesitediffselcorr.pdf
-2022-07-21 10:23:52,435 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_ZV-67-positivesitediffselcorr.pdf
-2022-07-21 10:23:53,110 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_ZV-67-maxmutdiffselcorr.pdf
-2022-07-21 10:23:53,782 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_ZV-67-meanmutdiffsel.csv
-2022-07-21 10:23:53,855 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_ZV-67-meansitediffsel.csv
-2022-07-21 10:23:53,885 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_ZV-67-medianmutdiffsel.csv
-2022-07-21 10:23:53,956 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_ZV-67-mediansitediffsel.csv
-2022-07-21 10:23:53,988 - INFO - Plotting mean positive diffsel to ./results/grouped_diffsel/summary_meanpositivediffsel.pdf
-2022-07-21 10:23:59,803 - INFO - Plotting mean total diffsel to ./results/grouped_diffsel/summary_meantotaldiffsel.pdf
-2022-07-21 10:24:05,971 - INFO - Plotting mean max diffsel to ./results/grouped_diffsel/summary_meanmaxdiffsel.pdf
-2022-07-21 10:24:11,666 - INFO - Plotting mean minmax diffsel to ./results/grouped_diffsel/summary_meanminmaxdiffsel.pdf
-2022-07-21 10:24:17,779 - INFO - Plotting median positive diffsel to ./results/grouped_diffsel/summary_medianpositivediffsel.pdf
-2022-07-21 10:24:23,683 - INFO - Plotting median total diffsel to ./results/grouped_diffsel/summary_mediantotaldiffsel.pdf
-2022-07-21 10:24:30,070 - INFO - Plotting median max diffsel to ./results/grouped_diffsel/summary_medianmaxdiffsel.pdf
-2022-07-21 10:24:35,692 - INFO - Plotting median minmax diffsel to ./results/grouped_diffsel/summary_medianminmaxdiffsel.pdf
-2022-07-21 10:24:41,946 - INFO - Successful completion of dms2_batch_diffsel
+2022-08-02 17:10:26,464 - INFO - Analyzing the diffsel values for the 2 samples in group EDE1-C10.
+2022-08-02 17:10:26,464 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-mutdiffselcorr.pdf
+2022-08-02 17:10:27,247 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-absolutesitediffselcorr.pdf
+2022-08-02 17:10:27,950 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-positivesitediffselcorr.pdf
+2022-08-02 17:10:28,568 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C10-maxmutdiffselcorr.pdf
+2022-08-02 17:10:29,198 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C10-meanmutdiffsel.csv
+2022-08-02 17:10:29,267 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_EDE1-C10-meansitediffsel.csv
+2022-08-02 17:10:29,298 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C10-medianmutdiffsel.csv
+2022-08-02 17:10:29,368 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_EDE1-C10-mediansitediffsel.csv
+2022-08-02 17:10:29,400 - INFO - Analyzing the diffsel values for the 2 samples in group EDE1-C8.
+2022-08-02 17:10:29,400 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-mutdiffselcorr.pdf
+2022-08-02 17:10:30,164 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-absolutesitediffselcorr.pdf
+2022-08-02 17:10:30,786 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-positivesitediffselcorr.pdf
+2022-08-02 17:10:31,503 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_EDE1-C8-maxmutdiffselcorr.pdf
+2022-08-02 17:10:32,130 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C8-meanmutdiffsel.csv
+2022-08-02 17:10:32,201 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_EDE1-C8-meansitediffsel.csv
+2022-08-02 17:10:32,233 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_EDE1-C8-medianmutdiffsel.csv
+2022-08-02 17:10:32,336 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_EDE1-C8-mediansitediffsel.csv
+2022-08-02 17:10:32,367 - INFO - Analyzing the diffsel values for the 3 samples in group MZ4.
+2022-08-02 17:10:32,367 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_MZ4-mutdiffselcorr.pdf
+2022-08-02 17:10:33,832 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_MZ4-absolutesitediffselcorr.pdf
+2022-08-02 17:10:35,105 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_MZ4-positivesitediffselcorr.pdf
+2022-08-02 17:10:36,303 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_MZ4-maxmutdiffselcorr.pdf
+2022-08-02 17:10:37,524 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_MZ4-meanmutdiffsel.csv
+2022-08-02 17:10:37,602 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_MZ4-meansitediffsel.csv
+2022-08-02 17:10:37,633 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_MZ4-medianmutdiffsel.csv
+2022-08-02 17:10:37,709 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_MZ4-mediansitediffsel.csv
+2022-08-02 17:10:37,740 - INFO - Analyzing the diffsel values for the 1 samples in group ZKA-64.
+2022-08-02 17:10:37,740 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-mutdiffselcorr.pdf
+2022-08-02 17:10:38,019 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-absolutesitediffselcorr.pdf
+2022-08-02 17:10:38,259 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-positivesitediffselcorr.pdf
+2022-08-02 17:10:38,496 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_ZKA-64-maxmutdiffselcorr.pdf
+2022-08-02 17:10:38,838 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_ZKA-64-meanmutdiffsel.csv
+2022-08-02 17:10:38,893 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_ZKA-64-meansitediffsel.csv
+2022-08-02 17:10:38,923 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_ZKA-64-medianmutdiffsel.csv
+2022-08-02 17:10:38,977 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_ZKA-64-mediansitediffsel.csv
+2022-08-02 17:10:39,009 - INFO - Analyzing the diffsel values for the 2 samples in group ZV-67.
+2022-08-02 17:10:39,009 - INFO - Plotting mutdiffsel correlations to ./results/grouped_diffsel/summary_ZV-67-mutdiffselcorr.pdf
+2022-08-02 17:10:39,746 - INFO - Plotting absolutesitediffsel correlations to ./results/grouped_diffsel/summary_ZV-67-absolutesitediffselcorr.pdf
+2022-08-02 17:10:40,377 - INFO - Plotting positivesitediffsel correlations to ./results/grouped_diffsel/summary_ZV-67-positivesitediffselcorr.pdf
+2022-08-02 17:10:41,003 - INFO - Plotting maxmutdiffsel correlations to ./results/grouped_diffsel/summary_ZV-67-maxmutdiffselcorr.pdf
+2022-08-02 17:10:41,633 - INFO - Writing mean mutdiffsel to ./results/grouped_diffsel/summary_ZV-67-meanmutdiffsel.csv
+2022-08-02 17:10:41,701 - INFO - Writing mean sitediffsel to ./results/grouped_diffsel/summary_ZV-67-meansitediffsel.csv
+2022-08-02 17:10:41,732 - INFO - Writing median mutdiffsel to ./results/grouped_diffsel/summary_ZV-67-medianmutdiffsel.csv
+2022-08-02 17:10:41,800 - INFO - Writing median sitediffsel to ./results/grouped_diffsel/summary_ZV-67-mediansitediffsel.csv
+2022-08-02 17:10:41,829 - INFO - Plotting mean positive diffsel to ./results/grouped_diffsel/summary_meanpositivediffsel.pdf
+2022-08-02 17:10:47,183 - INFO - Plotting mean total diffsel to ./results/grouped_diffsel/summary_meantotaldiffsel.pdf
+2022-08-02 17:10:52,799 - INFO - Plotting mean max diffsel to ./results/grouped_diffsel/summary_meanmaxdiffsel.pdf
+2022-08-02 17:10:58,019 - INFO - Plotting mean minmax diffsel to ./results/grouped_diffsel/summary_meanminmaxdiffsel.pdf
+2022-08-02 17:11:03,683 - INFO - Plotting median positive diffsel to ./results/grouped_diffsel/summary_medianpositivediffsel.pdf
+2022-08-02 17:11:08,927 - INFO - Plotting median total diffsel to ./results/grouped_diffsel/summary_mediantotaldiffsel.pdf
+2022-08-02 17:11:14,500 - INFO - Plotting median max diffsel to ./results/grouped_diffsel/summary_medianmaxdiffsel.pdf
+2022-08-02 17:11:19,663 - INFO - Plotting median minmax diffsel to ./results/grouped_diffsel/summary_medianminmaxdiffsel.pdf
+2022-08-02 17:11:25,288 - INFO - Successful completion of dms2_batch_diffsel

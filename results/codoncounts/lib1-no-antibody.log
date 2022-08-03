@@ -1,8 +1,8 @@
-2022-07-21 10:20:51,577 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-08-02 17:07:22,791 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-21 10:20:51,578 - INFO - Progress is being logged to ./results/codoncounts/lib1-no-antibody.log
-2022-07-21 10:20:51,614 - INFO - Version information:
-	Time and date: Thu Jul 21 10:20:51 2022
+2022-08-02 17:07:22,791 - INFO - Progress is being logged to ./results/codoncounts/lib1-no-antibody.log
+2022-08-02 17:07:22,829 - INFO - Version information:
+	Time and date: Tue Aug  2 17:07:22 2022
 	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-21 10:20:51,614 - INFO - Parsed the following arguments:
+2022-08-02 17:07:22,829 - INFO - Parsed the following arguments:
 	outdir = ./results/codoncounts
 	ncpus = -1
 	use_existing = no
@@ -49,29 +49,29 @@
 	name = lib1-no-antibody
 	R1 = ['/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_no_antibody_R1.fastq.gz']
 
-2022-07-21 10:20:51,619 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_codoncounts.csv
-2022-07-21 10:20:51,644 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_readstats.csv
-2022-07-21 10:20:51,667 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_readsperbc.csv
-2022-07-21 10:20:51,734 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_bcstats.csv
-2022-07-21 10:20:51,827 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_bcinfo.csv.gz
-2022-07-21 10:20:51,941 - INFO - Read refseq of 1512 codons from ./data/E.fasta
-2022-07-21 10:20:51,943 - INFO - Reads are in these FASTQ pairs:
+2022-08-02 17:07:22,831 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_codoncounts.csv
+2022-08-02 17:07:22,867 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_readstats.csv
+2022-08-02 17:07:22,882 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_readsperbc.csv
+2022-08-02 17:07:22,890 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_bcstats.csv
+2022-08-02 17:07:22,923 - INFO - Removing existing file ./results/codoncounts/lib1-no-antibody_bcinfo.csv.gz
+2022-08-02 17:07:22,983 - INFO - Read refseq of 1512 codons from ./data/E.fasta
+2022-08-02 17:07:22,985 - INFO - Reads are in these FASTQ pairs:
 	/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_no_antibody_R1.fastq.gz and /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_no_antibody_R2.fastq.gz
 
-2022-07-21 10:20:51,943 - INFO - Now parsing read pairs...
-2022-07-21 10:20:58,169 - INFO - Reads parsed so far: 500000
-2022-07-21 10:21:03,789 - INFO - Reads parsed so far: 1000000
-2022-07-21 10:21:09,933 - INFO - Reads parsed so far: 1500000
-2022-07-21 10:21:14,770 - INFO - Reads parsed so far: 2000000
-2022-07-21 10:21:20,556 - INFO - Reads parsed so far: 2500000
-2022-07-21 10:21:26,615 - INFO - Reads parsed so far: 3000000
-2022-07-21 10:21:30,205 - INFO - Parsed 3364787 reads, found 1894590 unique barcodes.
-2022-07-21 10:21:30,207 - INFO - Summary stats on reads:
+2022-08-02 17:07:22,986 - INFO - Now parsing read pairs...
+2022-08-02 17:07:35,639 - INFO - Reads parsed so far: 500000
+2022-08-02 17:07:42,999 - INFO - Reads parsed so far: 1000000
+2022-08-02 17:07:50,310 - INFO - Reads parsed so far: 1500000
+2022-08-02 17:07:55,398 - INFO - Reads parsed so far: 2000000
+2022-08-02 17:08:01,240 - INFO - Reads parsed so far: 2500000
+2022-08-02 17:08:07,335 - INFO - Reads parsed so far: 3000000
+2022-08-02 17:08:10,962 - INFO - Parsed 3364787 reads, found 1894590 unique barcodes.
+2022-08-02 17:08:10,964 - INFO - Summary stats on reads:
    total  fail filter  low Q barcode
  3364787       193655         217498
-2022-07-21 10:21:30,207 - INFO - Writing these stats to ./results/codoncounts/lib1-no-antibody_readstats.csv
+2022-08-02 17:08:10,964 - INFO - Writing these stats to ./results/codoncounts/lib1-no-antibody_readstats.csv
 
-2022-07-21 10:21:30,619 - INFO - Number of reads per barcode:
+2022-08-02 17:08:13,488 - INFO - Number of reads per barcode:
                  number of barcodes
 number of reads                    
 1                           1199046
@@ -88,23 +88,23 @@ number of reads
 13                                1
 16                                1
 20                                1
-2022-07-21 10:21:30,619 - INFO - Writing these stats to ./results/codoncounts/lib1-no-antibody_readsperbc.csv
+2022-08-02 17:08:13,489 - INFO - Writing these stats to ./results/codoncounts/lib1-no-antibody_readsperbc.csv
 
-2022-07-21 10:21:30,626 - INFO - Examining the 1894590 barcodes to build and align subamplicons...
-2022-07-21 10:21:39,007 - INFO - Barcodes examined so far: 200000
-2022-07-21 10:21:47,038 - INFO - Barcodes examined so far: 400000
-2022-07-21 10:21:54,711 - INFO - Barcodes examined so far: 600000
-2022-07-21 10:22:01,842 - INFO - Barcodes examined so far: 800000
-2022-07-21 10:22:08,370 - INFO - Barcodes examined so far: 1000000
-2022-07-21 10:22:14,294 - INFO - Barcodes examined so far: 1200000
-2022-07-21 10:22:19,502 - INFO - Barcodes examined so far: 1400000
-2022-07-21 10:22:23,819 - INFO - Barcodes examined so far: 1600000
-2022-07-21 10:22:27,041 - INFO - Barcodes examined so far: 1800000
-2022-07-21 10:22:28,164 - INFO - Examined all barcodes. Summary stats:
+2022-08-02 17:08:13,492 - INFO - Examining the 1894590 barcodes to build and align subamplicons...
+2022-08-02 17:08:21,898 - INFO - Barcodes examined so far: 200000
+2022-08-02 17:08:29,928 - INFO - Barcodes examined so far: 400000
+2022-08-02 17:08:37,532 - INFO - Barcodes examined so far: 600000
+2022-08-02 17:08:44,620 - INFO - Barcodes examined so far: 800000
+2022-08-02 17:08:51,137 - INFO - Barcodes examined so far: 1000000
+2022-08-02 17:08:57,040 - INFO - Barcodes examined so far: 1200000
+2022-08-02 17:09:02,229 - INFO - Barcodes examined so far: 1400000
+2022-08-02 17:09:06,536 - INFO - Barcodes examined so far: 1600000
+2022-08-02 17:09:09,726 - INFO - Barcodes examined so far: 1800000
+2022-08-02 17:09:10,890 - INFO - Examined all barcodes. Summary stats:
    total  too few reads  not alignable  aligned
  1894590        1199046          69366   626178
-2022-07-21 10:22:28,164 - INFO - Writing these stats to ./results/codoncounts/lib1-no-antibody_bcstats.csv
+2022-08-02 17:09:10,890 - INFO - Writing these stats to ./results/codoncounts/lib1-no-antibody_bcstats.csv
 
-2022-07-21 10:22:28,183 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/lib1-no-antibody_codoncounts.csv
+2022-08-02 17:09:10,909 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/lib1-no-antibody_codoncounts.csv
 
-2022-07-21 10:22:28,215 - INFO - Successful completion of dms2_bcsubamp
+2022-08-02 17:09:10,942 - INFO - Successful completion of dms2_bcsubamp

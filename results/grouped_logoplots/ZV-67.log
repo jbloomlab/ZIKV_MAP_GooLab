@@ -1,8 +1,8 @@
-2022-07-21 10:26:30,516 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-08-02 17:13:10,428 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-21 10:26:30,516 - INFO - Progress is being logged to ./results/grouped_logoplots/ZV-67.log
-2022-07-21 10:26:30,550 - INFO - Version information:
-	Time and date: Thu Jul 21 10:26:30 2022
+2022-08-02 17:13:10,429 - INFO - Progress is being logged to ./results/grouped_logoplots/ZV-67.log
+2022-08-02 17:13:10,464 - INFO - Version information:
+	Time and date: Tue Aug  2 17:13:10 2022
 	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-21 10:26:30,550 - INFO - Parsed the following arguments:
+2022-08-02 17:13:10,464 - INFO - Parsed the following arguments:
 	outdir = ./results/grouped_logoplots/
 	ncpus = 16
 	use_existing = no
@@ -54,11 +54,11 @@
 	ignore_extracols = no
 	sepline = yes
 
-2022-07-21 10:26:30,557 - INFO - Removing existing file ./results/grouped_logoplots/ZV-67_diffsel.pdf
-2022-07-21 10:26:30,563 - INFO - Reading diffsel from file ./results/grouped_diffsel/summary_ZV-67-meanmutdiffsel.csv...
-2022-07-21 10:26:30,585 - INFO - Read data for 504 sites.
+2022-08-02 17:13:10,493 - INFO - Removing existing file ./results/grouped_logoplots/ZV-67_diffsel.pdf
+2022-08-02 17:13:10,497 - INFO - Reading diffsel from file ./results/grouped_diffsel/summary_ZV-67-meanmutdiffsel.csv...
+2022-08-02 17:13:10,517 - INFO - Read data for 504 sites.
 
-2022-07-21 10:26:30,612 - INFO - Making logo plot ./results/grouped_logoplots/ZV-67_diffsel.pdf...
-2022-07-21 10:26:32,756 - INFO - Successfully created logo plot.
+2022-08-02 17:13:10,545 - INFO - Making logo plot ./results/grouped_logoplots/ZV-67_diffsel.pdf...
+2022-08-02 17:13:12,481 - INFO - Successfully created logo plot.
 
-2022-07-21 10:26:32,757 - INFO - Successful completion of dms2_logoplot
+2022-08-02 17:13:12,481 - INFO - Successful completion of dms2_logoplot

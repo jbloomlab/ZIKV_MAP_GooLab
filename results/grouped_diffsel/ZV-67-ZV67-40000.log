@@ -1,8 +1,8 @@
-2022-07-21 10:23:35,037 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-08-02 17:10:24,432 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-21 10:23:35,037 - INFO - Progress is being logged to ./results/grouped_diffsel/ZV-67-ZV67-40000.log
-2022-07-21 10:23:35,073 - INFO - Version information:
-	Time and date: Thu Jul 21 10:23:35 2022
+2022-08-02 17:10:24,432 - INFO - Progress is being logged to ./results/grouped_diffsel/ZV-67-ZV67-40000.log
+2022-08-02 17:10:24,469 - INFO - Version information:
+	Time and date: Tue Aug  2 17:10:24 2022
 	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-21 10:23:35,073 - INFO - Parsed the following arguments:
+2022-08-02 17:10:24,469 - INFO - Parsed the following arguments:
 	outdir = ./results/grouped_diffsel
 	ncpus = 1
 	use_existing = no
@@ -37,12 +37,12 @@
 	mock = lib1-no-antibody
 	err = None
 
-2022-07-21 10:23:35,075 - INFO - Removing existing file ./results/grouped_diffsel/ZV-67-ZV67-40000_mutdiffsel.csv
-2022-07-21 10:23:35,079 - INFO - Removing existing file ./results/grouped_diffsel/ZV-67-ZV67-40000_sitediffsel.csv
-2022-07-21 10:23:35,084 - INFO - Reading selected sample counts from lib1-ZV67-40000
-2022-07-21 10:23:35,093 - INFO - Reading mock-selected sample counts from lib1-no-antibody
-2022-07-21 10:23:35,100 - INFO - Computing mutdiffsel...
-2022-07-21 10:23:36,600 - INFO - Mutations with largest mutdiffsel:
+2022-08-02 17:10:24,471 - INFO - Removing existing file ./results/grouped_diffsel/ZV-67-ZV67-40000_mutdiffsel.csv
+2022-08-02 17:10:24,495 - INFO - Removing existing file ./results/grouped_diffsel/ZV-67-ZV67-40000_sitediffsel.csv
+2022-08-02 17:10:24,511 - INFO - Reading selected sample counts from lib1-ZV67-40000
+2022-08-02 17:10:24,526 - INFO - Reading mock-selected sample counts from lib1-no-antibody
+2022-08-02 17:10:24,531 - INFO - Computing mutdiffsel...
+2022-08-02 17:10:25,961 - INFO - Mutations with largest mutdiffsel:
  site wildtype mutation  mutdiffsel
    97        V        L        2.99
   333        A        R        2.98
@@ -55,9 +55,9 @@
   439        N        Q        2.49
    33        V        M        2.48
 
-2022-07-21 10:23:36,600 - INFO - Writing to ./results/grouped_diffsel/ZV-67-ZV67-40000_mutdiffsel.csv
-2022-07-21 10:23:36,636 - INFO - Computing sitediffsel...
-2022-07-21 10:23:36,662 - INFO - Sites with largest absolute sitediffsel:
+2022-08-02 17:10:25,961 - INFO - Writing to ./results/grouped_diffsel/ZV-67-ZV67-40000_mutdiffsel.csv
+2022-08-02 17:10:25,997 - INFO - Computing sitediffsel...
+2022-08-02 17:10:26,024 - INFO - Sites with largest absolute sitediffsel:
  site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
   443        31.49              0.00            -31.49         0.00        -5.05
   349        30.54              0.50            -30.04         0.50        -3.81
@@ -70,5 +70,5 @@
    49        17.56              0.00            -17.56         0.00        -3.55
    83        17.43              0.00            -17.43         0.00        -5.01
 
-2022-07-21 10:23:36,662 - INFO - Writing to ./results/grouped_diffsel/ZV-67-ZV67-40000_sitediffsel.csv
-2022-07-21 10:23:36,671 - INFO - Successful completion of dms2_diffsel
+2022-08-02 17:10:26,025 - INFO - Writing to ./results/grouped_diffsel/ZV-67-ZV67-40000_sitediffsel.csv
+2022-08-02 17:10:26,031 - INFO - Successful completion of dms2_diffsel

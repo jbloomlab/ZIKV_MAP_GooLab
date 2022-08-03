@@ -1,8 +1,8 @@
-2022-07-21 10:27:06,164 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-08-02 17:13:44,288 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-21 10:27:06,164 - INFO - Progress is being logged to ./results/logoplots/MZ4-1200.log
-2022-07-21 10:27:06,198 - INFO - Version information:
-	Time and date: Thu Jul 21 10:27:06 2022
+2022-08-02 17:13:44,288 - INFO - Progress is being logged to ./results/logoplots/MZ4-1200.log
+2022-08-02 17:13:44,323 - INFO - Version information:
+	Time and date: Tue Aug  2 17:13:44 2022
 	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-21 10:27:06,198 - INFO - Parsed the following arguments:
+2022-08-02 17:13:44,323 - INFO - Parsed the following arguments:
 	outdir = ./results/logoplots/
 	ncpus = 16
 	use_existing = no
@@ -54,11 +54,11 @@
 	ignore_extracols = no
 	sepline = yes
 
-2022-07-21 10:27:06,201 - INFO - Removing existing file ./results/logoplots/MZ4-1200_diffsel.pdf
-2022-07-21 10:27:06,206 - INFO - Reading diffsel from file ./results/diffsel/MZ4-1200_mutdiffsel.csv...
-2022-07-21 10:27:06,226 - INFO - Read data for 504 sites.
+2022-08-02 17:13:44,325 - INFO - Removing existing file ./results/logoplots/MZ4-1200_diffsel.pdf
+2022-08-02 17:13:44,329 - INFO - Reading diffsel from file ./results/diffsel/MZ4-1200_mutdiffsel.csv...
+2022-08-02 17:13:44,348 - INFO - Read data for 504 sites.
 
-2022-07-21 10:27:06,253 - INFO - Making logo plot ./results/logoplots/MZ4-1200_diffsel.pdf...
-2022-07-21 10:27:08,617 - INFO - Successfully created logo plot.
+2022-08-02 17:13:44,376 - INFO - Making logo plot ./results/logoplots/MZ4-1200_diffsel.pdf...
+2022-08-02 17:13:46,634 - INFO - Successfully created logo plot.
 
-2022-07-21 10:27:08,618 - INFO - Successful completion of dms2_logoplot
+2022-08-02 17:13:46,634 - INFO - Successful completion of dms2_logoplot

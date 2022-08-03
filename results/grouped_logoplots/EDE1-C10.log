@@ -1,8 +1,8 @@
-2022-07-21 10:26:08,434 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-08-02 17:12:48,553 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-21 10:26:08,434 - INFO - Progress is being logged to ./results/grouped_logoplots/EDE1-C10.log
-2022-07-21 10:26:08,469 - INFO - Version information:
-	Time and date: Thu Jul 21 10:26:08 2022
+2022-08-02 17:12:48,554 - INFO - Progress is being logged to ./results/grouped_logoplots/EDE1-C10.log
+2022-08-02 17:12:48,590 - INFO - Version information:
+	Time and date: Tue Aug  2 17:12:48 2022
 	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-21 10:26:08,469 - INFO - Parsed the following arguments:
+2022-08-02 17:12:48,590 - INFO - Parsed the following arguments:
 	outdir = ./results/grouped_logoplots/
 	ncpus = 16
 	use_existing = no
@@ -54,11 +54,11 @@
 	ignore_extracols = no
 	sepline = yes
 
-2022-07-21 10:26:08,472 - INFO - Removing existing file ./results/grouped_logoplots/EDE1-C10_diffsel.pdf
-2022-07-21 10:26:08,477 - INFO - Reading diffsel from file ./results/grouped_diffsel/summary_EDE1-C10-meanmutdiffsel.csv...
-2022-07-21 10:26:08,496 - INFO - Read data for 504 sites.
+2022-08-02 17:12:48,593 - INFO - Removing existing file ./results/grouped_logoplots/EDE1-C10_diffsel.pdf
+2022-08-02 17:12:48,597 - INFO - Reading diffsel from file ./results/grouped_diffsel/summary_EDE1-C10-meanmutdiffsel.csv...
+2022-08-02 17:12:48,616 - INFO - Read data for 504 sites.
 
-2022-07-21 10:26:08,524 - INFO - Making logo plot ./results/grouped_logoplots/EDE1-C10_diffsel.pdf...
-2022-07-21 10:26:10,683 - INFO - Successfully created logo plot.
+2022-08-02 17:12:48,644 - INFO - Making logo plot ./results/grouped_logoplots/EDE1-C10_diffsel.pdf...
+2022-08-02 17:12:50,867 - INFO - Successfully created logo plot.
 
-2022-07-21 10:26:10,683 - INFO - Successful completion of dms2_logoplot
+2022-08-02 17:12:50,868 - INFO - Successful completion of dms2_logoplot

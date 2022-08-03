@@ -1,8 +1,8 @@
-2022-07-21 10:26:19,513 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2022-08-02 17:12:59,500 - INFO - Beginning execution of dms2_logoplot in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-07-21 10:26:19,513 - INFO - Progress is being logged to ./results/grouped_logoplots/MZ4.log
-2022-07-21 10:26:19,546 - INFO - Version information:
-	Time and date: Thu Jul 21 10:26:19 2022
+2022-08-02 17:12:59,501 - INFO - Progress is being logged to ./results/grouped_logoplots/MZ4.log
+2022-08-02 17:12:59,536 - INFO - Version information:
+	Time and date: Tue Aug  2 17:12:59 2022
 	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.114
 	umi_tools version: 1.1.2
 
-2022-07-21 10:26:19,546 - INFO - Parsed the following arguments:
+2022-08-02 17:12:59,536 - INFO - Parsed the following arguments:
 	outdir = ./results/grouped_logoplots/
 	ncpus = 16
 	use_existing = no
@@ -54,11 +54,11 @@
 	ignore_extracols = no
 	sepline = yes
 
-2022-07-21 10:26:19,571 - INFO - Removing existing file ./results/grouped_logoplots/MZ4_diffsel.pdf
-2022-07-21 10:26:19,577 - INFO - Reading diffsel from file ./results/grouped_diffsel/summary_MZ4-meanmutdiffsel.csv...
-2022-07-21 10:26:19,599 - INFO - Read data for 504 sites.
+2022-08-02 17:12:59,575 - INFO - Removing existing file ./results/grouped_logoplots/MZ4_diffsel.pdf
+2022-08-02 17:12:59,580 - INFO - Reading diffsel from file ./results/grouped_diffsel/summary_MZ4-meanmutdiffsel.csv...
+2022-08-02 17:12:59,603 - INFO - Read data for 504 sites.
 
-2022-07-21 10:26:19,626 - INFO - Making logo plot ./results/grouped_logoplots/MZ4_diffsel.pdf...
-2022-07-21 10:26:21,825 - INFO - Successfully created logo plot.
+2022-08-02 17:12:59,631 - INFO - Making logo plot ./results/grouped_logoplots/MZ4_diffsel.pdf...
+2022-08-02 17:13:01,676 - INFO - Successfully created logo plot.
 
-2022-07-21 10:26:21,826 - INFO - Successful completion of dms2_logoplot
+2022-08-02 17:13:01,677 - INFO - Successful completion of dms2_logoplot
