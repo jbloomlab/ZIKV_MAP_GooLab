@@ -1,32 +1,32 @@
-2022-08-02 17:11:29,598 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2023-01-18 15:32:21,585 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2022-08-02 17:11:29,598 - INFO - Progress is being logged to ./results/diffsel/summary.log
-2022-08-02 17:11:29,634 - INFO - Version information:
-	Time and date: Tue Aug  2 17:11:29 2022
-	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+2023-01-18 15:32:21,585 - INFO - Progress is being logged to ./results/diffsel/summary.log
+2023-01-18 15:32:21,620 - INFO - Version information:
+	Time and date: Wed Jan 18 15:32:21 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
 	Bio version: 1.79
 	pandas version: 0.25.3
 	numpy version: 1.19.5
-	IPython version: 8.3.0
+	IPython version: 8.4.0
 	jupyter version: 1.0.0
 	matplotlib version: 3.2.2
 	plotnine version: 0.6.0
-	natsort version: 8.1.0
+	natsort version: 8.2.0
 	pystan version: 2.19.1.1
-	scipy version: 1.5.2
+	scipy version: 1.6.0
 	seaborn version: 0.10.1
 	phydmslib version: 2.4.1
 	statsmodels version: 0.11.1
 	rpy2 cannot be imported
-	regex version: 2.5.114
+	regex version: 2.5.121
 	umi_tools version: 1.1.2
 
-2022-08-02 17:11:29,634 - INFO - Parsed the following arguments:
+2023-01-18 15:32:21,620 - INFO - Parsed the following arguments:
 	outdir = ./results/diffsel
 	ncpus = 16
-	use_existing = no
+	use_existing = yes
 	indir = ./results/codoncounts
 	chartype = codon_to_aa
 	excludestop = yes
@@ -35,55 +35,49 @@
 	batchfile = ./results/diffsel/batch.csv
 	summaryprefix = summary
 
-2022-08-02 17:11:29,634 - INFO - Parsing info from ./results/diffsel/batch.csv
-2022-08-02 17:11:29,641 - INFO - Read the following sample information:
-name,sel,mock,percent_infectivity
-C10-150,lib1-C10-150,lib1-no-antibody,0.51%
-C10-300,lib1-C10-300,lib1-no-antibody,0.11%
-C8-1600,lib1-C8-1600,lib1-no-antibody,0.01%
-C8-800,lib1-C8-800,lib1-no-antibody,0.57%
-MZ4-1200,lib1-MZ4-1200,lib1-no-antibody,5.22%
-MZ4-2400,lib1-MZ4-2400,lib1-no-antibody,0.98%
-MZ4-4800,lib1-MZ4-4800,lib1-no-antibody,0.46%
-ZKA64-750,lib1-ZKA64-750,lib1-no-antibody,0.57%
-ZV67-40000,lib1-ZV67-40000,lib1-no-antibody,0.84%
-ZV67-80000,lib1-ZV67-80000,lib1-no-antibody,0.26%
+2023-01-18 15:32:21,620 - INFO - Parsing info from ./results/diffsel/batch.csv
+2023-01-18 15:32:21,627 - INFO - Read the following sample information:
+library,group,name,sel,mock,percent_infectivity
+lib1,EDE1-C10,lib1-C10-150,lib1-C10-150,lib1-no-antibody,0.51%
+lib1,EDE1-C10,lib1-C10-300,lib1-C10-300,lib1-no-antibody,0.11%
+lib1,EDE1-C8,lib1-C8-1600,lib1-C8-1600,lib1-no-antibody,0.01%
+lib1,EDE1-C8,lib1-C8-800,lib1-C8-800,lib1-no-antibody,0.57%
+lib1,MZ4,lib1-MZ4-1200,lib1-MZ4-1200,lib1-no-antibody,5.22%
+lib1,MZ4,lib1-MZ4-2400,lib1-MZ4-2400,lib1-no-antibody,0.98%
+lib1,MZ4,lib1-MZ4-4800,lib1-MZ4-4800,lib1-no-antibody,0.46%
+lib1,ZKA-64,lib1-ZKA64-750,lib1-ZKA64-750,lib1-no-antibody,0.57%
+lib1,ZV-67,lib1-ZV67-40000,lib1-ZV67-40000,lib1-no-antibody,0.84%
+lib1,ZV-67,lib1-ZV67-80000,lib1-ZV67-80000,lib1-no-antibody,0.26%
+lib2,EDE1-C10,lib2-C10-150,lib2-C10-150,lib2-no-antibody,0.01%
+lib2,EDE1-C10,lib2-C10-300,lib2-C10-300,lib2-no-antibody,0.01%
+lib2,EDE1-C8,lib2-C8-1800,lib2-C8-1800,lib2-no-antibody,0.13%
+lib2,EDE1-C8,lib2-C8-225,lib2-C8-225,lib2-no-antibody,1.25%
+lib2,EDE1-C8,lib2-C8-450,lib2-C8-450,lib2-no-antibody,1.06%
+lib2,EDE1-C8,lib2-C8-900,lib2-C8-900,lib2-no-antibody,0.61%
+lib2,MZ4,lib2-MZ4-2400,lib2-MZ4-2400,lib2-no-antibody,0.30%
+lib2,MZ4,lib2-MZ4-4800,lib2-MZ4-4800,lib2-no-antibody,0.02%
+lib2,SiGN-3C,lib2-SiGN-10,lib2-SiGN-10,lib2-no-antibody,0.35%
+lib2,SiGN-3C,lib2-SiGN-20,lib2-SiGN-20,lib2-no-antibody,1.36%
+lib2,SiGN-3C,lib2-SiGN-40,lib2-SiGN-40,lib2-no-antibody,0.95%
+lib2,ZKA-64,lib2-ZKA64-750,lib2-ZKA64-750,lib2-no-antibody,3.51%
+lib2,ZV-67,lib2-ZV67-400000,lib2-ZV67-400000,lib2-no-antibody,0.89%
+lib2,ZV-67,lib2-ZV67-800000,lib2-ZV67-800000,lib2-no-antibody,0.51%
+lib3,EDE1-C10,lib3-C10-150,lib3-C10-150,lib3-no-antibody,1.65%
+lib3,EDE1-C10,lib3-C10-300,lib3-C10-300,lib3-no-antibody,0.39%
+lib3,EDE1-C8,lib3-C8-1800,lib3-C8-1800,lib3-no-antibody,0.23%
+lib3,EDE1-C8,lib3-C8-225,lib3-C8-225,lib3-no-antibody,1.36%
+lib3,EDE1-C8,lib3-C8-450,lib3-C8-450,lib3-no-antibody,0.47%
+lib3,EDE1-C8,lib3-C8-900,lib3-C8-900,lib3-no-antibody,0.42%
+lib3,MZ4,lib3-MZ4-2400,lib3-MZ4-2400,lib3-no-antibody,0.16%
+lib3,MZ4,lib3-MZ4-4800,lib3-MZ4-4800,lib3-no-antibody,0.05%
+lib3,SiGN-3C,lib3-SiGN-10,lib3-SiGN-10,lib3-no-antibody,1.19%
+lib3,SiGN-3C,lib3-SiGN-20,lib3-SiGN-20,lib3-no-antibody,0.88%
+lib3,SiGN-3C,lib3-SiGN-40,lib3-SiGN-40,lib3-no-antibody,0.19%
+lib3,ZKA-64,lib3-ZKA64-750,lib3-ZKA64-750,lib3-no-antibody,5.41%
+lib3,ZV-67,lib3-ZV67-800000,lib3-ZV67-800000,lib3-no-antibody,0.06%
+lib3-v2,SiGN-3C,lib3-v2-SiGN-10,lib3-v2-SiGN-10,lib3-v2-no-antibody,4.56%
+lib3-v2,SiGN-3C,lib3-v2-SiGN-20,lib3-v2-SiGN-20,lib3-v2-no-antibody,5.54%
+lib3-v2,SiGN-3C,lib3-v2-SiGN-40,lib3-v2-SiGN-40,lib3-v2-no-antibody,1.65%
 
 
-2022-08-02 17:11:30,300 - INFO - Removing existing file ./results/diffsel/summary_meanpositivediffsel.pdf
-2022-08-02 17:11:30,305 - INFO - Removing existing file ./results/diffsel/summary_medianpositivediffsel.pdf
-2022-08-02 17:11:30,310 - INFO - Removing existing file ./results/diffsel/summary_meantotaldiffsel.pdf
-2022-08-02 17:11:30,314 - INFO - Removing existing file ./results/diffsel/summary_mediantotaldiffsel.pdf
-2022-08-02 17:11:30,333 - INFO - Removing existing file ./results/diffsel/summary_meanmaxdiffsel.pdf
-2022-08-02 17:11:30,338 - INFO - Removing existing file ./results/diffsel/summary_medianmaxdiffsel.pdf
-2022-08-02 17:11:30,342 - INFO - Removing existing file ./results/diffsel/summary_meanminmaxdiffsel.pdf
-2022-08-02 17:11:30,347 - INFO - Removing existing file ./results/diffsel/summary_medianminmaxdiffsel.pdf
-2022-08-02 17:11:30,361 - INFO - Removing existing file ./results/diffsel/summary_mutdiffselcorr.pdf
-2022-08-02 17:11:30,376 - INFO - Removing existing file ./results/diffsel/summary_absolutesitediffselcorr.pdf
-2022-08-02 17:11:30,405 - INFO - Removing existing file ./results/diffsel/summary_positivesitediffselcorr.pdf
-2022-08-02 17:11:30,514 - INFO - Removing existing file ./results/diffsel/summary_maxmutdiffselcorr.pdf
-2022-08-02 17:11:30,537 - INFO - Removing existing file ./results/diffsel/summary_meanmutdiffsel.csv
-2022-08-02 17:11:30,541 - INFO - Removing existing file ./results/diffsel/summary_meansitediffsel.csv
-2022-08-02 17:11:30,573 - INFO - Removing existing file ./results/diffsel/summary_medianmutdiffsel.csv
-2022-08-02 17:11:30,581 - INFO - Removing existing file ./results/diffsel/summary_mediansitediffsel.csv
-2022-08-02 17:11:30,586 - INFO - Running dms2_diffsel on all samples...
-2022-08-02 17:11:36,651 - INFO - Completed runs of dms2_diffsel.
-
-2022-08-02 17:11:36,665 - INFO - Analyzing the diffsel values for the 10 samples.
-2022-08-02 17:11:36,665 - INFO - Plotting mutdiffsel correlations to ./results/diffsel/summary_mutdiffselcorr.pdf
-2022-08-02 17:11:52,922 - INFO - Plotting absolutesitediffsel correlations to ./results/diffsel/summary_absolutesitediffselcorr.pdf
-2022-08-02 17:12:05,737 - INFO - Plotting positivesitediffsel correlations to ./results/diffsel/summary_positivesitediffselcorr.pdf
-2022-08-02 17:12:18,619 - INFO - Plotting maxmutdiffsel correlations to ./results/diffsel/summary_maxmutdiffselcorr.pdf
-2022-08-02 17:12:31,344 - INFO - Writing mean mutdiffsel to ./results/diffsel/summary_meanmutdiffsel.csv
-2022-08-02 17:12:31,491 - INFO - Writing mean sitediffsel to ./results/diffsel/summary_meansitediffsel.csv
-2022-08-02 17:12:31,528 - INFO - Writing median mutdiffsel to ./results/diffsel/summary_medianmutdiffsel.csv
-2022-08-02 17:12:31,693 - INFO - Writing median sitediffsel to ./results/diffsel/summary_mediansitediffsel.csv
-2022-08-02 17:12:31,723 - INFO - Plotting mean positive diffsel to ./results/diffsel/summary_meanpositivediffsel.pdf
-2022-08-02 17:12:32,863 - INFO - Plotting mean total diffsel to ./results/diffsel/summary_meantotaldiffsel.pdf
-2022-08-02 17:12:33,920 - INFO - Plotting mean max diffsel to ./results/diffsel/summary_meanmaxdiffsel.pdf
-2022-08-02 17:12:34,935 - INFO - Plotting mean minmax diffsel to ./results/diffsel/summary_meanminmaxdiffsel.pdf
-2022-08-02 17:12:35,952 - INFO - Plotting median positive diffsel to ./results/diffsel/summary_medianpositivediffsel.pdf
-2022-08-02 17:12:36,974 - INFO - Plotting median total diffsel to ./results/diffsel/summary_mediantotaldiffsel.pdf
-2022-08-02 17:12:38,012 - INFO - Plotting median max diffsel to ./results/diffsel/summary_medianmaxdiffsel.pdf
-2022-08-02 17:12:39,049 - INFO - Plotting median minmax diffsel to ./results/diffsel/summary_medianminmaxdiffsel.pdf
-2022-08-02 17:12:40,074 - INFO - Successful completion of dms2_batch_diffsel
+2023-01-18 15:32:21,748 - INFO - Output summary files already exist and '--use_existing' is 'yes', so exiting with no further action.

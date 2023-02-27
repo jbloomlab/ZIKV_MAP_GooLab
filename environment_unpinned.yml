@@ -1,4 +1,4 @@
-name: ZIKV_DMS_Goo
+name: zikv_e_dms
 channels:
   - bioconda
   - r
@@ -21,3 +21,4 @@ dependencies:
     - altair
     - vega_datasets
     - dms_variants
+    - scipy==1.6.0
