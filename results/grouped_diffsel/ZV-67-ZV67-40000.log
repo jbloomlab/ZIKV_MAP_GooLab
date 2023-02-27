@@ -1,0 +1,74 @@
+2022-08-02 17:10:24,432 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-08-02 17:10:24,432 - INFO - Progress is being logged to ./results/grouped_diffsel/ZV-67-ZV67-40000.log
+2022-08-02 17:10:24,469 - INFO - Version information:
+	Time and date: Tue Aug  2 17:10:24 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-08-02 17:10:24,469 - INFO - Parsed the following arguments:
+	outdir = ./results/grouped_diffsel
+	ncpus = 1
+	use_existing = no
+	indir = ./results/codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = ZV-67-ZV67-40000
+	sel = lib1-ZV67-40000
+	mock = lib1-no-antibody
+	err = None
+
+2022-08-02 17:10:24,471 - INFO - Removing existing file ./results/grouped_diffsel/ZV-67-ZV67-40000_mutdiffsel.csv
+2022-08-02 17:10:24,495 - INFO - Removing existing file ./results/grouped_diffsel/ZV-67-ZV67-40000_sitediffsel.csv
+2022-08-02 17:10:24,511 - INFO - Reading selected sample counts from lib1-ZV67-40000
+2022-08-02 17:10:24,526 - INFO - Reading mock-selected sample counts from lib1-no-antibody
+2022-08-02 17:10:24,531 - INFO - Computing mutdiffsel...
+2022-08-02 17:10:25,961 - INFO - Mutations with largest mutdiffsel:
+ site wildtype mutation  mutdiffsel
+   97        V        L        2.99
+  333        A        R        2.98
+   55        E        I        2.93
+   92        C        S        2.90
+   76        T        I        2.84
+   22        D        E        2.73
+   46        V        F        2.72
+  256        V        T        2.55
+  439        N        Q        2.49
+   33        V        M        2.48
+
+2022-08-02 17:10:25,961 - INFO - Writing to ./results/grouped_diffsel/ZV-67-ZV67-40000_mutdiffsel.csv
+2022-08-02 17:10:25,997 - INFO - Computing sitediffsel...
+2022-08-02 17:10:26,024 - INFO - Sites with largest absolute sitediffsel:
+ site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+  443        31.49              0.00            -31.49         0.00        -5.05
+  349        30.54              0.50            -30.04         0.50        -3.81
+   88        24.48              0.00            -24.48         0.00        -4.11
+  375        22.74              1.15            -21.58         0.45        -4.11
+  439        19.52              2.58            -16.95         2.49        -2.43
+  344        19.09              0.25            -18.84         0.25        -3.14
+   27        18.55              0.50            -18.05         0.50        -3.07
+  149        18.05              7.79            -10.26         2.47        -2.85
+   49        17.56              0.00            -17.56         0.00        -3.55
+   83        17.43              0.00            -17.43         0.00        -5.01
+
+2022-08-02 17:10:26,025 - INFO - Writing to ./results/grouped_diffsel/ZV-67-ZV67-40000_sitediffsel.csv
+2022-08-02 17:10:26,031 - INFO - Successful completion of dms2_diffsel

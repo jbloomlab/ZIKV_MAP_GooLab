@@ -1,0 +1,72 @@
+2022-07-29 17:32:08,060 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-29 17:32:08,061 - INFO - Progress is being logged to results/bottleneck_codoncounts/summary.log
+2022-07-29 17:32:08,201 - INFO - Version information:
+	Time and date: Fri Jul 29 17:32:08 2022
+	Platform: Linux-4.15.0-118-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-29 17:32:08,201 - INFO - Parsed the following arguments:
+	outdir = results/bottleneck_codoncounts
+	ncpus = 16
+	use_existing = yes
+	refseq = ./data/E.fasta
+	alignspecs = ['1,303,33,38', '304,609,38,40', '610,903,41,36', '904,1200,41,37', '1201,1512,36,35']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [200]
+	R2trim = [200]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0
+	purgebc = 0
+	bcinfo = False
+	bcinfo_csv = False
+	batchfile = data/bottleneck/batchSubampIDs.csv
+	summaryprefix = summary
+
+2022-07-29 17:32:08,201 - INFO - Parsing sample info from data/bottleneck/batchSubampIDs.csv
+2022-07-29 17:32:08,207 - INFO - Read the following sample information:
+name,R1
+GooCK-Lib1Goo-virus,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib1_no_antibody_R1.fastq.gz
+GooJBS-Lib1Goo-plasmid,/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib1_S1_L001_R1_001.fastq.gz
+GooJBS-Lib2Goo-plasmid,/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib2_S2_L001_R1_001.fastq.gz
+GooJBS-Lib3Goo-plasmid,/shared/ngs/illumina/bloom_lab/210115_M04866_0443_000000000-JG3V5/Data/Intensities/BaseCalls/JBS-lib3_S3_L001_R1_001.fastq.gz
+GooJBS-Lib1Goo-virus,/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample1_S6_R1_001.fastq.gz
+GooJBS-Lib2Goo-virus,/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample2_S7_R1_001.fastq.gz
+GooJBS-Lib3Goo-virus,/shared/ngs/illumina/bloom_lab/210409_D00300_1210_BHKC7KBCX3/Unaligned/Project_bloom_lab/JBS_38_Sample3_S8_R1_001.fastq.gz
+JV2019-Lib1-plasmid,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-1/*R1*.fastq.gz
+JV2019-Lib2-plasmid,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/*R1*.fastq.gz
+JV2019-Lib3-plasmid,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-3/*R1*.fastq.gz
+JV2019-wildtype-plasmid,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-wt/*R1*.fastq.gz
+JV2019-Lib1-virus,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/180427_SN367_1155_BHHJMKBCX2/Unaligned/Project_bloom_lab/Sample_zikv_L1/*R1*.fastq.gz
+JV2019-Lib2-virus,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/180427_SN367_1155_BHHJMKBCX2/Unaligned/Project_bloom_lab/Sample_zikv_L2/*R1*.fastq.gz
+JV2019-Lib3-virus,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/180427_SN367_1155_BHHJMKBCX2/Unaligned/Project_bloom_lab/Sample_zikv_L3/*R1*.fastq.gz
+JV2019-wildtype-virus,/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/180427_SN367_1155_BHHJMKBCX2/Unaligned/Project_bloom_lab/Sample_zikv_WT/*R1*.fastq.gz
+
+
+2022-07-29 17:32:08,424 - INFO - Output files already exist and '--use_existing' is 'yes', so exiting with no further action.

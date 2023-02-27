@@ -1,0 +1,110 @@
+2023-01-16 15:21:13,405 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2023-01-16 15:21:13,405 - INFO - Progress is being logged to ./results/codoncounts/lib3-C8-900.log
+2023-01-16 15:21:13,439 - INFO - Version information:
+	Time and date: Mon Jan 16 15:21:13 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.2.0
+	pystan version: 2.19.1.1
+	scipy version: 1.6.0
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.121
+	umi_tools version: 1.1.2
+
+2023-01-16 15:21:13,439 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = ./data/E.fasta
+	alignspecs = ['1,303,33,38', '304,609,38,40', '610,903,41,36', '904,1200,41,37', '1201,1512,36,35']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [200]
+	R2trim = [200]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = lib3-C8-900
+	R1 = ['/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib3_C8_900_R1.fastq.gz']
+
+2023-01-16 15:21:13,453 - INFO - Read refseq of 1512 codons from ./data/E.fasta
+2023-01-16 15:21:13,455 - INFO - Reads are in these FASTQ pairs:
+	/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib3_C8_900_R1.fastq.gz and /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_E_DMS_GooLab/data/concat_fastq/concat_fastq_out/lib3_C8_900_R2.fastq.gz
+
+2023-01-16 15:21:13,455 - INFO - Now parsing read pairs...
+2023-01-16 15:21:19,812 - INFO - Reads parsed so far: 500000
+2023-01-16 15:21:25,557 - INFO - Reads parsed so far: 1000000
+2023-01-16 15:21:31,807 - INFO - Reads parsed so far: 1500000
+2023-01-16 15:21:37,652 - INFO - Reads parsed so far: 2000000
+2023-01-16 15:21:42,660 - INFO - Reads parsed so far: 2500000
+2023-01-16 15:21:48,893 - INFO - Reads parsed so far: 3000000
+2023-01-16 15:21:53,807 - INFO - Reads parsed so far: 3500000
+2023-01-16 15:22:00,633 - INFO - Reads parsed so far: 4000000
+2023-01-16 15:22:03,912 - INFO - Parsed 4324851 reads, found 2294296 unique barcodes.
+2023-01-16 15:22:03,914 - INFO - Summary stats on reads:
+   total  fail filter  low Q barcode
+ 4324851       339450         391497
+2023-01-16 15:22:03,915 - INFO - Writing these stats to ./results/codoncounts/lib3-C8-900_readstats.csv
+
+2023-01-16 15:22:04,421 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           1422824
+2                            564065
+3                            217002
+4                             67109
+5                             17756
+6                              4350
+7                               967
+8                               179
+9                                31
+10                                6
+11                                3
+12                                1
+13                                1
+14                                1
+16                                1
+2023-01-16 15:22:04,422 - INFO - Writing these stats to ./results/codoncounts/lib3-C8-900_readsperbc.csv
+
+2023-01-16 15:22:04,425 - INFO - Examining the 2294296 barcodes to build and align subamplicons...
+2023-01-16 15:22:12,961 - INFO - Barcodes examined so far: 200000
+2023-01-16 15:22:21,243 - INFO - Barcodes examined so far: 400000
+2023-01-16 15:22:29,292 - INFO - Barcodes examined so far: 600000
+2023-01-16 15:22:37,055 - INFO - Barcodes examined so far: 800000
+2023-01-16 15:22:44,473 - INFO - Barcodes examined so far: 1000000
+2023-01-16 15:22:51,649 - INFO - Barcodes examined so far: 1200000
+2023-01-16 15:22:59,685 - INFO - Barcodes examined so far: 1400000
+2023-01-16 15:23:05,642 - INFO - Barcodes examined so far: 1600000
+2023-01-16 15:23:10,696 - INFO - Barcodes examined so far: 1800000
+2023-01-16 15:23:15,199 - INFO - Barcodes examined so far: 2000000
+2023-01-16 15:23:18,341 - INFO - Barcodes examined so far: 2200000
+2023-01-16 15:23:19,423 - INFO - Examined all barcodes. Summary stats:
+   total  too few reads  not alignable  aligned
+ 2294296        1422824         102983   768489
+2023-01-16 15:23:19,423 - INFO - Writing these stats to ./results/codoncounts/lib3-C8-900_bcstats.csv
+
+2023-01-16 15:23:19,442 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/lib3-C8-900_codoncounts.csv
+
+2023-01-16 15:23:19,472 - INFO - Successful completion of dms2_bcsubamp

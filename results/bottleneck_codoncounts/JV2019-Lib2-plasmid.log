@@ -1,0 +1,156 @@
+2022-07-20 17:18:54,160 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2022-07-20 17:18:54,160 - INFO - Progress is being logged to results/bottleneck_codoncounts/JV2019-Lib2-plasmid.log
+2022-07-20 17:18:54,190 - INFO - Version information:
+	Time and date: Wed Jul 20 17:18:54 2022
+	Platform: Linux-4.15.0-101-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.3.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.1.0
+	pystan version: 2.19.1.1
+	scipy version: 1.5.2
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.114
+	umi_tools version: 1.1.2
+
+2022-07-20 17:18:54,190 - INFO - Parsed the following arguments:
+	outdir = results/bottleneck_codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = ./data/E.fasta
+	alignspecs = ['1,303,33,38', '304,609,38,40', '610,903,41,36', '904,1200,41,37', '1201,1512,36,35']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [200]
+	R2trim = [200]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = JV2019-Lib2-plasmid
+	R1 = ['/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/*R1*.fastq.gz']
+
+2022-07-20 17:18:54,207 - INFO - Read refseq of 1512 codons from ./data/E.fasta
+2022-07-20 17:18:54,215 - INFO - Reads are in these FASTQ pairs:
+	/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R1_001.fastq.gz and /fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R2_001.fastq.gz
+	/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R1_002.fastq.gz and /fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R2_002.fastq.gz
+	/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R1_003.fastq.gz and /fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R2_003.fastq.gz
+	/fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R1_004.fastq.gz and /fh/fast/bloom_j/SR/ngs/illumina/bloom_lab/170609_SN367_0933_BHMLH5BCXY_lane2/Unaligned/Project_bloom_lab/Sample_zikv-2/zikv-2_TACAAG_L002_R2_004.fastq.gz
+
+2022-07-20 17:18:54,215 - INFO - Now parsing read pairs...
+2022-07-20 17:19:00,684 - INFO - Reads parsed so far: 500000
+2022-07-20 17:19:07,065 - INFO - Reads parsed so far: 1000000
+2022-07-20 17:19:12,863 - INFO - Reads parsed so far: 1500000
+2022-07-20 17:19:18,898 - INFO - Reads parsed so far: 2000000
+2022-07-20 17:19:25,121 - INFO - Reads parsed so far: 2500000
+2022-07-20 17:19:31,385 - INFO - Reads parsed so far: 3000000
+2022-07-20 17:19:36,633 - INFO - Reads parsed so far: 3500000
+2022-07-20 17:19:43,359 - INFO - Reads parsed so far: 4000000
+2022-07-20 17:19:48,989 - INFO - Reads parsed so far: 4500000
+2022-07-20 17:19:54,413 - INFO - Reads parsed so far: 5000000
+2022-07-20 17:20:01,594 - INFO - Reads parsed so far: 5500000
+2022-07-20 17:20:07,164 - INFO - Reads parsed so far: 6000000
+2022-07-20 17:20:12,541 - INFO - Reads parsed so far: 6500000
+2022-07-20 17:20:17,904 - INFO - Reads parsed so far: 7000000
+2022-07-20 17:20:23,290 - INFO - Reads parsed so far: 7500000
+2022-07-20 17:20:28,692 - INFO - Reads parsed so far: 8000000
+2022-07-20 17:20:36,441 - INFO - Reads parsed so far: 8500000
+2022-07-20 17:20:41,812 - INFO - Reads parsed so far: 9000000
+2022-07-20 17:20:47,199 - INFO - Reads parsed so far: 9500000
+2022-07-20 17:20:52,429 - INFO - Reads parsed so far: 10000000
+2022-07-20 17:20:57,633 - INFO - Reads parsed so far: 10500000
+2022-07-20 17:21:02,828 - INFO - Reads parsed so far: 11000000
+2022-07-20 17:21:08,092 - INFO - Reads parsed so far: 11500000
+2022-07-20 17:21:13,374 - INFO - Reads parsed so far: 12000000
+2022-07-20 17:21:18,664 - INFO - Reads parsed so far: 12500000
+2022-07-20 17:21:23,899 - INFO - Reads parsed so far: 13000000
+2022-07-20 17:21:29,160 - INFO - Reads parsed so far: 13500000
+2022-07-20 17:21:34,384 - INFO - Reads parsed so far: 14000000
+2022-07-20 17:21:43,650 - INFO - Reads parsed so far: 14500000
+2022-07-20 17:21:48,880 - INFO - Reads parsed so far: 15000000
+2022-07-20 17:21:48,893 - INFO - Parsed 15001221 reads, found 4275604 unique barcodes.
+2022-07-20 17:21:48,896 - INFO - Summary stats on reads:
+    total  fail filter  low Q barcode
+ 15001221       982312        1973950
+2022-07-20 17:21:48,896 - INFO - Writing these stats to results/bottleneck_codoncounts/JV2019-Lib2-plasmid_readstats.csv
+
+2022-07-20 17:21:49,784 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           1380133
+2                            831646
+3                            740880
+4                            560876
+5                            364682
+6                            207943
+7                            106092
+8                             49333
+9                             20878
+10                             8249
+11                             3184
+12                             1101
+13                              382
+14                              131
+15                               50
+16                               17
+17                                8
+18                                6
+19                                3
+20                                3
+21                                2
+23                                1
+26                                1
+29                                1
+30                                1
+53                                1
+2022-07-20 17:21:49,784 - INFO - Writing these stats to results/bottleneck_codoncounts/JV2019-Lib2-plasmid_readsperbc.csv
+
+2022-07-20 17:21:49,788 - INFO - Examining the 4275604 barcodes to build and align subamplicons...
+2022-07-20 17:22:01,062 - INFO - Barcodes examined so far: 200000
+2022-07-20 17:22:12,296 - INFO - Barcodes examined so far: 400000
+2022-07-20 17:22:23,467 - INFO - Barcodes examined so far: 600000
+2022-07-20 17:22:34,650 - INFO - Barcodes examined so far: 800000
+2022-07-20 17:22:46,058 - INFO - Barcodes examined so far: 1000000
+2022-07-20 17:22:57,269 - INFO - Barcodes examined so far: 1200000
+2022-07-20 17:23:08,239 - INFO - Barcodes examined so far: 1400000
+2022-07-20 17:23:18,875 - INFO - Barcodes examined so far: 1600000
+2022-07-20 17:23:28,975 - INFO - Barcodes examined so far: 1800000
+2022-07-20 17:23:38,935 - INFO - Barcodes examined so far: 2000000
+2022-07-20 17:23:48,845 - INFO - Barcodes examined so far: 2200000
+2022-07-20 17:23:58,496 - INFO - Barcodes examined so far: 2400000
+2022-07-20 17:24:07,747 - INFO - Barcodes examined so far: 2600000
+2022-07-20 17:24:16,480 - INFO - Barcodes examined so far: 2800000
+2022-07-20 17:24:24,620 - INFO - Barcodes examined so far: 3000000
+2022-07-20 17:24:32,356 - INFO - Barcodes examined so far: 3200000
+2022-07-20 17:24:39,854 - INFO - Barcodes examined so far: 3400000
+2022-07-20 17:24:46,148 - INFO - Barcodes examined so far: 3600000
+2022-07-20 17:24:51,213 - INFO - Barcodes examined so far: 3800000
+2022-07-20 17:24:55,549 - INFO - Barcodes examined so far: 4000000
+2022-07-20 17:24:58,512 - INFO - Barcodes examined so far: 4200000
+2022-07-20 17:24:59,351 - INFO - Examined all barcodes. Summary stats:
+   total  too few reads  not alignable  aligned
+ 4275604        1380133        1473974  1421497
+2022-07-20 17:24:59,351 - INFO - Writing these stats to results/bottleneck_codoncounts/JV2019-Lib2-plasmid_bcstats.csv
+
+2022-07-20 17:24:59,372 - INFO - Writing the counts of each codon identity at each site to results/bottleneck_codoncounts/JV2019-Lib2-plasmid_codoncounts.csv
+
+2022-07-20 17:24:59,403 - INFO - Successful completion of dms2_bcsubamp

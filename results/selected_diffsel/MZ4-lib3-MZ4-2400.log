@@ -1,0 +1,72 @@
+2023-01-17 15:00:54,513 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2023-01-17 15:00:54,513 - INFO - Progress is being logged to ./results/selected_diffsel/MZ4-lib3-MZ4-2400.log
+2023-01-17 15:00:54,545 - INFO - Version information:
+	Time and date: Tue Jan 17 15:00:54 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.2.0
+	pystan version: 2.19.1.1
+	scipy version: 1.6.0
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.121
+	umi_tools version: 1.1.2
+
+2023-01-17 15:00:54,545 - INFO - Parsed the following arguments:
+	outdir = ./results/selected_diffsel/
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = MZ4-lib3-MZ4-2400
+	sel = lib3-MZ4-2400
+	mock = lib3-no-antibody
+	err = None
+
+2023-01-17 15:00:54,548 - INFO - Reading selected sample counts from lib3-MZ4-2400
+2023-01-17 15:00:54,557 - INFO - Reading mock-selected sample counts from lib3-no-antibody
+2023-01-17 15:00:54,569 - INFO - Computing mutdiffsel...
+2023-01-17 15:00:56,021 - INFO - Mutations with largest mutdiffsel:
+ site wildtype mutation  mutdiffsel
+  368        S        N        4.60
+   36        Q        Y        4.29
+  352        L        F        4.13
+  488        C        W        4.05
+   86        S        K        3.94
+  446        H        F        3.94
+  480        K        F        3.92
+  487        T        C        3.89
+   52        N        Y        3.85
+  419        K        V        3.66
+
+2023-01-17 15:00:56,021 - INFO - Writing to ./results/selected_diffsel/MZ4-lib3-MZ4-2400_mutdiffsel.csv
+2023-01-17 15:00:56,052 - INFO - Computing sitediffsel...
+2023-01-17 15:00:56,077 - INFO - Sites with largest absolute sitediffsel:
+ site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+  443        51.55              2.27            -49.28         2.27        -5.76
+  439        35.92              4.99            -30.93         1.30        -3.92
+  403        32.59              1.87            -30.72         1.12        -3.66
+  375        32.50              0.00            -32.50         0.00        -3.93
+   29        32.27              0.27            -31.99         0.27        -5.51
+   88        30.85              1.74            -29.11         1.74        -3.32
+  368        30.20             28.59             -1.61         4.60        -0.83
+   69        29.19             12.65            -16.54         3.55        -3.50
+  391        27.70              3.35            -24.34         2.66        -3.04
+  352        27.52             16.76            -10.76         4.13        -3.06
+
+2023-01-17 15:00:56,077 - INFO - Writing to ./results/selected_diffsel/MZ4-lib3-MZ4-2400_sitediffsel.csv
+2023-01-17 15:00:56,083 - INFO - Successful completion of dms2_diffsel

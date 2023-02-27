@@ -1,6 +1,6 @@
 # Mutational antigenic profiling of ZIKV E protein
-Experiments by Jackson Barr Stuart and Leslie Goo.
-Analysis by Jesse Bloom.
+Experiments by Caroline Kikawa, Jackson Barr Stuart and Leslie Goo.
+Analysis by Jesse Bloom and Caroline Kikawa.
 
 ## Results
 For a summary of the results, see [results/summary/map_analysis.md](results/summary/map_analysis.md), which is the Markdown summary of running the Jupyter notebook [map_analysis.ipynb](map_analysis.ipynb).

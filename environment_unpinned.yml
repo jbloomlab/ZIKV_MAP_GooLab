@@ -1,4 +1,4 @@
-name: ZIKV_DMS
+name: zikv_e_dms
 channels:
   - bioconda
   - r
@@ -8,10 +8,17 @@ channels:
 dependencies:
   - imagemagick
   - jupyterlab
+  - mamba
   - nbdime
   - nodejs
+  - pandas=0.25.3
   - pip
   - python=3.8
   - pip:
-    - dms_tools2
-    - dmslogo
+    - dms_tools2==2.6.10
+    - dmslogo==0.6.2
+    - snakemake==6.5.2
+    - altair
+    - vega_datasets
+    - dms_variants
+    - scipy==1.6.0
