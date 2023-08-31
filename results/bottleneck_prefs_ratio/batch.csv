@@ -1,8 +1,0 @@
-name,selection,library,pre,post,errpre,errpost
-GooCK-Lib1Goo,virus,Lib1Goo,GooJBS-Lib1Goo-plasmid,GooCK-Lib1Goo-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
-GooJBS-Lib1Goo,virus,Lib1Goo,GooJBS-Lib1Goo-plasmid,GooJBS-Lib1Goo-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
-GooJBS-Lib2Goo,virus,Lib2Goo,GooJBS-Lib2Goo-plasmid,GooJBS-Lib2Goo-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
-GooJBS-Lib3Goo,virus,Lib3Goo,GooJBS-Lib3Goo-plasmid,GooJBS-Lib3Goo-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
-JV2019-Lib1,virus,Lib1,JV2019-Lib1-plasmid,JV2019-Lib1-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
-JV2019-Lib2,virus,Lib2,JV2019-Lib2-plasmid,JV2019-Lib2-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus
-JV2019-Lib3,virus,Lib3,JV2019-Lib3-plasmid,JV2019-Lib3-virus,JV2019-wildtype-plasmid,JV2019-wildtype-virus

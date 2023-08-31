@@ -1,41 +1,20 @@
-library,group,name,sel,mock,percent_infectivity
-lib1,EDE1-C10,lib1-C10-150,lib1-C10-150,lib1-no-antibody,0.51%
-lib1,EDE1-C10,lib1-C10-300,lib1-C10-300,lib1-no-antibody,0.11%
-lib1,EDE1-C8,lib1-C8-1600,lib1-C8-1600,lib1-no-antibody,0.01%
-lib1,EDE1-C8,lib1-C8-800,lib1-C8-800,lib1-no-antibody,0.57%
-lib1,MZ4,lib1-MZ4-1200,lib1-MZ4-1200,lib1-no-antibody,5.22%
-lib1,MZ4,lib1-MZ4-2400,lib1-MZ4-2400,lib1-no-antibody,0.98%
-lib1,MZ4,lib1-MZ4-4800,lib1-MZ4-4800,lib1-no-antibody,0.46%
-lib1,ZKA-64,lib1-ZKA64-750,lib1-ZKA64-750,lib1-no-antibody,0.57%
-lib1,ZV-67,lib1-ZV67-40000,lib1-ZV67-40000,lib1-no-antibody,0.84%
-lib1,ZV-67,lib1-ZV67-80000,lib1-ZV67-80000,lib1-no-antibody,0.26%
-lib2,EDE1-C10,lib2-C10-150,lib2-C10-150,lib2-no-antibody,0.01%
-lib2,EDE1-C10,lib2-C10-300,lib2-C10-300,lib2-no-antibody,0.01%
-lib2,EDE1-C8,lib2-C8-1800,lib2-C8-1800,lib2-no-antibody,0.13%
-lib2,EDE1-C8,lib2-C8-225,lib2-C8-225,lib2-no-antibody,1.25%
-lib2,EDE1-C8,lib2-C8-450,lib2-C8-450,lib2-no-antibody,1.06%
-lib2,EDE1-C8,lib2-C8-900,lib2-C8-900,lib2-no-antibody,0.61%
-lib2,MZ4,lib2-MZ4-2400,lib2-MZ4-2400,lib2-no-antibody,0.30%
-lib2,MZ4,lib2-MZ4-4800,lib2-MZ4-4800,lib2-no-antibody,0.02%
-lib2,SiGN-3C,lib2-SiGN-10,lib2-SiGN-10,lib2-no-antibody,0.35%
-lib2,SiGN-3C,lib2-SiGN-20,lib2-SiGN-20,lib2-no-antibody,1.36%
-lib2,SiGN-3C,lib2-SiGN-40,lib2-SiGN-40,lib2-no-antibody,0.95%
-lib2,ZKA-64,lib2-ZKA64-750,lib2-ZKA64-750,lib2-no-antibody,3.51%
-lib2,ZV-67,lib2-ZV67-400000,lib2-ZV67-400000,lib2-no-antibody,0.89%
-lib2,ZV-67,lib2-ZV67-800000,lib2-ZV67-800000,lib2-no-antibody,0.51%
-lib3,EDE1-C10,lib3-C10-150,lib3-C10-150,lib3-no-antibody,1.65%
-lib3,EDE1-C10,lib3-C10-300,lib3-C10-300,lib3-no-antibody,0.39%
-lib3,EDE1-C8,lib3-C8-1800,lib3-C8-1800,lib3-no-antibody,0.23%
-lib3,EDE1-C8,lib3-C8-225,lib3-C8-225,lib3-no-antibody,1.36%
-lib3,EDE1-C8,lib3-C8-450,lib3-C8-450,lib3-no-antibody,0.47%
-lib3,EDE1-C8,lib3-C8-900,lib3-C8-900,lib3-no-antibody,0.42%
-lib3,MZ4,lib3-MZ4-2400,lib3-MZ4-2400,lib3-no-antibody,0.16%
-lib3,MZ4,lib3-MZ4-4800,lib3-MZ4-4800,lib3-no-antibody,0.05%
-lib3,SiGN-3C,lib3-SiGN-10,lib3-SiGN-10,lib3-no-antibody,1.19%
-lib3,SiGN-3C,lib3-SiGN-20,lib3-SiGN-20,lib3-no-antibody,0.88%
-lib3,SiGN-3C,lib3-SiGN-40,lib3-SiGN-40,lib3-no-antibody,0.19%
-lib3,ZKA-64,lib3-ZKA64-750,lib3-ZKA64-750,lib3-no-antibody,5.41%
-lib3,ZV-67,lib3-ZV67-800000,lib3-ZV67-800000,lib3-no-antibody,0.06%
-lib3-v2,SiGN-3C,lib3-v2-SiGN-10,lib3-v2-SiGN-10,lib3-v2-no-antibody,4.56%
-lib3-v2,SiGN-3C,lib3-v2-SiGN-20,lib3-v2-SiGN-20,lib3-v2-no-antibody,5.54%
-lib3-v2,SiGN-3C,lib3-v2-SiGN-40,lib3-v2-SiGN-40,lib3-v2-no-antibody,1.65%
+antibody,group,name,sel,mock,percent_infectivity,grouplabel
+ZV-67,ZV-67-40000,lib1-ZV67-40000,lib1-ZV67-40000,lib1-no-antibody,0.84%,targeted antibody ZV-67: (40000 ng/mL)
+ZV-67,ZV-67-40000,lib2-ZV67-40000,lib2-ZV67-40000,lib2-no-antibody,0.89%,targeted antibody ZV-67: (40000 ng/mL)
+ZV-67,ZV-67-40000,lib3-ZV67-40000,lib3-ZV67-40000,lib3-no-antibody,0.01%,targeted antibody ZV-67: (40000 ng/mL)
+MZ4,MZ4-4800,lib1-MZ4-4800,lib1-MZ4-4800,lib1-no-antibody,0.46%,pseudo-broad antibody MZ4: (4800 ng/mL)
+MZ4,MZ4-4800,lib2-MZ4-4800,lib2-MZ4-4800,lib2-no-antibody,0.02%,pseudo-broad antibody MZ4: (4800 ng/mL)
+MZ4,MZ4-4800,lib3-MZ4-4800,lib3-MZ4-4800,lib3-no-antibody,0.05%,pseudo-broad antibody MZ4: (4800 ng/mL)
+EDE1-C10,EDE1-C10-300,lib1-C10-300,lib1-C10-300,lib1-no-antibody,0.11%,broad antibody EDE1-C10: (300 ng/mL)
+EDE1-C10,EDE1-C10-300,lib2-C10-300,lib2-C10-300,lib2-no-antibody,0.23%,broad antibody EDE1-C10: (300 ng/mL)
+EDE1-C10,EDE1-C10-300,lib3-C10-300,lib3-C10-300,lib3-no-antibody,0.39%,broad antibody EDE1-C10: (300 ng/mL)
+EDE1-C8,EDE1-C8-1800,lib1-C8-1800,lib1-C8-1800,lib1-no-antibody,0.01%,broad antibody EDE1-C8: (1800 ng/mL)
+EDE1-C8,EDE1-C8-1800,lib2-C8-1800,lib2-C8-1800,lib2-no-antibody,0.13%,broad antibody EDE1-C8: (1800 ng/mL)
+EDE1-C8,EDE1-C8-1800,lib3-C8-1800,lib3-C8-1800,lib3-no-antibody,0.23%,broad antibody EDE1-C8: (1800 ng/mL)
+SIgN-3C,SIgN-3C-20000,lib1-SIgN-20000,lib1-SIgN-20000,lib1-no-antibody,0.21%,broad antibody SIgN-3C: (20000 ng/mL)
+SIgN-3C,SIgN-3C-10000,lib2-SIgN-10000,lib2-SIgN-10000,lib2-no-antibody,0.35%,broad antibody SIgN-3C: (10000 ng/mL)
+SIgN-3C,SIgN-3C-20000,lib2-SIgN-20000,lib2-SIgN-20000,lib2-no-antibody,1.36%,broad antibody SIgN-3C: (20000 ng/mL)
+SIgN-3C,SIgN-3C-10000,lib3-SIgN-10000,lib3-SIgN-10000,lib3-no-antibody,1.19%,broad antibody SIgN-3C: (10000 ng/mL)
+SIgN-3C,SIgN-3C-20000,lib3-SIgN-20000,lib3-SIgN-20000,lib3-no-antibody,0.88%,broad antibody SIgN-3C: (20000 ng/mL)
+SIgN-3C,SIgN-3C-10000,lib3-v2-SIgN-10000,lib3-v2-SIgN-10000,lib3-v2-no-antibody,0.45%,broad antibody SIgN-3C: (10000 ng/mL)
+SIgN-3C,SIgN-3C-20000,lib3-v2-SIgN-20000,lib3-v2-SIgN-20000,lib3-v2-no-antibody,0.55%,broad antibody SIgN-3C: (20000 ng/mL)
