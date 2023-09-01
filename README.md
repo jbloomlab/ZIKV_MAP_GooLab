@@ -7,6 +7,8 @@ For a summary of the results, see [results/notebooks/selections_analysis.md](res
 
 Other results are placed in [./results/](results), although not all files are tracked in the GitHub repo.
 
+For the data and analysis used in the neutralization assays and visualizations for the paper, see the notebooks and results in [./paper_figures/](paper_figures) 
+
 ## Running analysis
 First activate the [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment for the analysis. If you have prebuilt the relevant environments, you can do this just with:
 
