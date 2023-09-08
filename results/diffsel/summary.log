@@ -1,8 +1,8 @@
-2023-08-31 13:46:46,537 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2023-09-01 14:01:07,461 - INFO - Beginning execution of dms2_batch_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2023-08-31 13:46:46,538 - INFO - Progress is being logged to ./results/diffsel/summary.log
-2023-08-31 13:46:46,574 - INFO - Version information:
-	Time and date: Thu Aug 31 13:46:46 2023
+2023-09-01 14:01:07,461 - INFO - Progress is being logged to ./results/diffsel/summary.log
+2023-09-01 14:01:07,495 - INFO - Version information:
+	Time and date: Fri Sep  1 14:01:07 2023
 	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.121
 	umi_tools version: 1.1.2
 
-2023-08-31 13:46:46,574 - INFO - Parsed the following arguments:
+2023-09-01 14:01:07,495 - INFO - Parsed the following arguments:
 	outdir = ./results/diffsel
 	ncpus = 16
 	use_existing = yes
@@ -35,28 +35,28 @@
 	batchfile = ./results/diffsel/batch.csv
 	summaryprefix = summary
 
-2023-08-31 13:46:46,574 - INFO - Parsing info from ./results/diffsel/batch.csv
-2023-08-31 13:46:46,586 - INFO - Read the following sample information:
+2023-09-01 14:01:07,495 - INFO - Parsing info from ./results/diffsel/batch.csv
+2023-09-01 14:01:07,503 - INFO - Read the following sample information:
 antibody,group,name,sel,mock,percent_infectivity,grouplabel
-ZV-67,ZV-67-40000,lib1-ZV67-40000,lib1-ZV67-40000,lib1-no-antibody,0.84%,targeted antibody ZV-67: (40000 ng/mL)
-ZV-67,ZV-67-40000,lib2-ZV67-40000,lib2-ZV67-40000,lib2-no-antibody,0.89%,targeted antibody ZV-67: (40000 ng/mL)
-ZV-67,ZV-67-40000,lib3-ZV67-40000,lib3-ZV67-40000,lib3-no-antibody,0.01%,targeted antibody ZV-67: (40000 ng/mL)
-MZ4,MZ4-4800,lib1-MZ4-4800,lib1-MZ4-4800,lib1-no-antibody,0.46%,pseudo-broad antibody MZ4: (4800 ng/mL)
-MZ4,MZ4-4800,lib2-MZ4-4800,lib2-MZ4-4800,lib2-no-antibody,0.02%,pseudo-broad antibody MZ4: (4800 ng/mL)
-MZ4,MZ4-4800,lib3-MZ4-4800,lib3-MZ4-4800,lib3-no-antibody,0.05%,pseudo-broad antibody MZ4: (4800 ng/mL)
-EDE1-C10,EDE1-C10-300,lib1-C10-300,lib1-C10-300,lib1-no-antibody,0.11%,broad antibody EDE1-C10: (300 ng/mL)
-EDE1-C10,EDE1-C10-300,lib2-C10-300,lib2-C10-300,lib2-no-antibody,0.23%,broad antibody EDE1-C10: (300 ng/mL)
-EDE1-C10,EDE1-C10-300,lib3-C10-300,lib3-C10-300,lib3-no-antibody,0.39%,broad antibody EDE1-C10: (300 ng/mL)
-EDE1-C8,EDE1-C8-1800,lib1-C8-1800,lib1-C8-1800,lib1-no-antibody,0.01%,broad antibody EDE1-C8: (1800 ng/mL)
-EDE1-C8,EDE1-C8-1800,lib2-C8-1800,lib2-C8-1800,lib2-no-antibody,0.13%,broad antibody EDE1-C8: (1800 ng/mL)
-EDE1-C8,EDE1-C8-1800,lib3-C8-1800,lib3-C8-1800,lib3-no-antibody,0.23%,broad antibody EDE1-C8: (1800 ng/mL)
-SIgN-3C,SIgN-3C-20000,lib1-SIgN-20000,lib1-SIgN-20000,lib1-no-antibody,0.21%,broad antibody SIgN-3C: (20000 ng/mL)
-SIgN-3C,SIgN-3C-10000,lib2-SIgN-10000,lib2-SIgN-10000,lib2-no-antibody,0.35%,broad antibody SIgN-3C: (10000 ng/mL)
-SIgN-3C,SIgN-3C-20000,lib2-SIgN-20000,lib2-SIgN-20000,lib2-no-antibody,1.36%,broad antibody SIgN-3C: (20000 ng/mL)
-SIgN-3C,SIgN-3C-10000,lib3-SIgN-10000,lib3-SIgN-10000,lib3-no-antibody,1.19%,broad antibody SIgN-3C: (10000 ng/mL)
-SIgN-3C,SIgN-3C-20000,lib3-SIgN-20000,lib3-SIgN-20000,lib3-no-antibody,0.88%,broad antibody SIgN-3C: (20000 ng/mL)
-SIgN-3C,SIgN-3C-10000,lib3-v2-SIgN-10000,lib3-v2-SIgN-10000,lib3-v2-no-antibody,0.45%,broad antibody SIgN-3C: (10000 ng/mL)
-SIgN-3C,SIgN-3C-20000,lib3-v2-SIgN-20000,lib3-v2-SIgN-20000,lib3-v2-no-antibody,0.55%,broad antibody SIgN-3C: (20000 ng/mL)
+ZV-67,ZV-67-40000,replicate1,lib1-ZV67-40000,lib1-no-antibody,0.84%,targeted antibody ZV-67: (40000 ng/mL)
+ZV-67,ZV-67-40000,replicate2,lib2-ZV67-40000,lib2-no-antibody,0.89%,targeted antibody ZV-67: (40000 ng/mL)
+ZV-67,ZV-67-40000,replicate3,lib3-ZV67-40000,lib3-no-antibody,0.01%,targeted antibody ZV-67: (40000 ng/mL)
+MZ4,MZ4-4800,replicate1,lib1-MZ4-4800,lib1-no-antibody,0.46%,pseudo-broad antibody MZ4: (4800 ng/mL)
+MZ4,MZ4-4800,replicate2,lib2-MZ4-4800,lib2-no-antibody,0.02%,pseudo-broad antibody MZ4: (4800 ng/mL)
+MZ4,MZ4-4800,replicate3,lib3-MZ4-4800,lib3-no-antibody,0.05%,pseudo-broad antibody MZ4: (4800 ng/mL)
+EDE1-C10,EDE1-C10-300,replicate1,lib1-C10-300,lib1-no-antibody,0.11%,broad antibody EDE1-C10: (300 ng/mL)
+EDE1-C10,EDE1-C10-300,replicate2,lib2-C10-300,lib2-no-antibody,0.23%,broad antibody EDE1-C10: (300 ng/mL)
+EDE1-C10,EDE1-C10-300,replicate3,lib3-C10-300,lib3-no-antibody,0.39%,broad antibody EDE1-C10: (300 ng/mL)
+EDE1-C8,EDE1-C8-1800,replicate1,lib1-C8-1800,lib1-no-antibody,0.01%,broad antibody EDE1-C8: (1800 ng/mL)
+EDE1-C8,EDE1-C8-1800,replicate2,lib2-C8-1800,lib2-no-antibody,0.13%,broad antibody EDE1-C8: (1800 ng/mL)
+EDE1-C8,EDE1-C8-1800,replicate3,lib3-C8-1800,lib3-no-antibody,0.23%,broad antibody EDE1-C8: (1800 ng/mL)
+SIgN-3C,SIgN-3C-20000,replicate1,lib1-SIgN-20000,lib1-no-antibody,0.21%,broad antibody SIgN-3C: (20000 ng/mL)
+SIgN-3C,SIgN-3C-10000,replicate2,lib2-SIgN-10000,lib2-no-antibody,0.35%,broad antibody SIgN-3C: (10000 ng/mL)
+SIgN-3C,SIgN-3C-20000,replicate2,lib2-SIgN-20000,lib2-no-antibody,1.36%,broad antibody SIgN-3C: (20000 ng/mL)
+SIgN-3C,SIgN-3C-10000,replicate3,lib3-SIgN-10000,lib3-no-antibody,1.19%,broad antibody SIgN-3C: (10000 ng/mL)
+SIgN-3C,SIgN-3C-20000,replicate3,lib3-SIgN-20000,lib3-no-antibody,0.88%,broad antibody SIgN-3C: (20000 ng/mL)
+SIgN-3C,SIgN-3C-10000,replicate3v2,lib3-v2-SIgN-10000,lib3-v2-no-antibody,0.45%,broad antibody SIgN-3C: (10000 ng/mL)
+SIgN-3C,SIgN-3C-20000,replicate3v2,lib3-v2-SIgN-20000,lib3-v2-no-antibody,0.55%,broad antibody SIgN-3C: (20000 ng/mL)
 
 
-2023-08-31 13:46:46,680 - INFO - Output summary files already exist and '--use_existing' is 'yes', so exiting with no further action.
+2023-09-01 14:01:07,525 - INFO - Output summary files already exist and '--use_existing' is 'yes', so exiting with no further action.

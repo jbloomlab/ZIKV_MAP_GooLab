@@ -1,0 +1,20 @@
+antibody,concentration,dmslibrary,percent_infectivity
+ZV-67,40000 ng/$\mu$L,lib1,0.84%
+ZV-67,40000 ng/$\mu$L,lib2,0.89%
+ZV-67,40000 ng/$\mu$L,lib3,0.01%
+MZ4,4800 ng/$\mu$L,lib1,0.46%
+MZ4,4800 ng/$\mu$L,lib2,0.02%
+MZ4,4800 ng/$\mu$L,lib3,0.05%
+EDE1-C10,300 ng/$\mu$L,lib1,0.11%
+EDE1-C10,300 ng/$\mu$L,lib2,0.23%
+EDE1-C10,300 ng/$\mu$L,lib3,0.39%
+EDE1-C8,1800 ng/$\mu$L,lib1,0.01%
+EDE1-C8,1800 ng/$\mu$L,lib2,0.13%
+EDE1-C8,1800 ng/$\mu$L,lib3,0.23%
+SIgN-3C,20000 ng/$\mu$L,lib1,0.21%
+SIgN-3C,10000 ng/$\mu$L,lib2,0.35%
+SIgN-3C,20000 ng/$\mu$L,lib2,1.36%
+SIgN-3C,10000 ng/$\mu$L,lib3,1.19%
+SIgN-3C,20000 ng/$\mu$L,lib3,0.88%
+SIgN-3C,10000 ng/$\mu$L,lib3,0.45%
+SIgN-3C,20000 ng/$\mu$L,lib3,0.55%

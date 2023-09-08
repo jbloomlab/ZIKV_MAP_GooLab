@@ -1,0 +1,152 @@
+2023-08-31 13:34:06,291 - INFO - Beginning execution of dms2_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2023-08-31 13:34:06,292 - INFO - Progress is being logged to ./results/codoncounts/lib2-ZV67-40000.log
+2023-08-31 13:34:06,322 - INFO - Version information:
+	Time and date: Thu Aug 31 13:34:06 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.2.0
+	pystan version: 2.19.1.1
+	scipy version: 1.6.0
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.121
+	umi_tools version: 1.1.2
+
+2023-08-31 13:34:06,322 - INFO - Parsed the following arguments:
+	outdir = ./results/codoncounts
+	ncpus = -1
+	use_existing = yes
+	refseq = ./data/E.fasta
+	alignspecs = ['1,303,33,38', '304,609,38,40', '610,903,41,36', '904,1200,41,37', '1201,1512,36,35']
+	bclen = 8
+	fastqdir = None
+	R2 = None
+	R1trim = [200]
+	R2trim = [200]
+	bclen2 = None
+	chartype = codon
+	maxmuts = 4
+	minq = 15
+	minreads = 2
+	minfraccall = 0.95
+	minconcur = 0.75
+	sitemask = None
+	purgeread = 0.0
+	purgebc = 0.0
+	bcinfo = True
+	bcinfo_csv = True
+	name = lib2-ZV67-40000
+	R1 = ['/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab/data/concat_fastq/concat_fastq_out/lib2_ZV67_40000_R1.fastq.gz']
+
+2023-08-31 13:34:06,335 - INFO - Read refseq of 1512 codons from ./data/E.fasta
+2023-08-31 13:34:06,336 - INFO - Reads are in these FASTQ pairs:
+	/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab/data/concat_fastq/concat_fastq_out/lib2_ZV67_40000_R1.fastq.gz and /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab/data/concat_fastq/concat_fastq_out/lib2_ZV67_40000_R2.fastq.gz
+
+2023-08-31 13:34:06,336 - INFO - Now parsing read pairs...
+2023-08-31 13:34:13,723 - INFO - Reads parsed so far: 500000
+2023-08-31 13:34:21,594 - INFO - Reads parsed so far: 1000000
+2023-08-31 13:34:30,698 - INFO - Reads parsed so far: 1500000
+2023-08-31 13:34:37,222 - INFO - Reads parsed so far: 2000000
+2023-08-31 13:34:41,443 - INFO - Reads parsed so far: 2500000
+2023-08-31 13:34:46,928 - INFO - Reads parsed so far: 3000000
+2023-08-31 13:34:51,184 - INFO - Reads parsed so far: 3500000
+2023-08-31 13:34:57,060 - INFO - Reads parsed so far: 4000000
+2023-08-31 13:35:01,327 - INFO - Reads parsed so far: 4500000
+2023-08-31 13:35:05,601 - INFO - Reads parsed so far: 5000000
+2023-08-31 13:35:15,807 - INFO - Reads parsed so far: 5500000
+2023-08-31 13:35:20,672 - INFO - Reads parsed so far: 6000000
+2023-08-31 13:35:24,998 - INFO - Reads parsed so far: 6500000
+2023-08-31 13:35:29,332 - INFO - Reads parsed so far: 7000000
+2023-08-31 13:35:33,679 - INFO - Reads parsed so far: 7500000
+2023-08-31 13:35:40,938 - INFO - Reads parsed so far: 8000000
+2023-08-31 13:35:45,303 - INFO - Reads parsed so far: 8500000
+2023-08-31 13:35:49,666 - INFO - Reads parsed so far: 9000000
+2023-08-31 13:35:54,025 - INFO - Reads parsed so far: 9500000
+2023-08-31 13:35:58,401 - INFO - Reads parsed so far: 10000000
+2023-08-31 13:36:02,778 - INFO - Reads parsed so far: 10500000
+2023-08-31 13:36:09,893 - INFO - Reads parsed so far: 11000000
+2023-08-31 13:36:14,276 - INFO - Reads parsed so far: 11500000
+2023-08-31 13:36:18,854 - INFO - Reads parsed so far: 12000000
+2023-08-31 13:36:27,754 - INFO - Reads parsed so far: 12500000
+2023-08-31 13:36:32,170 - INFO - Reads parsed so far: 13000000
+2023-08-31 13:36:36,720 - INFO - Reads parsed so far: 13500000
+2023-08-31 13:36:37,573 - INFO - Parsed 13597519 reads, found 4367181 unique barcodes.
+2023-08-31 13:36:37,576 - INFO - Summary stats on reads:
+    total  fail filter  low Q barcode
+ 13597519        59776        1550825
+2023-08-31 13:36:37,576 - INFO - Writing these stats to ./results/codoncounts/lib2-ZV67-40000_readstats.csv
+
+2023-08-31 13:36:38,541 - INFO - Number of reads per barcode:
+                 number of barcodes
+number of reads                    
+1                           1990816
+2                            662771
+3                            489357
+4                            379585
+5                            283901
+6                            201211
+7                            136328
+8                             88211
+9                             55604
+10                            33615
+11                            19880
+12                            11458
+13                             6550
+14                             3684
+15                             1959
+16                             1068
+17                              568
+18                              296
+19                              159
+20                               73
+21                               43
+22                               21
+23                               10
+24                                4
+25                                5
+26                                1
+27                                2
+72                                1
+2023-08-31 13:36:38,541 - INFO - Writing these stats to ./results/codoncounts/lib2-ZV67-40000_readsperbc.csv
+
+2023-08-31 13:36:38,544 - INFO - Examining the 4367181 barcodes to build and align subamplicons...
+2023-08-31 13:36:41,293 - INFO - Barcodes examined so far: 200000
+2023-08-31 13:36:43,796 - INFO - Barcodes examined so far: 400000
+2023-08-31 13:36:46,057 - INFO - Barcodes examined so far: 600000
+2023-08-31 13:36:50,807 - INFO - Barcodes examined so far: 800000
+2023-08-31 13:37:03,120 - INFO - Barcodes examined so far: 1000000
+2023-08-31 13:37:15,278 - INFO - Barcodes examined so far: 1200000
+2023-08-31 13:37:27,320 - INFO - Barcodes examined so far: 1400000
+2023-08-31 13:37:39,292 - INFO - Barcodes examined so far: 1600000
+2023-08-31 13:37:51,136 - INFO - Barcodes examined so far: 1800000
+2023-08-31 13:38:02,747 - INFO - Barcodes examined so far: 2000000
+2023-08-31 13:38:14,062 - INFO - Barcodes examined so far: 2200000
+2023-08-31 13:38:25,039 - INFO - Barcodes examined so far: 2400000
+2023-08-31 13:38:35,779 - INFO - Barcodes examined so far: 2600000
+2023-08-31 13:38:46,224 - INFO - Barcodes examined so far: 2800000
+2023-08-31 13:38:56,227 - INFO - Barcodes examined so far: 3000000
+2023-08-31 13:39:05,683 - INFO - Barcodes examined so far: 3200000
+2023-08-31 13:39:14,206 - INFO - Barcodes examined so far: 3400000
+2023-08-31 13:39:21,889 - INFO - Barcodes examined so far: 3600000
+2023-08-31 13:39:28,923 - INFO - Barcodes examined so far: 3800000
+2023-08-31 13:39:35,163 - INFO - Barcodes examined so far: 4000000
+2023-08-31 13:39:40,495 - INFO - Barcodes examined so far: 4200000
+2023-08-31 13:39:44,244 - INFO - Examined all barcodes. Summary stats:
+   total  too few reads  not alignable  aligned
+ 4367181        1990816         124442  2251923
+2023-08-31 13:39:44,244 - INFO - Writing these stats to ./results/codoncounts/lib2-ZV67-40000_bcstats.csv
+
+2023-08-31 13:39:44,265 - INFO - Writing the counts of each codon identity at each site to ./results/codoncounts/lib2-ZV67-40000_codoncounts.csv
+
+2023-08-31 13:39:44,294 - INFO - Successful completion of dms2_bcsubamp

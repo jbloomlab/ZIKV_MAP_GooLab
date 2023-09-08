@@ -1,0 +1,72 @@
+2023-09-01 11:41:08,891 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2023-09-01 11:41:08,891 - INFO - Progress is being logged to ./results/diffsel/SIgN-3C-10000-replicate2.log
+2023-09-01 11:41:08,924 - INFO - Version information:
+	Time and date: Fri Sep  1 11:41:08 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.2.0
+	pystan version: 2.19.1.1
+	scipy version: 1.6.0
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.121
+	umi_tools version: 1.1.2
+
+2023-09-01 11:41:08,924 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = 1
+	use_existing = no
+	indir = ./results/codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = SIgN-3C-10000-replicate2
+	sel = lib2-SIgN-10000
+	mock = lib2-no-antibody
+	err = None
+
+2023-09-01 11:41:08,927 - INFO - Reading selected sample counts from lib2-SIgN-10000
+2023-09-01 11:41:08,936 - INFO - Reading mock-selected sample counts from lib2-no-antibody
+2023-09-01 11:41:08,943 - INFO - Computing mutdiffsel...
+2023-09-01 11:41:10,288 - INFO - Mutations with largest mutdiffsel:
+ site wildtype mutation  mutdiffsel
+   97        V        P        2.91
+  370        E        P        2.26
+   58        S        T        2.26
+    8        N        T        2.25
+   55        E        P        2.24
+  240        E        L        2.20
+  320        E        S        2.18
+   72        S        G        2.15
+  394        K        M        1.93
+   37        D        T        1.90
+
+2023-09-01 11:41:10,288 - INFO - Writing to ./results/diffsel/SIgN-3C-10000-replicate2_mutdiffsel.csv
+2023-09-01 11:41:10,319 - INFO - Computing sitediffsel...
+2023-09-01 11:41:10,344 - INFO - Sites with largest absolute sitediffsel:
+ site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+  349        22.14              0.21            -21.93         0.21        -2.61
+  443        13.70              0.00            -13.70         0.00        -2.49
+  344        12.44              1.96            -10.48         1.29        -1.67
+  140        12.22              8.81             -3.41         1.44        -1.26
+  352        12.15              2.21             -9.94         1.21        -1.83
+  350        11.43              0.74            -10.69         0.39        -2.90
+  152        11.36              1.59             -9.77         1.07        -2.01
+  373        11.06              3.18             -7.88         1.48        -2.18
+   29        11.05              3.40             -7.66         1.51        -2.17
+  162        10.91              6.86             -4.04         1.87        -1.86
+
+2023-09-01 11:41:10,344 - INFO - Writing to ./results/diffsel/SIgN-3C-10000-replicate2_sitediffsel.csv
+2023-09-01 11:41:10,351 - INFO - Successful completion of dms2_diffsel

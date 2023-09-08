@@ -1,8 +1,8 @@
-2023-08-31 13:46:33,496 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+2023-09-01 14:00:55,957 - INFO - Beginning execution of dms2_batch_bcsubamp in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
 
-2023-08-31 13:46:33,497 - INFO - Progress is being logged to ./results/codoncounts/summary.log
-2023-08-31 13:46:33,538 - INFO - Version information:
-	Time and date: Thu Aug 31 13:46:33 2023
+2023-09-01 14:00:55,957 - INFO - Progress is being logged to ./results/codoncounts/summary.log
+2023-09-01 14:00:55,993 - INFO - Version information:
+	Time and date: Fri Sep  1 14:00:55 2023
 	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
 	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
 	dms_tools2 version: 2.6.10
@@ -23,7 +23,7 @@
 	regex version: 2.5.121
 	umi_tools version: 1.1.2
 
-2023-08-31 13:46:33,538 - INFO - Parsed the following arguments:
+2023-09-01 14:00:55,993 - INFO - Parsed the following arguments:
 	outdir = ./results/codoncounts
 	ncpus = 16
 	use_existing = yes
@@ -49,8 +49,8 @@
 	batchfile = ./data/batchSubampIDs.csv
 	summaryprefix = summary
 
-2023-08-31 13:46:33,538 - INFO - Parsing sample info from ./data/batchSubampIDs.csv
-2023-08-31 13:46:33,546 - INFO - Read the following sample information:
+2023-09-01 14:00:55,993 - INFO - Parsing sample info from ./data/batchSubampIDs.csv
+2023-09-01 14:00:55,999 - INFO - Read the following sample information:
 name,R1
 lib1-C10-300,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab/data/concat_fastq/concat_fastq_out/lib1_C10_300_R1.fastq.gz
 lib1-C8-1800,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab/data/concat_fastq/concat_fastq_out/lib1_C8_1800_R1.fastq.gz
@@ -77,4 +77,4 @@ lib3-v2-SIgN-20000,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MA
 lib3-v2-no-antibody,/fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab/data/concat_fastq/concat_fastq_out/lib3-v2_no_antibody_R1.fastq.gz
 
 
-2023-08-31 13:46:33,600 - INFO - Output files already exist and '--use_existing' is 'yes', so exiting with no further action.
+2023-09-01 14:00:56,075 - INFO - Output files already exist and '--use_existing' is 'yes', so exiting with no further action.

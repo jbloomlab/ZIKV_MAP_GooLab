@@ -1,0 +1,72 @@
+2023-08-31 13:42:26,747 - INFO - Beginning execution of dms2_diffsel in directory /fh/fast/bloom_j/computational_notebooks/ckikawa/2022/ZIKV_MAP_GooLab
+
+2023-08-31 13:42:26,747 - INFO - Progress is being logged to ./results/diffsel/EDE1-C10-300-lib3-C10-300.log
+2023-08-31 13:42:26,782 - INFO - Version information:
+	Time and date: Thu Aug 31 13:42:26 2023
+	Platform: Linux-4.15.0-192-generic-x86_64-with-glibc2.10
+	Python version: 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 06:04:10)  [GCC 10.3.0]
+	dms_tools2 version: 2.6.10
+	Bio version: 1.79
+	pandas version: 0.25.3
+	numpy version: 1.19.5
+	IPython version: 8.4.0
+	jupyter version: 1.0.0
+	matplotlib version: 3.2.2
+	plotnine version: 0.6.0
+	natsort version: 8.2.0
+	pystan version: 2.19.1.1
+	scipy version: 1.6.0
+	seaborn version: 0.10.1
+	phydmslib version: 2.4.1
+	statsmodels version: 0.11.1
+	rpy2 cannot be imported
+	regex version: 2.5.121
+	umi_tools version: 1.1.2
+
+2023-08-31 13:42:26,783 - INFO - Parsed the following arguments:
+	outdir = ./results/diffsel
+	ncpus = 1
+	use_existing = yes
+	indir = ./results/codoncounts
+	chartype = codon_to_aa
+	excludestop = yes
+	pseudocount = 5.0
+	mincount = 0
+	name = EDE1-C10-300-lib3-C10-300
+	sel = lib3-C10-300
+	mock = lib3-no-antibody
+	err = None
+
+2023-08-31 13:42:26,785 - INFO - Reading selected sample counts from lib3-C10-300
+2023-08-31 13:42:26,796 - INFO - Reading mock-selected sample counts from lib3-no-antibody
+2023-08-31 13:42:26,803 - INFO - Computing mutdiffsel...
+2023-08-31 13:42:28,163 - INFO - Mutations with largest mutdiffsel:
+ site wildtype mutation  mutdiffsel
+   45        L        M        3.03
+   66        S        Y        2.85
+   64        S        K        2.78
+   95        T        C        2.54
+   49        T        D        2.50
+   78        G        D        2.43
+   95        T        E        2.20
+    7        S        N        2.02
+   23        V        T        2.02
+   43        I        M        1.95
+
+2023-08-31 13:42:28,163 - INFO - Writing to ./results/diffsel/EDE1-C10-300-lib3-C10-300_mutdiffsel.csv
+2023-08-31 13:42:28,194 - INFO - Computing sitediffsel...
+2023-08-31 13:42:28,220 - INFO - Sites with largest absolute sitediffsel:
+ site  abs_diffsel  positive_diffsel  negative_diffsel  max_diffsel  min_diffsel
+   29        14.07              0.14            -13.92         0.14        -3.54
+   84        12.35              3.42             -8.94         1.29        -1.41
+   49        11.40              5.02             -6.38         2.50        -1.86
+  375        10.61              0.04            -10.57         0.04        -2.35
+   47         9.99              0.53             -9.46         0.53        -2.53
+   64         9.81              3.88             -5.93         2.78        -1.40
+   27         9.20              2.38             -6.82         1.55        -1.74
+   83         9.07              0.38             -8.69         0.38        -2.34
+   88         8.78              0.95             -7.83         0.53        -1.29
+   55         8.73              4.13             -4.60         1.62        -1.30
+
+2023-08-31 13:42:28,220 - INFO - Writing to ./results/diffsel/EDE1-C10-300-lib3-C10-300_sitediffsel.csv
+2023-08-31 13:42:28,226 - INFO - Successful completion of dms2_diffsel
