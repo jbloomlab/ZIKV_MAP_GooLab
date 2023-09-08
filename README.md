@@ -7,16 +7,20 @@ For a summary of the results, see [results/notebooks/selections_analysis.md](res
 
 Other results are placed in [./results/](results), although not all files are tracked in the GitHub repo.
 
-For the data and analysis used in the neutralization assays and visualizations for the paper, see the notebooks and results in [./paper_figures/](paper_figures) 
+For the data and analysis used in the neutralization assays and visualizations for the paper, see the notebooks and results in [./paper_figures/](paper_figures), and for documentation of the SRA sequencing submission, see [./sra_submission/](sra_submission)
 
 ## Running analysis
 First activate the [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment for the analysis. If you have prebuilt the relevant environments, you can do this just with:
 
     conda activate zikv_dmstools2
 
-Otherwise, first build the *zikv_dmstools2* [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment from the [environments/environment_dmstools2.yml](environments/environment_dmstools2.yml) file, then activate it as above.
+or: 
 
-After you have activated the either [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment, simply run the Python Jupyter notebooks: [selections_analysis.ipynb](map_analysis.ipynb) or [polyclonal_analysis.ipynb](polyclonal_analysis.ipynb). On the Hutch cluster, you will first want to grab a node with 16 cores before doing this.
+    conda activate neutcurve
+
+Otherwise, first build the [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environments from the [environments/environment_dmstools2.yml](environments/environment_dmstools2.yml) or [environments/environment_neutcurve.yml](environments/environment_neutcurve.yml)file, then activate it as above.
+
+After you have activated the either [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment, simply run the Python Jupyter notebooks: use [environment_dmstools2](environments/environment_dmstools2.yml) to run [selections_analysis.ipynb](map_analysis.ipynb) or [polyclonal_analysis.ipynb](polyclonal_analysis.ipynb). On the Hutch cluster, you will first want to grab a node with 16 cores before doing this. For the notebooks within [./paper_figures/](paper_figures), use [neutcurve](environments/environment_neutcurve.yml). 
 
 ## Input data
 The input data are in [./data/](data):
