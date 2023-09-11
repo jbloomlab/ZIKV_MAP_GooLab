@@ -3,7 +3,7 @@ Experiments by Caroline Kikawa, Jackson Barr Stuart and Leslie Goo.
 Analysis by Jesse Bloom and Caroline Kikawa.
 
 ## Results
-For a summary of the results, see [results/notebooks/selections_analysis.md](results/notebooks/selections_analysis.md), which is the Markdown summary of running the Jupyter notebook [selections_analysis.ipynb](selections_analysis.ipynb).
+For a summary of the results, see [selections_analysis.ipynb](selections_analysis.ipynb).
 
 Other results are placed in [./results/](results), although not all files are tracked in the GitHub repo.
 - Barcoded subamplicon sequencing reads are processed into codon counts, and stored in [./results/codoncounts/](/results/codoncounts/)
@@ -23,7 +23,7 @@ or:
 
 Otherwise, first build the [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environments from the [environments/environment_dmstools2.yml](environments/environment_dmstools2.yml) or [environments/environment_neutcurve.yml](environments/environment_neutcurve.yml)file, then activate it as above.
 
-After you have activated the either [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment, simply run the Python Jupyter notebooks: use [environment_dmstools2](environments/environment_dmstools2.yml) to run [selections_analysis.ipynb](map_analysis.ipynb) or [polyclonal_analysis.ipynb](polyclonal_analysis.ipynb). On the Hutch cluster, you will first want to grab a node with 16 cores before doing this. For the notebooks within [./paper_figures/](paper_figures), use [neutcurve](environments/environment_neutcurve.yml). 
+After you have activated the either [conda](https://docs.conda.io/projects/conda/en/latest/index.html) environment, simply run the Python Jupyter notebooks: use [environment_dmstools2](environments/environment_dmstools2.yml) to run [selections_analysis.ipynb](map_analysis.ipynb) or [polyclonal_analysis.ipynb](polyclonal_analysis.ipynb). On the Hutch cluster, you will first want to grab a node with 16 cores before doing this. For the notebooks within [./paper_figures/](paper_figures), use [environment_neutcurve](environments/environment_neutcurve.yml). 
 
 ## Input data
 The input data are in [./data/](data):
