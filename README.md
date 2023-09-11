@@ -6,6 +6,9 @@ Analysis by Jesse Bloom and Caroline Kikawa.
 For a summary of the results, see [results/notebooks/selections_analysis.md](results/notebooks/selections_analysis.md), which is the Markdown summary of running the Jupyter notebook [selections_analysis.ipynb](selections_analysis.ipynb).
 
 Other results are placed in [./results/](results), although not all files are tracked in the GitHub repo.
+- Barcoded subamplicon sequencing reads are processed into codon counts, and stored in [./results/codoncounts/](/results/codoncounts/)
+- For individual and median antibody escape values, see differential selection measurements, placed in [./results/diffsel/](/results/diffsel/). 
+- PDB files with reassigned B-factors with antibody escape are placed in [./results/reassignedpdb/](/results/reassignedpdb/). 
 
 For the data and analysis used in the neutralization assays and visualizations for the paper, see the notebooks and results in [./paper_figures/](paper_figures), and for documentation of the SRA sequencing submission, see [./sra_submission/](sra_submission)
 
